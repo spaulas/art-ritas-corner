@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/art-ritas-corner/precache-manifest.eda3c4c9759624f655673e234dd1950d.js"
+  "/art-ritas-corner/precache-manifest.c0365e428a1124d98f717676315060db.js"
 );
 
 workbox.clientsClaim();
