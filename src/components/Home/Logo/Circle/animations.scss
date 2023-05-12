@@ -1,0 +1,183 @@
+@import "styles/imports.scss";
+
+@keyframes showCircleFading1 {
+  0% {
+    border-width: 496px;
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  33% {
+    transform: scale(1, 1);
+    opacity: 0;
+    border-width: 28px;
+  }
+  66% {
+    border-width: 496px;
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+    border-width: 28px;
+  }
+}
+
+@keyframes showCircleFading2 {
+  0% {
+    border-width: 430px;
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  33% {
+    transform: scale(1, 1);
+    opacity: 0;
+    border-width: 24px;
+  }
+  66% {
+    border-width: 430px;
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+    border-width: 24px;
+  }
+}
+
+@keyframes showCircleFading3 {
+  0% {
+    border-width: 380px;
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  33% {
+    transform: scale(1, 1);
+    opacity: 0;
+    border-width: 20px;
+  }
+  66% {
+    border-width: 380px;
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+    border-width: 20px;
+  }
+}
+
+@keyframes showCircleFading4 {
+  0% {
+    border-width: 316px;
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  33% {
+    transform: scale(1, 1);
+    opacity: 0;
+    border-width: 18px;
+  }
+  66% {
+    border-width: 316px;
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+    border-width: 18px;
+  }
+}
+
+@keyframes showCircleFading5 {
+  0% {
+    border-width: 252px;
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  33% {
+    transform: scale(1, 1);
+    opacity: 0;
+    border-width: 16px;
+  }
+  66% {
+    border-width: 252px;
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+    border-width: 16px;
+  }
+}
+
+// --------------------
+
+@keyframes showCircleFixed1 {
+  from {
+    border-width: 396px;
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+    border-width: 28px;
+  }
+}
+
+@keyframes showCircleFixed2 {
+  from {
+    border-width: 330px;
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+    border-width: 24px;
+  }
+}
+
+@keyframes showCircleFixed3 {
+  from {
+    border-width: 280px;
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+    border-width: 20px;
+  }
+}
+
+@keyframes showCircleFixed4 {
+  from {
+    border-width: 316px;
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+    border-width: 18px;
+  }
+}
+
+@keyframes showCircleFixed5 {
+  from {
+    border-width: 152px;
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+    border-width: 16px;
+  }
+}
