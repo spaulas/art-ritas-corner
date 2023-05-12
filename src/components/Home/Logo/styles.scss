@@ -6,13 +6,70 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    user-select: none;
+    -webkit-user-drag: none;
 
     &.logo {
       width: 440px;
+
+      @media only screen and (max-width: $desktop-width),
+        screen and (max-height: $big-desktop-height) {
+        // 1024 / 1080
+        width: 416px;
+      }
+
+      @media only screen and (max-width: $ipad-horizontal-width),
+        screen and (max-height: $ipad-vertical-height) {
+        // 900 / 1080
+        width: 368px;
+      }
+
+      @media only screen and (max-width: $mobile-horizontal-width),
+        screen and (max-height: $desktop-height) {
+        // 768 / 1080
+        width: 312px;
+      }
+
+      @media only screen and (max-width: $ipad-vertical-width),
+        screen and (max-height: 700px) {
+        // 590 / 1080
+        width: 240px;
+      }
+
+      @media only screen and (max-width: $mobile-vertical-width),
+        screen and (max-height: $ipad-horizontal-height) {
+        // 414 / 1080
+        width: 168px;
+      }
     }
 
     &.branch {
       width: 920px;
+
+      @media only screen and (max-width: $desktop-width),
+        screen and (max-height: $big-desktop-height) {
+        width: 872px;
+      }
+
+      @media only screen and (max-width: $ipad-horizontal-width),
+        screen and (max-height: $ipad-vertical-height) {
+        width: 768px;
+      }
+
+      @media only screen and (max-width: $mobile-horizontal-width),
+        screen and (max-height: $desktop-height) {
+        width: 652px;
+      }
+
+      @media only screen and (max-width: $ipad-vertical-width),
+        screen and (max-height: 700px) {
+        width: 504px;
+      }
+
+      @media only screen and (max-width: $mobile-vertical-width),
+        screen and (max-height: $ipad-horizontal-height) {
+        width: 352px;
+      }
     }
   }
 }
