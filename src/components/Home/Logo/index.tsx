@@ -9,6 +9,7 @@ const Logo = () => {
         <div className="logo-container">
             <div className="images">
                 <img className="branch" src={branch} alt="branch" />
+                <div className="branch-cover" />
                 <img className="logo" src={logo} alt="logo" />
             </div>
             <Circle color="blue" animationDelay={-2} />
