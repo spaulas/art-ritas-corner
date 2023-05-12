@@ -1,11 +1,16 @@
 {
-  "main.js": "/art-ritas-corner/static/js/main.edfc9d06.chunk.js",
-  "main.js.map": "/art-ritas-corner/static/js/main.edfc9d06.chunk.js.map",
-  "runtime~main.js": "/art-ritas-corner/static/js/runtime~main.3ff3a525.js",
-  "runtime~main.js.map": "/art-ritas-corner/static/js/runtime~main.3ff3a525.js.map",
-  "static/js/2.0aaa9787.chunk.js": "/art-ritas-corner/static/js/2.0aaa9787.chunk.js",
-  "static/js/2.0aaa9787.chunk.js.map": "/art-ritas-corner/static/js/2.0aaa9787.chunk.js.map",
-  "index.html": "/art-ritas-corner/index.html",
-  "precache-manifest.c0365e428a1124d98f717676315060db.js": "/art-ritas-corner/precache-manifest.c0365e428a1124d98f717676315060db.js",
-  "service-worker.js": "/art-ritas-corner/service-worker.js"
+  "files": {
+    "main.css": "/art-ritas-corner/static/css/main.e96338c2.css",
+    "main.js": "/art-ritas-corner/static/js/main.ea979916.js",
+    "static/media/branch.png": "/art-ritas-corner/static/media/branch.bca08d7191c067d10a01.png",
+    "static/media/logo.png": "/art-ritas-corner/static/media/logo.f7b7a61d4a379b717ad3.png",
+    "static/media/Saudagar.ttf": "/art-ritas-corner/static/media/Saudagar.7bbe1c48b05a89f4af4f.ttf",
+    "index.html": "/art-ritas-corner/index.html",
+    "main.e96338c2.css.map": "/art-ritas-corner/static/css/main.e96338c2.css.map",
+    "main.ea979916.js.map": "/art-ritas-corner/static/js/main.ea979916.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e96338c2.css",
+    "static/js/main.ea979916.js"
+  ]
 }
