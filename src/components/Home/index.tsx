@@ -1,8 +1,9 @@
-import React from "react";
+import React from "react"
 import Title from "components/common/Title"
+import "./styles.scss"
 
 const Home = () => {
-    return <div><Title title="Artiste d'ongles" description="description"/></div>
+    return <div className="home"><Title title="Artiste d'ongles" description="description"/></div>
 }
 
-export default Home;
+export default Home
