@@ -1,0 +1,20 @@
+@import "_colors";
+
+@mixin title {
+  font-family: Saudagar;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 68px;
+  line-height: 102px;
+  color: $black;
+  border: 0.5px solid $black;
+}
+  
+@mixin description {
+  font-family: Saudagar;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: $black;
+}

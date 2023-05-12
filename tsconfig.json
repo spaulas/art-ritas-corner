@@ -22,7 +22,7 @@
     "baseUrl": "src",
     "paths": {
       "__mocks__/*": ["../tests/__mocks__/*"],
-      "*": ["*", "app/*", "common/*", "assets/*", "popup/*", "types/*"]
+      "*": ["*", "App/*", "components/*", "assets/*", "styles/*"]
     }
   },
   "include": [
