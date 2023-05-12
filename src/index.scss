@@ -1,0 +1,14 @@
+@import "styles/imports.scss";
+
+@font-face {
+  font-family: "Saudagar";
+  src: local("Saudagar"),
+    url("./assets/fonts/Saudagar/Saudagar.ttf") format("truetype");
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  background: $white;
+  min-width: 375px;
+}

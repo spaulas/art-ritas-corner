@@ -18,7 +18,12 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve"
+    "jsx": "react-jsx",
+    "baseUrl": "src",
+    "paths": {
+      "__mocks__/*": ["tests/__mocks__/*"],
+      "*": ["*", "App/*", "components/*", "assets/*", "styles/*"]
+    }
   },
   "include": [
     "src"

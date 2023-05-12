@@ -1,0 +1,147 @@
+@import "styles/imports.scss";
+
+@keyframes showLogo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showBranch {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+.logo-container {
+  overflow: hidden;
+  width: 900px;
+  height: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+    -webkit-user-drag: none;
+
+    &.logo {
+      width: 440px;
+      opacity: 0;
+      animation: showLogo 0.8s linear 2.2s 1 forwards;
+
+      @media only screen and (max-width: $desktop-width),
+        screen and (max-height: $big-desktop-height) {
+        width: 416px;
+      }
+
+      @media only screen and (max-width: $ipad-horizontal-width),
+        screen and (max-height: $ipad-vertical-height) {
+        width: 368px;
+      }
+
+      @media only screen and (max-width: $mobile-horizontal-width),
+        screen and (max-height: $desktop-height) {
+        width: 312px;
+      }
+
+      @media only screen and (max-width: $ipad-vertical-width),
+        screen and (max-height: 700px) {
+        width: 240px;
+      }
+
+      @media only screen and (max-width: $mobile-vertical-width),
+        screen and (max-height: $ipad-horizontal-height) {
+        width: 168px;
+      }
+    }
+
+    &.branch {
+      width: 920px;
+
+      @media only screen and (max-width: $desktop-width),
+        screen and (max-height: $big-desktop-height) {
+        width: 872px;
+      }
+
+      @media only screen and (max-width: $ipad-horizontal-width),
+        screen and (max-height: $ipad-vertical-height) {
+        width: 768px;
+      }
+
+      @media only screen and (max-width: $mobile-horizontal-width),
+        screen and (max-height: $desktop-height) {
+        width: 652px;
+      }
+
+      @media only screen and (max-width: $ipad-vertical-width),
+        screen and (max-height: 700px) {
+        width: 504px;
+      }
+
+      @media only screen and (max-width: $mobile-vertical-width),
+        screen and (max-height: $ipad-horizontal-height) {
+        width: 352px;
+      }
+    }
+  }
+
+  .images {
+    display: flex;
+    width: 652px;
+    height: 837px;
+
+    @media only screen and (max-width: $desktop-width),
+      screen and (max-height: $big-desktop-height) {
+      width: 872px;
+      height: 794px;
+    }
+
+    @media only screen and (max-width: $ipad-horizontal-width),
+      screen and (max-height: $ipad-vertical-height) {
+      width: 768px;
+      height: 699px;
+    }
+
+    @media only screen and (max-width: $mobile-horizontal-width),
+      screen and (max-height: $desktop-height) {
+      width: 652px;
+      height: 594px;
+    }
+
+    @media only screen and (max-width: $ipad-vertical-width),
+      screen and (max-height: 700px) {
+      width: 504px;
+      height: 459px;
+    }
+
+    @media only screen and (max-width: $mobile-vertical-width),
+      screen and (max-height: $ipad-horizontal-height) {
+      width: 352px;
+      height: 321px;
+    }
+  }
+
+  .branch-cover {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: $white;
+    margin-left: auto;
+    animation: showBranch 1s linear 2.1s 1 forwards;
+  }
+}

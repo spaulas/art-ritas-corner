@@ -1,0 +1,132 @@
+@import "styles/imports.scss";
+@import "./animations.scss";
+
+.circle {
+  @include shadow-gray-medium;
+  border-radius: 50%;
+  border: 28px solid;
+  position: absolute;
+  box-sizing: border-box;
+  opacity: 0;
+
+  &.hide-animation {
+    animation: showCircleFading1 4s 1 cubic-bezier(0.36, 0.11, 0.89, 0.32);
+
+    @media only screen and (max-width: $ipad-horizontal-width),
+      screen and (max-height: $ipad-vertical-height) {
+      animation-name: showCircleFading2;
+    }
+
+    @media only screen and (max-width: $mobile-horizontal-width),
+      screen and (max-height: $desktop-height) {
+      animation-name: showCircleFading3;
+    }
+
+    @media only screen and (max-width: $ipad-vertical-width),
+      screen and (max-height: 700px) {
+      animation-name: showCircleFading4;
+    }
+
+    @media only screen and (max-width: $mobile-vertical-width),
+      screen and (max-height: $ipad-horizontal-height) {
+      animation-name: showCircleFading5;
+    }
+  }
+
+  &.show-animation {
+    animation: showCircleFixed1 2.5s 1 cubic-bezier(0.36, 0.11, 0.89, 0.32)
+      forwards;
+
+    @media only screen and (max-width: $ipad-horizontal-width),
+      screen and (max-height: $ipad-vertical-height) {
+      animation-name: showCircleFixed2;
+    }
+
+    @media only screen and (max-width: $mobile-horizontal-width),
+      screen and (max-height: $desktop-height) {
+      animation-name: showCircleFixed3;
+    }
+
+    @media only screen and (max-width: $ipad-vertical-width),
+      screen and (max-height: 700px) {
+      animation-name: showCircleFixed4;
+    }
+
+    @media only screen and (max-width: $mobile-vertical-width),
+      screen and (max-height: $ipad-horizontal-height) {
+      animation-name: showCircleFixed5;
+    }
+  }
+
+  &-pink {
+    border-color: $pink;
+    height: 654px;
+    width: 654px;
+
+    @media only screen and (max-width: $desktop-width),
+      screen and (max-height: $big-desktop-height) {
+      height: 620px;
+      width: 620px;
+    }
+
+    @media only screen and (max-width: $ipad-horizontal-width),
+      screen and (max-height: $ipad-vertical-height) {
+      height: 544px;
+      width: 544px;
+    }
+
+    @media only screen and (max-width: $mobile-horizontal-width),
+      screen and (max-height: $desktop-height) {
+      height: 464px;
+      width: 464px;
+    }
+
+    @media only screen and (max-width: $ipad-vertical-width),
+      screen and (max-height: 700px) {
+      height: 356px;
+      width: 356px;
+    }
+
+    @media only screen and (max-width: $mobile-vertical-width),
+      screen and (max-height: $ipad-horizontal-height) {
+      height: 248px;
+      width: 248px;
+    }
+  }
+
+  &-blue {
+    border-color: $blue;
+    height: 792px;
+    width: 792px;
+
+    @media only screen and (max-width: $desktop-width),
+      screen and (max-height: $big-desktop-height) {
+      height: 748px;
+      width: 748px;
+    }
+
+    @media only screen and (max-width: $ipad-horizontal-width),
+      screen and (max-height: $ipad-vertical-height) {
+      height: 660px;
+      width: 660px;
+    }
+
+    @media only screen and (max-width: $mobile-horizontal-width),
+      screen and (max-height: $desktop-height) {
+      height: 560px;
+      width: 560px;
+    }
+
+    @media only screen and (max-width: $ipad-vertical-width),
+      screen and (max-height: 700px) {
+      height: 432px;
+      width: 432px;
+    }
+
+    @media only screen and (max-width: $mobile-vertical-width),
+      screen and (max-height: $ipad-horizontal-height) {
+      height: 304px;
+      width: 304px;
+    }
+  }
+}
