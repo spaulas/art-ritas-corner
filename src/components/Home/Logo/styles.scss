@@ -1,6 +1,15 @@
 @import "styles/imports.scss";
 
 .logo-container {
+  overflow: hidden;
+  width: 792px;
+  height: 792px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+
   img {
     position: absolute;
     top: 50%;

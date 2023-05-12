@@ -7,12 +7,14 @@ import "./styles.scss"
 const Logo = () => {
     return (
         <div className="logo-container">
-            <img className="branch" src={branch} alt="branch" />
-            <div className="circles">
-                <Circle color="blue" />
-                <Circle color="pink" />
+            <div className="images">
+                <img className="branch" src={branch} alt="branch" />
+                <img className="logo" src={logo} alt="logo" />
             </div>
-            <img className="logo" src={logo} alt="logo" />
+            <Circle color="blue" animationDelay={-2} />
+            <Circle color="pink" animationDelay={-1.5} />
+            <Circle color="blue" animateOnce animationDelay={-0.5} />
+            <Circle color="pink" animateOnce animationDelay={0} />
         </div>
     )
 }
