@@ -1,5 +1,18 @@
+$big-desktop-width: 1919px;
+$big-desktop-height: 1080px;
+$desktop-width: 1439px;
+$desktop-height: 900px;
+$ipad-horizontal-width: 1023px;
+$ipad-horizontal-height: 768px;
+$ipad-vertical-width: 767px;
+$ipad-vertical-height: 1024px;
+$mobile-horizontal-width: 895px;
+$mobile-horizontal-height: 414px;
+$mobile-vertical-width: 359px;
+$mobile-vertical-height: 760px;
+
 @mixin page-layout {
-    width: 100%;
-    max-width: 1140px;
-    margin: auto;
+  width: 100%;
+  max-width: 1140px;
+  margin: auto;
 }

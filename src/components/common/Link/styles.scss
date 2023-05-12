@@ -1,0 +1,10 @@
+@import "styles/imports.scss";
+
+.link-button {
+  @include link;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

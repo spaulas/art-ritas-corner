@@ -1,7 +1,12 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
+import "./styles.scss"
 
-const Button = () => {
-    return <div>Button</div>
+type LinkProps = {
+    onClick: () => void
 }
 
-export default Button;
+const Link = ({ onClick, children }: PropsWithChildren<LinkProps>) => {
+    return <div className="link-button" onClick={onClick}>{children}</div>
+}
+
+export default Link;
