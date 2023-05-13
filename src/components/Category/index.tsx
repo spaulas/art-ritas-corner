@@ -33,7 +33,9 @@ const Category = ({
   blobs,
 }: CategoryProps) => {
   return (
-    <div className="category">
+    <div
+      className={`category ${titlePosition.includes("right") ? "invert" : ""}`}
+    >
       <Title
         title={title}
         description={description}
