@@ -1,0 +1,37 @@
+@import "styles/imports.scss";
+
+.title-container {
+  h5 {
+    width: 100%;
+    max-width: 404px;
+  }
+
+  &.top-right,
+  &.bottom-right {
+    p,
+    h1,
+    h5 {
+      text-align: right;
+    }
+
+    h5 {
+      margin-left: auto;
+    }
+  }
+
+  &.top-right {
+    margin-top: 52px;
+    margin-right: 132px;
+  }
+
+  &.bottom-right {
+    margin-top: auto;
+    margin-bottom: 52px;
+    margin-right: 132px;
+  }
+
+  &.top-left {
+    margin-top: 52px;
+    margin-left: 132px;
+  }
+}

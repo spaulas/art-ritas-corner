@@ -18,6 +18,15 @@
   color: $black;
 }
 
+@mixin subCategory {
+  font-family: Saudagar;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 32px;
+  color: $black;
+}
+
 @mixin link {
   font-family: Saudagar;
   font-style: normal;
