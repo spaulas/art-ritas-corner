@@ -32,17 +32,17 @@ const Category = ({
   images,
   blobs,
 }: CategoryProps) => {
+  console.log("----------");
+  const isTitleRight = titlePosition.includes("right");
   return (
-    <div
-      className={`category ${titlePosition.includes("right") ? "invert" : ""}`}
-    >
+    <div className={`category ${isTitleRight ? "invert" : ""}`}>
       <Title
         title={title}
         description={description}
         subCategory={subCategory}
         position={titlePosition as TitleProps["position"]}
       />
-      <Images images={images} />
+      <Images images={images} isOpenRight={isTitleRight} />
       <Flower
         id={flower.id}
         position={flower.position as FlowerProps["position"]}

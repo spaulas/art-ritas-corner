@@ -64,19 +64,6 @@
                     },
                     "price": 30,
                     "duration": 150
-                },
-                {
-                    "src": "nails04",
-                    "title": {
-                        "fr": "Ongles 04",
-                        "en": "Nails 04"
-                    },
-                    "description": {
-                        "fr": "Décrivez ici en petit détail en quoi il consiste",
-                        "en": "Describe here in small detail what it consists of"
-                    },
-                    "price": 40,
-                    "duration": 180
                 }
             ]
         },

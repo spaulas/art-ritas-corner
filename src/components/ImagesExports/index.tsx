@@ -1,7 +1,6 @@
 import nails01 from "assets/Nails/nails01.jpg";
 import nails02 from "assets/Nails/nails02.jpg";
 import nails03 from "assets/Nails/nails03.jpg";
-import nails04 from "assets/Nails/nails04.jpg";
 
 import mandala01 from "assets/Mandalas/mandala01.png";
 
@@ -20,7 +19,6 @@ export {
   nails01,
   nails02,
   nails03,
-  nails04,
   mandala01,
   abstract01,
   body01,

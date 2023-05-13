@@ -8,7 +8,6 @@ import {
   nails01,
   nails02,
   nails03,
-  nails04,
   mandala01,
   abstract01,
   body01,
@@ -27,6 +26,7 @@ export type Image = {
 
 type ImageProps = {
   images: Image[];
+  isOpenRight: boolean;
 };
 
 // TODO: remove after using images links!
@@ -34,7 +34,6 @@ const tempHelper: Record<string, string> = {
   nails01,
   nails02,
   nails03,
-  nails04,
   mandala01,
   abstract01,
   body01,
@@ -43,7 +42,7 @@ const tempHelper: Record<string, string> = {
   body04,
 };
 
-const Images = ({ images }: ImageProps) => {
+const Images = ({ images, isOpenRight }: ImageProps) => {
   const { language } = useContext(LanguageContext);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -53,29 +52,30 @@ const Images = ({ images }: ImageProps) => {
   const hoverImages = [...images].slice(0, IMAGES_VISIBLE_ON_HOVER);
   const clickImages = [...images].slice(IMAGES_VISIBLE_ON_HOVER, images.length);
 
-  console.log("images = ", images);
+  console.log("isOpenRight = ", isOpenRight);
 
   return (
     <div className="images-container">
-      <div className="hover-images" onClick={() => setIsOpen(true)}>
-        {hoverImages.map((image) => (
-          <div className="image-display">
-            <img
-              key={image.src}
-              src={tempHelper[image.src]}
-              alt={image.title[language]}
-            />
+      <div
+        className={`hover-images ${isOpenRight ? "open-right" : "open-left"}`}
+        onClick={() => setIsOpen(true)}
+      >
+        {hoverImages.map((image, index) => (
+          <div
+            key={image.src}
+            className="image-display"
+            style={{ zIndex: IMAGES_VISIBLE_ON_HOVER - index }}
+          >
+            <img src={tempHelper[image.src]} alt={image.title[language]} />
           </div>
         ))}
       </div>
       {clickImages && isOpen ? (
         <div className="click-images">
           {clickImages.map((image) => (
-            <img
-              key={image.src}
-              src={tempHelper[image.src]}
-              alt={image.title[language]}
-            />
+            <div key={image.src} className="image-display">
+              <img src={tempHelper[image.src]} alt={image.title[language]} />
+            </div>
           ))}
         </div>
       ) : null}
