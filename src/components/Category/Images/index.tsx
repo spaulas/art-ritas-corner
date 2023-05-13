@@ -53,6 +53,8 @@ const Images = ({ images }: ImageProps) => {
   const hoverImages = [...images].slice(0, IMAGES_VISIBLE_ON_HOVER);
   const clickImages = [...images].slice(IMAGES_VISIBLE_ON_HOVER, images.length);
 
+  console.log("images = ", images);
+
   return (
     <div className="images-container">
       <div className="hover-images" onClick={() => setIsOpen(true)}>

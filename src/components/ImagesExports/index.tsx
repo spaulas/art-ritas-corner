@@ -8,13 +8,13 @@ import mandala01 from "assets/Mandalas/mandala01.png";
 import abstract01 from "assets/Abstracts/abstract01.jpeg";
 
 import body01 from "assets/AquarelaBody/body01.jpg";
-import body02 from "assets/AquarelaBody/body02.jpeg";
-import body03 from "assets/AquarelaBody/body03.jpeg";
-import body04 from "assets/AquarelaBody/body04.jpeg";
+import body02 from "assets/AquarelaBody/body02.jpg";
+import body03 from "assets/AquarelaBody/body03.jpg";
+import body04 from "assets/AquarelaBody/body04.jpg";
 
-import body01_details01 from "assets/AquarelaBody/Body01Details/body01_details01.jpeg";
-import body01_details02 from "assets/AquarelaBody/Body01Details/body01_details02.jpeg";
-import body01_details03 from "assets/AquarelaBody/Body01Details/body01_details03.jpeg";
+import body01_details01 from "assets/AquarelaBody/Body01Details/body01_details01.jpg";
+import body01_details02 from "assets/AquarelaBody/Body01Details/body01_details02.jpg";
+import body01_details03 from "assets/AquarelaBody/Body01Details/body01_details03.jpg";
 
 export {
   nails01,

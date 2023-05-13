@@ -191,7 +191,7 @@
             ],
             "images": [
                 {
-                    "src": "body_01",
+                    "src": "body01",
                     "title": {
                         "fr": "Body 01",
                         "en": "Body 01"
@@ -203,7 +203,7 @@
                     "available": true
                 },
                 {
-                    "src": "body_02",
+                    "src": "body02",
                     "title": {
                         "fr": "Body 02",
                         "en": "Body 02"
@@ -215,7 +215,7 @@
                     "available": true
                 },
                 {
-                    "src": "body_03",
+                    "src": "body03",
                     "title": {
                         "fr": "Body 03",
                         "en": "Body 03"
@@ -227,7 +227,7 @@
                     "available": false
                 },
                 {
-                    "src": "body_04",
+                    "src": "body04",
                     "title": {
                         "fr": "Body 04",
                         "en": "Body 04"

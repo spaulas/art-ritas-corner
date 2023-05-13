@@ -28,17 +28,22 @@
   }
 
   &-top-right {
-    right: 0;
+    right: -64px;
+    top: 44px;
+  }
+
+  &-top-left {
+    left: -64px;
     top: 44px;
   }
 
   &-bottom-left {
-    left: 92px;
+    left: 0;
     bottom: 0;
   }
 
   &-bottom-right {
-    right: 0;
+    right: -32px;
     bottom: 0;
   }
 }
