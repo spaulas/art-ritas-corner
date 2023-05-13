@@ -5,8 +5,9 @@ import flower03 from "assets/Flowers/flower03.png";
 import flower04 from "assets/Flowers/flower04.png";
 import flower05 from "assets/Flowers/flower05.png";
 import flower06 from "assets/Flowers/flower06.png";
+import "./styles.scss";
 
-type FlowerProps = {
+export type FlowerProps = {
   id: number;
   position: "top-right" | "top-left" | "bottom-right" | "bottom-left";
 };

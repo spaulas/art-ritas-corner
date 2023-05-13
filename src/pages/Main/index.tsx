@@ -6,10 +6,9 @@ import Category from "components/Category";
 
 const Main = () => {
   const renderCategories = () => {
-    Object.values(data.categories).map((category) => (
-      <Category {...category} />
+    return Object.values(data.categories).map((category) => (
+      <Category key={category.id} {...category} />
     ));
-    return null;
   };
 
   return (

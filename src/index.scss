@@ -12,3 +12,18 @@ body {
   background: $white;
   min-width: 375px;
 }
+
+p {
+  @include subCategory;
+  margin: 0;
+}
+
+h1 {
+  @include title;
+  margin: 0;
+}
+
+h5 {
+  @include description;
+  margin: 0;
+}

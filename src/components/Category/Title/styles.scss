@@ -1,0 +1,26 @@
+@import "styles/imports.scss";
+
+.title-container {
+  h5 {
+    width: 100%;
+    max-width: 404px;
+  }
+
+  &.top-right {
+    margin-top: 136px;
+    margin-right: 132px;
+
+    p,
+    h1 {
+      text-align: right;
+    }
+
+    h5 {
+      margin-left: auto;
+    }
+  }
+
+  .top-left {
+    margin-top: 52px;
+  }
+}
