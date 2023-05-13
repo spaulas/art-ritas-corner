@@ -1,18 +1,12 @@
 import React from "react";
 import Title from "./Title";
 import Flower from "./Flower";
+import Images from "./Images";
 import type { Text } from "./Title";
 import type { FlowerProps } from "./Flower";
 import type { TitleProps } from "./Title";
+import type { Image as ImageType } from "./Images";
 import "./styles.scss";
-
-type Image = {
-  title: Text;
-  description: Text;
-  price?: number;
-  duration?: number;
-  src: string;
-};
 
 type Blob = {
   color: string;
@@ -25,7 +19,7 @@ type CategoryProps = {
   subCategory?: Text;
   titlePosition: string;
   flower: { id: number; position: string };
-  images: Image[];
+  images: ImageType[];
   blobs: Blob[];
 };
 
@@ -46,6 +40,7 @@ const Category = ({
         subCategory={subCategory}
         position={titlePosition as TitleProps["position"]}
       />
+      <Images images={images} />
       <Flower
         id={flower.id}
         position={flower.position as FlowerProps["position"]}
