@@ -1,0 +1,44 @@
+@import "styles/imports.scss";
+
+.flower {
+  position: absolute;
+
+  &-1 {
+    width: 359px;
+  }
+
+  &-2 {
+    width: 270px;
+  }
+
+  &-3 {
+    width: 316px;
+  }
+
+  &-4 {
+    width: 221px;
+  }
+
+  &-5 {
+    width: 309px;
+  }
+
+  &-6 {
+    width: 270px;
+  }
+
+  &-top-right {
+    right: 0;
+    top: 44px;
+  }
+
+  &-bottom-left {
+    left: 92px;
+    bottom: 0;
+  }
+
+  &-bottom-right {
+    right: 72px;
+    bottom: 0;
+  }
+}
