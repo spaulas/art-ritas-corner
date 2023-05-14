@@ -18,11 +18,13 @@
             "blobs": [
                 {
                     "color": "pink",
-                    "id": 1
+                    "id": 1,
+                    "angle": 75
                 },
                 {
                     "color": "blue",
-                    "id": 5
+                    "id": 5,
+                    "size": "small"
                 }
             ],
             "images": [
@@ -89,7 +91,8 @@
                 },
                 {
                     "color": "blue",
-                    "id": 7
+                    "id": 7,
+                    "angle": 75
                 }
             ],
             "images": [
