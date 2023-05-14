@@ -1,0 +1,42 @@
+.blobs-container {
+  z-index: -1;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 372px;
+  height: 664px;
+
+  img {
+    position: absolute;
+
+    &:first-child {
+      left: -400px;
+
+      &.angle-0 {
+        top: -100px;
+        left: -200px;
+      }
+    }
+
+    &:last-child {
+      bottom: -150px;
+      right: -100px;
+    }
+
+    &.angle-45 {
+      transform: rotate(45deg);
+    }
+
+    &.angle-75 {
+      transform: rotate(75deg);
+    }
+
+    &.angle-90 {
+      transform: rotate(90deg);
+    }
+
+    &.size-small {
+      max-width: 380px;
+    }
+  }
+}

@@ -9,12 +9,15 @@
   display: flex;
   justify-content: space-between;
 
+  @media only screen and (max-width: $desktop-width),
+    screen and (max-height: $big-desktop-height) {
+    padding: 104px 0;
+  }
+
   &.invert {
     flex-direction: row-reverse;
   }
 
-  @media only screen and (max-width: $desktop-width),
-    screen and (max-height: $big-desktop-height) {
-    padding: 104px 0;
+  .images-with-blob {
   }
 }
