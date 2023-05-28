@@ -4,6 +4,24 @@
   width: 372px;
   height: 664px;
 
+  @media only screen and (max-width: $desktop-width),
+    screen and (max-height: $ipad-vertical-height) {
+    width: 304px;
+    height: 544px;
+  }
+
+  @media only screen and (max-width: $ipad-horizontal-width),
+    screen and (max-height: $desktop-height) {
+    width: 247px;
+    height: 442px;
+  }
+
+  @media only screen and (max-width: $ipad-vertical-width),
+    screen and (max-height: $ipad-horizontal-height) {
+    width: 186px;
+    height: 332px;
+  }
+
   .hover-images {
     position: relative;
 
@@ -14,6 +32,24 @@
       transition: all 0.2s ease;
       -webkit-transition: all 0.2s ease;
       margin: 0;
+
+      @media only screen and (max-width: $desktop-width),
+        screen and (max-height: $ipad-vertical-height) {
+        width: 304px;
+        height: 544px;
+      }
+
+      @media only screen and (max-width: $ipad-horizontal-width),
+        screen and (max-height: $desktop-height) {
+        width: 247px;
+        height: 442px;
+      }
+
+      @media only screen and (max-width: $ipad-vertical-width),
+        screen and (max-height: $ipad-horizontal-height) {
+        width: 186px;
+        height: 332px;
+      }
 
       img {
         @include shadow-gray-medium;
@@ -35,14 +71,59 @@
         opacity: 1;
         &:nth-child(2) {
           margin-left: 32px;
+
+          @media only screen and (max-width: $desktop-width),
+            screen and (max-height: $ipad-vertical-height) {
+            margin-left: 28px;
+          }
+
+          @media only screen and (max-width: $ipad-horizontal-width),
+            screen and (max-height: $desktop-height) {
+            margin-left: 24px;
+          }
+
+          @media only screen and (max-width: $ipad-vertical-width),
+            screen and (max-height: $ipad-horizontal-height) {
+            margin-left: 20px;
+          }
         }
 
         &:nth-child(3) {
           margin-left: 64px;
+
+          @media only screen and (max-width: $desktop-width),
+            screen and (max-height: $ipad-vertical-height) {
+            margin-left: 56px;
+          }
+
+          @media only screen and (max-width: $ipad-horizontal-width),
+            screen and (max-height: $desktop-height) {
+            margin-left: 48px;
+          }
+
+          @media only screen and (max-width: $ipad-vertical-width),
+            screen and (max-height: $ipad-horizontal-height) {
+            margin-left: 40px;
+          }
         }
 
         &:nth-child(4) {
           margin-left: 96px;
+
+          @media only screen and (max-width: $desktop-width),
+            screen and (max-height: $ipad-vertical-height) {
+            margin-left: 84px;
+          }
+
+          @media only screen and (max-width: $ipad-horizontal-width),
+            screen and (max-height: $desktop-height) {
+            margin-left: 72px;
+          }
+
+          @media only screen and (max-width: $ipad-vertical-width),
+            screen and (max-height: $ipad-horizontal-height) {
+            margin-left: 60px;
+          }
         }
       }
     }
@@ -54,14 +135,64 @@
         opacity: 1;
         &:nth-child(2) {
           margin-left: -32px;
+
+          @media only screen and (max-width: $desktop-width),
+            screen and (max-height: $ipad-vertical-height) {
+            margin-left: -28px;
+          }
+
+          @media only screen and (max-width: $ipad-horizontal-width),
+            screen and (max-height: $desktop-height) {
+            margin-left: -24px;
+          }
+
+          @media only screen and (max-width: $ipad-vertical-width),
+            screen and (max-height: $ipad-horizontal-height) {
+            margin-left: -20px;
+          }
         }
 
         &:nth-child(3) {
           margin-left: -64px;
+
+          @media only screen and (max-width: $desktop-width),
+            screen and (max-height: $ipad-vertical-height) {
+            margin-left: -56px;
+          }
+
+          @media only screen and (max-width: $ipad-horizontal-width),
+            screen and (max-height: $desktop-height) {
+            margin-left: -48px;
+          }
+
+          @media only screen and (max-width: $ipad-vertical-width),
+            screen and (max-height: $ipad-horizontal-height) {
+            margin-left: -40px;
+          }
+
+          @media only screen and (max-width: $mobile-vertical-width),
+            screen and (max-height: $mobile-horizontal-height) {
+            margin-left: -32px;
+          }
         }
 
         &:nth-child(4) {
           margin-left: -96px;
+
+          @media only screen and (max-width: $desktop-width),
+            screen and (max-height: $ipad-vertical-height) {
+            margin-left: -84px;
+          }
+
+          @media only screen and (max-width: $ipad-horizontal-width),
+            screen and (max-height: $desktop-height) {
+            margin-left: -72px;
+          }
+
+          @media only screen and (max-width: $ipad-vertical-width),
+            screen and (max-height: $ipad-horizontal-height) {
+            margin-left: -60px;
+          }
         }
       }
     }

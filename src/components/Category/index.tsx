@@ -38,7 +38,7 @@ const Category = ({
         subCategory={subCategory}
         position={titlePosition as TitleProps["position"]}
       />
-      <div className="images-with-blobs">
+      <div className={`images-with-blobs ${titlePosition.includes("bottom") ? "bottom" : ""} `}>
         <Blobs blobs={blobs} />
         <Images images={images} isOpenRight={isTitleRight} />
       </div>

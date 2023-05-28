@@ -1,3 +1,5 @@
+@import "styles/imports.scss";
+
 .blobs-container {
   z-index: -1;
   position: absolute;
@@ -6,21 +8,88 @@
   width: 372px;
   height: 664px;
 
+  @media only screen and (max-width: $desktop-width),
+    screen and (max-height: $ipad-vertical-height) {
+    width: 304px;
+    height: 544px;
+  }
+
+  @media only screen and (max-width: $ipad-horizontal-width),
+    screen and (max-height: $desktop-height) {
+    width: 247px;
+    height: 442px;
+  }
+
+  @media only screen and (max-width: $ipad-vertical-width),
+    screen and (max-height: $ipad-horizontal-height) {
+    width: 186px;
+    height: 332px;
+  }
+
   img {
     position: absolute;
+
+    @media only screen and (max-width: $desktop-width),
+      screen and (max-height: $ipad-vertical-height) {
+      height: 66%;
+    }
+
+    @media only screen and (max-width: $ipad-horizontal-width),
+      screen and (max-height: $desktop-height) {
+      height: 60%;
+    }
+
+    @media only screen and (max-width: $ipad-vertical-width),
+      screen and (max-height: $ipad-horizontal-height) {
+      height: 54%;
+    }
 
     &:first-child {
       left: -400px;
 
+      @media only screen and (max-width: $ipad-horizontal-width),
+        screen and (max-height: $desktop-height) {
+        left: -280px;
+      }
+
+      @media only screen and (max-width: $ipad-vertical-width),
+        screen and (max-height: $ipad-horizontal-height) {
+        left: -130px;
+      }
+
       &.angle-0 {
         top: -100px;
         left: -200px;
+
+        @media only screen and (max-width: $ipad-horizontal-width),
+          screen and (max-height: $desktop-height) {
+          top: -100px;
+          left: -100px;
+        }
+
+        @media only screen and (max-width: $ipad-vertical-width),
+          screen and (max-height: $ipad-horizontal-height) {
+          top: -80px;
+          left: -80px;
+        }
       }
     }
 
     &:last-child {
       bottom: -150px;
       right: -100px;
+
+      @media only screen and (max-width: $ipad-horizontal-width),
+        screen and (max-height: $desktop-height) {
+        bottom: -130px;
+        right: -72px;
+      }
+
+      @media only screen and (max-width: $ipad-vertical-width),
+        screen and (max-height: $ipad-horizontal-height) {
+        bottom: -72px;
+        right: -72px;
+      }
     }
 
     &.angle-45 {
