@@ -40,7 +40,7 @@ const Category = ({
       />
       <div className={`images-with-blobs ${titlePosition.includes("bottom") ? "bottom" : ""} `}>
         <Blobs blobs={blobs} />
-        <Images images={images} isOpenRight={isTitleRight} />
+        <Images images={images} isHoverRight={isTitleRight} />
       </div>
       <Flower
         id={flower.id}

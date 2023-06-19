@@ -1,20 +1,9 @@
-import React, { useContext, useState } from "react";
-import { LanguageContext } from "components/LanguageProvider";
+import React, { useState } from "react";
 import type { Text } from "../Title";
 import "./styles.scss";
 
-// TODO: remove this after the images are stored correctly
-import {
-  nails01,
-  nails02,
-  nails03,
-  mandala01,
-  abstract01,
-  body01,
-  body02,
-  body03,
-  body04,
-} from "components/ImagesExports";
+import classNames from "classnames";
+import Card from "./Card";
 
 export type Image = {
   title: Text;
@@ -26,25 +15,10 @@ export type Image = {
 
 type ImageProps = {
   images: Image[];
-  isOpenRight: boolean;
+  isHoverRight: boolean;
 };
 
-// TODO: remove after using images links!
-const tempHelper: Record<string, string> = {
-  nails01,
-  nails02,
-  nails03,
-  mandala01,
-  abstract01,
-  body01,
-  body02,
-  body03,
-  body04,
-};
-
-const Images = ({ images, isOpenRight }: ImageProps) => {
-  const { language } = useContext(LanguageContext);
-
+const Images = ({ images, isHoverRight }: ImageProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const IMAGES_VISIBLE_ON_HOVER = 4;
@@ -52,30 +26,28 @@ const Images = ({ images, isOpenRight }: ImageProps) => {
   const hoverImages = [...images].slice(0, IMAGES_VISIBLE_ON_HOVER);
   const clickImages = [...images].slice(IMAGES_VISIBLE_ON_HOVER, images.length);
 
-  console.log("isOpenRight = ", isOpenRight);
+  const hoverImagesClassName = classNames("hover-images", {
+    "hover-right": !isOpen && isHoverRight,
+    "hover-left": !isOpen && !isHoverRight,
+    "open-right": isOpen && isHoverRight,
+    "open-left": isOpen && !isHoverRight
+  });
+  const clickImagesClassName = classNames("click-images", {
+    "open-right": isOpen && isHoverRight,
+    "open-left": isOpen && !isHoverRight
+  });
 
   return (
     <div className="images-container">
-      <div
-        className={`hover-images ${isOpenRight ? "open-right" : "open-left"}`}
-        onClick={() => setIsOpen(true)}
-      >
+      <div className={hoverImagesClassName} onClick={() => setIsOpen(true)}>
         {hoverImages.map((image, index) => (
-          <div
-            key={image.src}
-            className="image-display"
-            style={{ zIndex: IMAGES_VISIBLE_ON_HOVER - index }}
-          >
-            <img src={tempHelper[image.src]} alt={image.title[language]} />
-          </div>
+          <Card image={image} zIndex={IMAGES_VISIBLE_ON_HOVER - index} isOpen={isOpen} />
         ))}
       </div>
       {clickImages && isOpen ? (
-        <div className="click-images">
+        <div className={clickImagesClassName}>
           {clickImages.map((image) => (
-            <div key={image.src} className="image-display">
-              <img src={tempHelper[image.src]} alt={image.title[language]} />
-            </div>
+            <Card image={image} isOpen={isOpen}  />
           ))}
         </div>
       ) : null}

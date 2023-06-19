@@ -1,0 +1,60 @@
+@import "styles/imports.scss";
+
+.image-card {
+  position: absolute;
+  height: 664px;
+  width: 372px;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  margin: 0;
+
+  @media only screen and (max-width: $desktop-width),
+    screen and (max-height: $ipad-vertical-height) {
+    width: 304px;
+    height: 544px;
+  }
+
+  @media only screen and (max-width: $ipad-horizontal-width),
+    screen and (max-height: $desktop-height) {
+    width: 247px;
+    height: 442px;
+  }
+
+  @media only screen and (max-width: $ipad-vertical-width),
+    screen and (max-height: $ipad-horizontal-height) {
+    width: 186px;
+    height: 332px;
+  }
+
+  img {
+    @include shadow-gray-medium;
+    width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+    border-radius: 12px;
+  }
+
+  &:not(:first-child) {
+    opacity: 0;
+  }
+
+  .image-description {
+    height: auto;
+    max-height: 0;
+    padding: 0 16px;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    overflow: hidden;
+  }
+
+  &.opened {
+    cursor: pointer;
+
+    &:hover {
+      .image-description {
+        max-height: 400px;
+        padding: 16px;
+      }
+    }
+  }
+}
