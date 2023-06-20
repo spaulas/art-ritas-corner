@@ -1,0 +1,49 @@
+@import "styles/imports.scss";
+
+.image-description {
+  position: absolute;
+  bottom: 0;
+  padding: 16px;
+  background: rgba(22, 22, 22, 0.6);
+  mix-blend-mode: normal;
+  backdrop-filter: blur(6px);
+  border-radius: 0px 0px 12px 12px;
+  font-family: Saudagar;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  color: $white;
+
+  .title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 16px;
+    margin-top: 8px;
+  }
+
+  .price {
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  button {
+    cursor: pointer;
+    padding: 4px 16px;
+    background: none;
+    border: 1px solid $white;
+    border-radius: 16px;
+    color: $white;
+    font-family: Saudagar;
+    margin-top: 16px;
+
+    &:hover {
+        background-color: $white;
+        color: rgba(22, 22, 22, 0.6);;
+    }
+  }
+}

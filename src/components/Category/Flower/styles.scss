@@ -2,48 +2,157 @@
 
 .flower {
   position: absolute;
+  user-select: none;
+  -webkit-user-drag: none;
+  
 
   &-1 {
     width: 359px;
+
+    @media only screen and (max-width: $desktop-width),
+      screen and (max-height: $ipad-vertical-height) {
+      width: 294px;
+    }
+
+    @media only screen and (max-width: $ipad-horizontal-width),
+      screen and (max-height: $desktop-height) {
+      width: 239px;
+    }
+
+    @media only screen and (max-width: $ipad-vertical-width),
+      screen and (max-height: $ipad-horizontal-height) {
+      width: 180px;
+    }
   }
 
   &-2 {
     width: 270px;
+
+    @media only screen and (max-width: $desktop-width),
+      screen and (max-height: $ipad-vertical-height) {
+      width: 221px;
+    }
+
+    @media only screen and (max-width: $ipad-horizontal-width),
+      screen and (max-height: $desktop-height) {
+      width: 180px;
+    }
+
+    @media only screen and (max-width: $ipad-vertical-width),
+      screen and (max-height: $ipad-horizontal-height) {
+      width: 135px;
+    }
   }
 
   &-3 {
     width: 316px;
+
+    @media only screen and (max-width: $desktop-width),
+      screen and (max-height: $ipad-vertical-height) {
+      width: 259px;
+    }
+
+    @media only screen and (max-width: $ipad-horizontal-width),
+      screen and (max-height: $desktop-height) {
+      width: 210px;
+    }
+
+    @media only screen and (max-width: $ipad-vertical-width),
+      screen and (max-height: $ipad-horizontal-height) {
+      width: 130px;
+    }
   }
 
   &-4 {
     width: 221px;
+
+    @media only screen and (max-width: $desktop-width),
+      screen and (max-height: $ipad-vertical-height) {
+      width: 181px;
+    }
+
+    @media only screen and (max-width: $ipad-horizontal-width),
+      screen and (max-height: $desktop-height) {
+      width: 147px;
+    }
+
+    @media only screen and (max-width: $ipad-vertical-width),
+      screen and (max-height: $ipad-horizontal-height) {
+      width: 111px;
+    }
   }
 
   &-5 {
     width: 309px;
+
+    @media only screen and (max-width: $desktop-width),
+      screen and (max-height: $ipad-vertical-height) {
+      width: 253px;
+    }
+
+    @media only screen and (max-width: $ipad-horizontal-width),
+      screen and (max-height: $desktop-height) {
+      width: 206px;
+    }
+
+    @media only screen and (max-width: $ipad-vertical-width),
+      screen and (max-height: $ipad-horizontal-height) {
+      width: 155px;
+    }
   }
 
   &-6 {
     width: 270px;
+
+    @media only screen and (max-width: $desktop-width),
+      screen and (max-height: $ipad-vertical-height) {
+      width: 221px;
+    }
+
+    @media only screen and (max-width: $ipad-horizontal-width),
+      screen and (max-height: $desktop-height) {
+      width: 180px;
+    }
+
+    @media only screen and (max-width: $ipad-vertical-width),
+      screen and (max-height: $ipad-horizontal-height) {
+      width: 135px;
+    }
   }
 
   &-top-right {
     right: -64px;
     top: 44px;
+
+    @media only screen and (max-width: $mobile-vertical-width),
+      screen and (max-height: $ipad-horizontal-height) {
+      right: -48px;
+    }
   }
 
   &-top-left {
     left: -64px;
     top: 44px;
+
+    @media only screen and (max-width: $mobile-vertical-width),
+      screen and (max-height: $ipad-horizontal-height) {
+        left: -48px;
+    }
   }
 
   &-bottom-left {
     left: 0;
     bottom: 0;
+
   }
 
   &-bottom-right {
     right: -32px;
     bottom: 0;
+
+    @media only screen and (max-width: $mobile-vertical-width),
+      screen and (max-height: $ipad-horizontal-height) {
+        right: -8px;
+    }
   }
 }

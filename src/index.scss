@@ -11,6 +11,10 @@ body {
   margin: 0;
   background: $white;
   min-width: 375px;
+
+  #root {
+    overflow-x: hidden;
+  }
 }
 
 p {

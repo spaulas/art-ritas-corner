@@ -1,20 +1,9 @@
-import React, { useContext, useState } from "react";
-import { LanguageContext } from "components/LanguageProvider";
+import React, { useRef, useState, useEffect } from "react";
 import type { Text } from "../Title";
 import "./styles.scss";
 
-// TODO: remove this after the images are stored correctly
-import {
-  nails01,
-  nails02,
-  nails03,
-  mandala01,
-  abstract01,
-  body01,
-  body02,
-  body03,
-  body04,
-} from "components/ImagesExports";
+import classNames from "classnames";
+import Card from "./Card";
 
 export type Image = {
   title: Text;
@@ -26,59 +15,97 @@ export type Image = {
 
 type ImageProps = {
   images: Image[];
-  isOpenRight: boolean;
+  isHoverRight: boolean;
 };
 
-// TODO: remove after using images links!
-const tempHelper: Record<string, string> = {
-  nails01,
-  nails02,
-  nails03,
-  mandala01,
-  abstract01,
-  body01,
-  body02,
-  body03,
-  body04,
-};
-
-const Images = ({ images, isOpenRight }: ImageProps) => {
-  const { language } = useContext(LanguageContext);
-
+const Images = ({ images, isHoverRight }: ImageProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [marginLeft, setMarginLeft] = useState(0);
+
+  const isSliding = useRef(false);
+  const startX = useRef(0);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const IMAGES_VISIBLE_ON_HOVER = 4;
 
   const hoverImages = [...images].slice(0, IMAGES_VISIBLE_ON_HOVER);
-  const clickImages = [...images].slice(IMAGES_VISIBLE_ON_HOVER, images.length);
+  const currentImages = isOpen ? images : hoverImages;
 
-  console.log("isOpenRight = ", isOpenRight);
+  useEffect(() => {
+    const onScroll = () => setIsOpen(false);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+}, []);
+
+  const handleMouseDown = (e: any) => {
+    if (!isOpen) return;
+
+    isSliding.current = true;
+    startX.current = e.pageX + marginLeft / -3;
+  };
+
+  const handleOnMouseLeave = () => {
+    if (!isOpen) return;
+    isSliding.current = false;
+  };
+
+  const handleMouseUp = () => {
+    if (!isOpen) return;
+    isSliding.current = false;
+  };
+
+  const handleOnMouseMove = (e: any) => {
+    if (!isOpen || !isSliding.current) return;
+
+    e.preventDefault();
+
+    let _marginLeft = (e.pageX - startX.current) * 3;
+    if (_marginLeft > 0) {
+      _marginLeft = 0
+    } else if (
+      containerRef?.current &&
+      _marginLeft < containerRef.current.clientWidth / -2
+    ) {
+      _marginLeft = containerRef.current.clientWidth / -2
+    } 
+
+    setMarginLeft(_marginLeft)
+  };
+
+  const imagesClassName = classNames(
+    "images-slider",
+    `container-width-${currentImages.length}`,
+    {
+      "hover-right": !isOpen && isHoverRight,
+      "hover-left": !isOpen && !isHoverRight,
+      "open-right": isOpen && isHoverRight,
+      "open-left": isOpen && !isHoverRight,
+      active: isSliding.current,
+    }
+  );
 
   return (
-    <div className="images-container">
+    <div
+      className="images-container"
+      onMouseDown={handleMouseDown}
+      onMouseLeave={handleOnMouseLeave}
+      onMouseUp={handleMouseUp}
+      onMouseMove={handleOnMouseMove}
+    >
       <div
-        className={`hover-images ${isOpenRight ? "open-right" : "open-left"}`}
+        ref={containerRef}
+        className={imagesClassName}
         onClick={() => setIsOpen(true)}
+        style={{ marginLeft }}
       >
-        {hoverImages.map((image, index) => (
-          <div
-            key={image.src}
-            className="image-display"
-            style={{ zIndex: IMAGES_VISIBLE_ON_HOVER - index }}
-          >
-            <img src={tempHelper[image.src]} alt={image.title[language]} />
-          </div>
+        {currentImages.map((image, index) => (
+          <Card
+            image={image}
+            zIndex={IMAGES_VISIBLE_ON_HOVER - index}
+            isOpen={isOpen}
+          />
         ))}
       </div>
-      {clickImages && isOpen ? (
-        <div className="click-images">
-          {clickImages.map((image) => (
-            <div key={image.src} className="image-display">
-              <img src={tempHelper[image.src]} alt={image.title[language]} />
-            </div>
-          ))}
-        </div>
-      ) : null}
     </div>
   );
 };

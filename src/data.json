@@ -66,6 +66,45 @@
                     },
                     "price": 30,
                     "duration": 150
+                },
+                {
+                    "src": "nails01",
+                    "title": {
+                        "fr": "Ongles 04",
+                        "en": "Nails 04"
+                    },
+                    "description": {
+                        "fr": "Décrivez ici en petit détail en quoi il consiste",
+                        "en": "Describe here in small detail what it consists of"
+                    },
+                    "price": 40,
+                    "duration": 60
+                },
+                {
+                    "src": "nails02",
+                    "title": {
+                        "fr": "Ongles 05",
+                        "en": "Nails 05"
+                    },
+                    "description": {
+                        "fr": "Décrivez ici en petit détail en quoi il consiste",
+                        "en": "Describe here in small detail what it consists of"
+                    },
+                    "price": 50,
+                    "duration": 60
+                },
+                {
+                    "src": "nails03",
+                    "title": {
+                        "fr": "Ongles 06",
+                        "en": "Nails 06"
+                    },
+                    "description": {
+                        "fr": "Décrivez ici en petit détail en quoi il consiste",
+                        "en": "Describe here in small detail what it consists of"
+                    },
+                    "price": 60,
+                    "duration": 60
                 }
             ]
         },
