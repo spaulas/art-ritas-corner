@@ -2,6 +2,7 @@
 
 .title-container {
   h5 {
+    user-select: none;
     width: 100%;
     max-width: 404px;
 
@@ -31,6 +32,7 @@
   &.top-right {
     margin-top: 52px;
     margin-right: 132px;
+    user-select: none;
 
     @media only screen and (max-width: 1080px) {
       margin-top: 92px;
@@ -48,6 +50,7 @@
     margin-top: auto;
     margin-bottom: 52px;
     margin-right: 132px;
+    user-select: none;
 
     @media only screen and (max-width: 1080px) {
       margin-bottom: 92px;
@@ -65,6 +68,7 @@
     margin-top: auto;
     margin-bottom: 52px;
     margin-left: 132px;
+    user-select: none;
 
     @media only screen and (max-width: 1080px) {
       margin-bottom: 92px;
@@ -81,6 +85,7 @@
   &.top-left {
     margin-top: 52px;
     margin-left: 132px;
+    user-select: none;
 
     @media only screen and (max-width: 1080px) {
       margin-top: 92px;

@@ -2,6 +2,9 @@
 
 .flower {
   position: absolute;
+  user-select: none;
+  -webkit-user-drag: none;
+  
 
   &-1 {
     width: 359px;

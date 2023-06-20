@@ -32,6 +32,8 @@
     max-height: 100%;
     vertical-align: middle;
     border-radius: 12px;
+    user-select: none;
+    -webkit-user-drag: none;
   }
 
   &:not(:first-child) {
