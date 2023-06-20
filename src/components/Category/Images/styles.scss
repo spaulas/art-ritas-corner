@@ -22,8 +22,10 @@
     height: 332px;
   }
 
-  .hover-images {
+  .images-slider {
     position: relative;
+    height: 100%;
+    z-index: 2;
 
     &.hover-right:hover {
       cursor: pointer;
@@ -158,11 +160,11 @@
       }
     }
 
-    
-  }
-
-  .click-images {
-    position: relative;
+    @for $i from 1 through 100 {
+      &.container-width-#{$i} {
+        width: calc((304px + 32px) * ($i));
+      }
+    }
   }
 
   .open-right {
