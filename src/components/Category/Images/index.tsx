@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import type { Text } from "../Title";
 import "./styles.scss";
 
@@ -30,6 +30,12 @@ const Images = ({ images, isHoverRight }: ImageProps) => {
 
   const hoverImages = [...images].slice(0, IMAGES_VISIBLE_ON_HOVER);
   const currentImages = isOpen ? images : hoverImages;
+
+  useEffect(() => {
+    const onScroll = () => setIsOpen(false);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+}, []);
 
   const handleMouseDown = (e: any) => {
     if (!isOpen) return;
