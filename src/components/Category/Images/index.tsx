@@ -32,10 +32,13 @@ const Images = ({ images, isHoverRight }: ImageProps) => {
   const currentImages = isOpen ? images : hoverImages;
 
   useEffect(() => {
-    const onScroll = () => setIsOpen(false);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-}, []);
+    const onScroll = () => {
+      setIsOpen(false);
+      setMarginLeft(0);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const handleMouseDown = (e: any) => {
     if (!isOpen) return;
@@ -61,15 +64,15 @@ const Images = ({ images, isHoverRight }: ImageProps) => {
 
     let _marginLeft = (e.pageX - startX.current) * 3;
     if (_marginLeft > 0) {
-      _marginLeft = 0
+      _marginLeft = 0;
     } else if (
       containerRef?.current &&
       _marginLeft < containerRef.current.clientWidth / -2
     ) {
-      _marginLeft = containerRef.current.clientWidth / -2
-    } 
+      _marginLeft = containerRef.current.clientWidth / -2;
+    }
 
-    setMarginLeft(_marginLeft)
+    setMarginLeft(_marginLeft);
   };
 
   const imagesClassName = classNames(
