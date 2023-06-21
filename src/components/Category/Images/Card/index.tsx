@@ -33,13 +33,14 @@ const tempHelper: Record<string, string> = {
 type CardProps = {
   image: Image;
   isOpen: boolean;
+  isSliding: boolean;
   zIndex?: number;
 };
 
-const Card = ({ image, isOpen, zIndex = 1 }: CardProps) => {
+const Card = ({ image, isOpen, isSliding, zIndex = 1 }: CardProps) => {
   const { language } = useContext(LanguageContext);
 
-  const className = classNames("image-card", {opened: isOpen})
+  const className = classNames("image-card", { opened: isOpen && !isSliding });
 
   return (
     <div key={image.src} className={className} style={{ zIndex }}>

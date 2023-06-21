@@ -27,6 +27,8 @@ const Images = ({ images, isHoverRight }: ImageProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const IMAGES_VISIBLE_ON_HOVER = 4;
+  const SLIDING_LIMIT_OFFSET = 180;
+  const SLIDING_SPEED = 3;
 
   const hoverImages = [...images].slice(0, IMAGES_VISIBLE_ON_HOVER);
   const currentImages = isOpen ? images : hoverImages;
@@ -40,11 +42,38 @@ const Images = ({ images, isHoverRight }: ImageProps) => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const calculateSlidingDistance = (e: any): number => {
+    const _marginLeft = (e.pageX - startX.current) * SLIDING_SPEED;
+
+    const rightMaxSlide = containerRef.current
+      ? containerRef.current.clientWidth / -2 + SLIDING_LIMIT_OFFSET
+      : 0;
+    const leftMaxSlide = containerRef.current
+      ? (SLIDING_LIMIT_OFFSET / 3) * 2
+      : 0;
+
+    const isAtStart =
+      (isHoverRight && _marginLeft > 0) || (!isHoverRight && _marginLeft < 0);
+
+    const isAtEnd =
+      (isHoverRight && _marginLeft < rightMaxSlide) ||
+      (!isHoverRight && _marginLeft > leftMaxSlide);
+    if (isAtStart) {
+      return 0;
+    }
+
+    if (isAtEnd && containerRef.current) {
+      return isHoverRight ? rightMaxSlide : leftMaxSlide;
+    }
+
+    return _marginLeft;
+  };
+
   const handleMouseDown = (e: any) => {
     if (!isOpen) return;
 
     isSliding.current = true;
-    startX.current = e.pageX + marginLeft / -3;
+    startX.current = e.pageX + (marginLeft / SLIDING_SPEED) * -1;
   };
 
   const handleOnMouseLeave = () => {
@@ -61,16 +90,7 @@ const Images = ({ images, isHoverRight }: ImageProps) => {
     if (!isOpen || !isSliding.current) return;
 
     e.preventDefault();
-
-    let _marginLeft = (e.pageX - startX.current) * 3;
-    if (_marginLeft > 0) {
-      _marginLeft = 0;
-    } else if (
-      containerRef?.current &&
-      _marginLeft < containerRef.current.clientWidth / -2
-    ) {
-      _marginLeft = containerRef.current.clientWidth / -2;
-    }
+    const _marginLeft = calculateSlidingDistance(e);
 
     setMarginLeft(_marginLeft);
   };
@@ -79,11 +99,11 @@ const Images = ({ images, isHoverRight }: ImageProps) => {
     "images-slider",
     `container-width-${currentImages.length}`,
     {
-      "hover-right": !isOpen && isHoverRight,
-      "hover-left": !isOpen && !isHoverRight,
-      "open-right": isOpen && isHoverRight,
-      "open-left": isOpen && !isHoverRight,
-      active: isSliding.current,
+      "hover-right": !isOpen && isHoverRight && currentImages.length > 1,
+      "hover-left": !isOpen && !isHoverRight && currentImages.length > 1,
+      "open-right": isOpen && isHoverRight && currentImages.length > 1,
+      "open-left": isOpen && !isHoverRight && currentImages.length > 1,
+      active: isSliding.current && currentImages.length > 1,
     }
   );
 
@@ -105,7 +125,8 @@ const Images = ({ images, isHoverRight }: ImageProps) => {
           <Card
             image={image}
             zIndex={IMAGES_VISIBLE_ON_HOVER - index}
-            isOpen={isOpen}
+            isOpen={isOpen || currentImages.length === 1}
+            isSliding={isSliding.current}
           />
         ))}
       </div>
