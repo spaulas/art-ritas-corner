@@ -20,9 +20,9 @@ type ImageProps = {
 
 const Images = ({ images, isHoverRight }: ImageProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSliding, setIsSliding] = useState(false);
   const [marginLeft, setMarginLeft] = useState(0);
 
-  const isSliding = useRef(false);
   const startX = useRef(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -72,22 +72,22 @@ const Images = ({ images, isHoverRight }: ImageProps) => {
   const handleMouseDown = (e: any) => {
     if (!isOpen) return;
 
-    isSliding.current = true;
+    setIsSliding(true);
     startX.current = e.pageX + (marginLeft / SLIDING_SPEED) * -1;
   };
 
   const handleOnMouseLeave = () => {
     if (!isOpen) return;
-    isSliding.current = false;
+    setIsSliding(false);
   };
 
   const handleMouseUp = () => {
     if (!isOpen) return;
-    isSliding.current = false;
+    setIsSliding(false);
   };
 
   const handleOnMouseMove = (e: any) => {
-    if (!isOpen || !isSliding.current) return;
+    if (!isOpen || !isSliding) return;
 
     e.preventDefault();
     const _marginLeft = calculateSlidingDistance(e);
@@ -103,7 +103,7 @@ const Images = ({ images, isHoverRight }: ImageProps) => {
       "hover-left": !isOpen && !isHoverRight && currentImages.length > 1,
       "open-right": isOpen && isHoverRight && currentImages.length > 1,
       "open-left": isOpen && !isHoverRight && currentImages.length > 1,
-      active: isSliding.current && currentImages.length > 1,
+      active: isSliding && currentImages.length > 1,
     }
   );
 
@@ -126,7 +126,7 @@ const Images = ({ images, isHoverRight }: ImageProps) => {
             image={image}
             zIndex={IMAGES_VISIBLE_ON_HOVER - index}
             isOpen={isOpen || currentImages.length === 1}
-            isSliding={isSliding.current}
+            isSliding={isSliding}
           />
         ))}
       </div>
