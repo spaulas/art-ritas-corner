@@ -22,5 +22,7 @@ $mobile-vertical-height: 760px;
 
   @media only screen and (max-width: $mobile-vertical-width) {
     padding: 0 24px;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 }
