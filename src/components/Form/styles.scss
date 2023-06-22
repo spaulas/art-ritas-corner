@@ -17,13 +17,15 @@
     max-height: 664px;
     background-color: $pink;
     border-radius: 16px 16px 600px 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .form-title {
     color: $white;
     font-family: Saudagar;
     font-size: 48px;
-    text-align: center;
     margin: 16px 0;
   }
 }
