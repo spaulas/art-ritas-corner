@@ -1,0 +1,50 @@
+@import "styles/imports.scss";
+
+.input-container {
+  position: relative;
+  height: 40px;
+
+  input {
+    width: 100%;
+    height: 100%;
+    max-width: calc(336px - 32px);
+    color: $black;
+    border: none;
+    background-color: $white;
+    font-family: Saudagar;
+    font-size: 20px;
+    border-radius: 12px;
+    padding: 0 16px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus + label span,
+    &:valid + label span {
+      transform: translateY(-150%);
+      font-size: 14px;
+      left: 0;
+      color: $white;
+      padding-bottom: 2px;
+    }
+  }
+
+  label {
+    position: absolute;
+    bottom: 4px;
+    left: 16px;
+    pointer-events: none;
+    font-family: Saudagar;
+    color: $black;
+    font-size: 20px;
+    width: 100%;
+
+    span {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      transition: all 0.3s ease;
+    }
+  }
+}

@@ -1,8 +1,9 @@
 import React from "react";
 import Home from "components/Home";
 import data from "data.json";
-import "./styles.scss";
 import Category from "components/Category";
+import Form from "components/Form";
+import "./styles.scss";
 
 const Main = () => {
   const renderCategories = () => {
@@ -15,6 +16,7 @@ const Main = () => {
     <div className="main-page">
       <Home />
       {renderCategories()}
+      <Form />
     </div>
   );
 };
