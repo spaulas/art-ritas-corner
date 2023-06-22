@@ -1,0 +1,48 @@
+@import "styles/imports.scss";
+
+.form-page {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  padding: 150px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+
+  .form-box {
+    @include shadow-gray-medium;
+    width: 100%;
+    height: 100%;
+    max-width: 1109px;
+    max-height: 664px;
+    background-color: $pink;
+    border-radius: 16px 16px 600px 600px;
+  }
+
+  .form-title {
+    color: $white;
+    font-family: Saudagar;
+    font-size: 48px;
+    text-align: center;
+    margin: 16px 0;
+  }
+}
+
+.nails-form {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  gap: 56px;
+
+  .fields {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    width: 50%;
+    max-width: 336px;
+  }
+}
+
+.paintings-form {
+}
