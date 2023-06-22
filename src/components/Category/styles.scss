@@ -9,6 +9,10 @@
   display: flex;
   justify-content: space-between;
 
+  @media only screen and (max-width: $mobile-vertical-width) {
+    overflow: hidden;
+  }
+
   @media only screen and (max-width: $desktop-width),
     screen and (max-height: $big-desktop-height) {
     padding: 104px 0;
