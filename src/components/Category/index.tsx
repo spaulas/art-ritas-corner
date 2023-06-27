@@ -10,7 +10,7 @@ import type { Image as ImageType } from "./Images";
 import type { BlobType } from "./Blobs";
 import "./styles.scss";
 
-type CategoryProps = {
+export type CategoryProps = {
   title: Text;
   description: Text;
   subCategory?: Text;
@@ -38,7 +38,11 @@ const Category = ({
         subCategory={subCategory}
         position={titlePosition as TitleProps["position"]}
       />
-      <div className={`images-with-blobs ${titlePosition.includes("bottom") ? "bottom" : ""} `}>
+      <div
+        className={`images-with-blobs ${
+          titlePosition.includes("bottom") ? "bottom" : ""
+        } `}
+      >
         <Blobs blobs={blobs} />
         <Images images={images} isHoverRight={isTitleRight} />
       </div>

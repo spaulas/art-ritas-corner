@@ -72,11 +72,9 @@ const Input = ({ label, value, type, onUpdate }: InputProps) => {
           <span>{label}</span>
         </label>
       </div>
-      {
-        <span className={`input-error ${hasError ? "visible" : ""}`}>
-          * invalide
-        </span>
-      }
+      <span className={`input-error ${hasError ? "visible" : ""}`}>
+        * invalide
+      </span>
     </div>
   );
 };

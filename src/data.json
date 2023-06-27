@@ -272,5 +272,79 @@
   ],
   "profile": {
     "text": "Présente-toi, Rita! Rédigez une petite présentation sur pourquoi vous aimez peindre, quelles sont vos inspirations, ce que vous aimez le plus faire. Parlez peut-être un peu plus de votre travail d'ongles, je ne sais pas!"
+  },
+  "calendar": {
+    "schedules": {
+      "monday": {
+        "morning": {
+          "start": 9,
+          "end": 12
+        },
+        "afternoon": {
+          "start": 13,
+          "end": 18
+        }
+      },
+      "tuesday": {
+        "morning": {
+          "start": 9,
+          "end": 12
+        },
+        "afternoon": {
+          "start": 13,
+          "end": 18
+        }
+      },
+      "wednesday": {
+        "morning": {
+          "start": 9,
+          "end": 12
+        },
+        "afternoon": {
+          "start": 13,
+          "end": 18
+        }
+      },
+      "thursday": {
+        "morning": {
+          "start": 9,
+          "end": 12
+        },
+        "afternoon": {
+          "start": 13,
+          "end": 18
+        }
+      },
+      "friday": {
+        "morning": {
+          "start": 9,
+          "end": 12
+        },
+        "afternoon": {
+          "start": 13,
+          "end": 18
+        }
+      },
+      "saturday": {
+        "morning": {
+          "start": 9,
+          "end": 12
+        },
+        "afternoon": {
+          "start": 13,
+          "end": 18
+        }
+      },
+      "sunday": {
+        "morning": {
+          "start": 9,
+          "end": 12
+        },
+        "afternoon": {
+          "start": 13,
+          "end": 18
+        }
+      }
+    }
   }
 }
