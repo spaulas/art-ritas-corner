@@ -1,8 +1,20 @@
 import React from "react";
 import Input from "components/common/Input";
 import "./styles.scss";
+import {
+  BasicFormFields,
+  NailsFormFields,
+  UpdateBasicFieldsFunction,
+  UpdateNailsFieldsFunction,
+} from "context/FormProvider";
 
-const NailsForm = () => {
+type NailsFormProps = {
+  fields: BasicFormFields & NailsFormFields;
+  updateBasicFields: UpdateBasicFieldsFunction;
+  updateNailsFields: UpdateNailsFieldsFunction;
+};
+
+const NailsForm = (props: NailsFormProps) => {
   return (
     <div className="nails-form">
       <div className="fields">
