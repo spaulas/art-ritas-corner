@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/art-ritas-corner/static/css/main.6781e719.css",
-    "main.js": "/art-ritas-corner/static/js/main.eb19510d.js",
+    "main.css": "/art-ritas-corner/static/css/main.0f79ca7a.css",
+    "main.js": "/art-ritas-corner/static/js/main.5d1f512e.js",
     "static/media/mandala01.png": "/art-ritas-corner/static/media/mandala01.da01f8d779e4c6a7e341.png",
     "static/media/body01_details01.jpg": "/art-ritas-corner/static/media/body01_details01.5668b89275fe4cf96a18.jpg",
     "static/media/body01_details03.jpg": "/art-ritas-corner/static/media/body01_details03.23dc28ddc133e89bb638.jpg",
@@ -11,6 +11,7 @@
     "static/media/branch.png": "/art-ritas-corner/static/media/branch.bca08d7191c067d10a01.png",
     "static/media/body01_details02.jpg": "/art-ritas-corner/static/media/body01_details02.e14fd7b8b2550d3611e4.jpg",
     "static/media/body03.jpg": "/art-ritas-corner/static/media/body03.68dd1f34691ad10ed4b3.jpg",
+    "static/media/profile.jpeg": "/art-ritas-corner/static/media/profile.89ac9650be8aef086793.jpeg",
     "static/media/body01.jpg": "/art-ritas-corner/static/media/body01.8d2a6db990177c3e25d9.jpg",
     "static/media/nails03.jpg": "/art-ritas-corner/static/media/nails03.38454cf60b74c3b11305.jpg",
     "static/media/flower05.png": "/art-ritas-corner/static/media/flower05.0d3cddfc66784e4bf66a.png",
@@ -37,11 +38,11 @@
     "static/media/blob_cream_12.png": "/art-ritas-corner/static/media/blob_cream_12.6696b3c2881d068b449f.png",
     "static/media/blob_cream_05.png": "/art-ritas-corner/static/media/blob_cream_05.5f84023b3b8c42c9be26.png",
     "index.html": "/art-ritas-corner/index.html",
-    "main.6781e719.css.map": "/art-ritas-corner/static/css/main.6781e719.css.map",
-    "main.eb19510d.js.map": "/art-ritas-corner/static/js/main.eb19510d.js.map"
+    "main.0f79ca7a.css.map": "/art-ritas-corner/static/css/main.0f79ca7a.css.map",
+    "main.5d1f512e.js.map": "/art-ritas-corner/static/js/main.5d1f512e.js.map"
   },
   "entrypoints": [
-    "static/css/main.6781e719.css",
-    "static/js/main.eb19510d.js"
+    "static/css/main.0f79ca7a.css",
+    "static/js/main.5d1f512e.js"
   ]
 }
