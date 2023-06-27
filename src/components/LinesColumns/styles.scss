@@ -1,0 +1,23 @@
+@import "styles/imports.scss";
+
+.lines-columns-container {
+  display: flex;
+  width: 100%;
+  height: calc(200vh - 160px);
+  justify-content: space-between;
+  max-width: 1140px;
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+
+  .lines-column {
+    display: flex;
+    gap: 16.5px;
+
+    .line {
+        height: 100%;
+        width: 1px;
+        background-color: $pink;
+    }
+  }
+}

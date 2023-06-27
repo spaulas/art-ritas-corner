@@ -5,6 +5,7 @@ import Category from "components/Category";
 import Form from "components/Form";
 import About from "components/About";
 import "./styles.scss";
+import { LinesColumns } from "components/LinesColumns";
 
 const Main = () => {
   const renderCategories = () => {
@@ -19,6 +20,7 @@ const Main = () => {
       {renderCategories()}
       <Form />
       <About profileText={data.profile.text} />
+      <LinesColumns />
     </div>
   );
 };

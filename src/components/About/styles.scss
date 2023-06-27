@@ -26,6 +26,7 @@
     justify-content: space-between;
 
     .about-flowers {
+      z-index: 1;
       &:first-child {
         width: 270px;
         height: 382px;
@@ -41,6 +42,7 @@
   .about-bottom {
     position: absolute;
     bottom: 0;
+    z-index: 1;
 
     img {
       margin-bottom: -4px;
