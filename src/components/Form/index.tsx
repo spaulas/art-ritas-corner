@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import NailsForm from "./NailsForm";
 import PaintingForm from "./PaintingForm";
-import "./styles.scss";
 import Button from "components/common/Button";
+import "./styles.scss";
 
 const ContactForm = () => {
   const [currentForm, setCurrentForm] = useState("nails");

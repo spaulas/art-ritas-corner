@@ -1,273 +1,276 @@
 {
-    "categories": [
+  "categories": [
+    {
+      "id": "nailArt",
+      "title": {
+        "fr": "Artiste d'ongles",
+        "en": "Nail art"
+      },
+      "description": {
+        "fr": "Divers services de mannucure effectués à domicile",
+        "en": "Various manicure services performed at home"
+      },
+      "titlePosition": "top-right",
+      "flower": {
+        "id": 1,
+        "position": "bottom-right"
+      },
+      "blobs": [
         {
-            "id": "nailArt",
-            "title": {
-                "fr": "Artiste d'ongles",
-                "en": "Nail art"
-            },
-            "description": {
-                "fr": "Divers services de mannucure effectués à domicile",
-                "en": "Various manicure services performed at home"
-            },
-            "titlePosition": "top-right",
-            "flower": {
-                "id": 1,
-                "position": "bottom-right"
-            },
-            "blobs": [
-                {
-                    "color": "pink",
-                    "id": 1,
-                    "angle": 75
-                },
-                {
-                    "color": "blue",
-                    "id": 5,
-                    "size": "small"
-                }
-            ],
-            "images": [
-                {
-                    "src": "nails01",
-                    "title": {
-                        "fr": "Ongles 01",
-                        "en": "Nails 01"
-                    },
-                    "description": {
-                        "fr": "Décrivez ici en petit détail en quoi il consiste",
-                        "en": "Describe here in small detail what it consists of"
-                    },
-                    "price": 10,
-                    "duration": 60
-                },
-                {
-                    "src": "nails02",
-                    "title": {
-                        "fr": "Ongles 02",
-                        "en": "Nails 02"
-                    },
-                    "description": {
-                        "fr": "Décrivez ici en petit détail en quoi il consiste",
-                        "en": "Describe here in small detail what it consists of"
-                    },
-                    "price": 20,
-                    "duration": 120
-                },
-                {
-                    "src": "nails03",
-                    "title": {
-                        "fr": "Ongles 03",
-                        "en": "Nails 03"
-                    },
-                    "description": {
-                        "fr": "Décrivez ici en petit détail en quoi il consiste",
-                        "en": "Describe here in small detail what it consists of"
-                    },
-                    "price": 30,
-                    "duration": 150
-                },
-                {
-                    "src": "nails01",
-                    "title": {
-                        "fr": "Ongles 04",
-                        "en": "Nails 04"
-                    },
-                    "description": {
-                        "fr": "Décrivez ici en petit détail en quoi il consiste",
-                        "en": "Describe here in small detail what it consists of"
-                    },
-                    "price": 40,
-                    "duration": 60
-                },
-                {
-                    "src": "nails02",
-                    "title": {
-                        "fr": "Ongles 05",
-                        "en": "Nails 05"
-                    },
-                    "description": {
-                        "fr": "Décrivez ici en petit détail en quoi il consiste",
-                        "en": "Describe here in small detail what it consists of"
-                    },
-                    "price": 50,
-                    "duration": 60
-                },
-                {
-                    "src": "nails03",
-                    "title": {
-                        "fr": "Ongles 06",
-                        "en": "Nails 06"
-                    },
-                    "description": {
-                        "fr": "Décrivez ici en petit détail en quoi il consiste",
-                        "en": "Describe here in small detail what it consists of"
-                    },
-                    "price": 60,
-                    "duration": 60
-                }
-            ]
+          "color": "pink",
+          "id": 1,
+          "angle": 75
         },
         {
-            "id": "mandala",
-            "title": {
-                "fr": "Mandalas",
-                "en": "Mandalas"
-            },
-            "description": {
-                "fr": "”Des mandalas colorés et variés, réalisés en numérique ou sur toile”",
-                "en": "”Colorful and varied mandalas, made digitally or on canvas”"
-            },
-            "titlePosition": "top-left",
-            "flower": {
-                "id": 4,
-                "position": "bottom-left"
-            },
-            "blobs": [
-                {
-                    "color": "cream",
-                    "id": 9
-                },
-                {
-                    "color": "blue",
-                    "id": 7,
-                    "angle": 75
-                }
-            ],
-            "images": [
-                {
-                    "src": "mandala01",
-                    "title": {
-                        "fr": "Mandala 01",
-                        "en": "Mandala 01"
-                    },
-                    "description": {
-                        "fr": "Décrivez ici en petit détail en quoi il consiste",
-                        "en": "Describe here in small detail what it consists of"
-                    },
-                    "available": true
-                }
-            ]
-        },
-        {
-            "id": "abstract",
-            "title": {
-                "fr": "Peintures abstraites",
-                "en": "Abstract paitings"
-            },
-            "description": {
-                "fr": "Peintures réalisées avec une technique qui pourrait être accentuée",
-                "en": "Paintings made with a technique that could be accentuated"
-            },
-            "titlePosition": "bottom-right",
-            "flower": {
-                "id": 3,
-                "position": "top-right"
-            },
-            "blobs": [
-                {
-                    "color": "cream",
-                    "id": 6
-                },
-                {
-                    "color": "pink",
-                    "id": 11
-                }
-            ],
-            "images": [
-                {
-                    "src": "abstract01",
-                    "title": {
-                        "fr": "Abstract 01",
-                        "en": "Abstract 01"
-                    },
-                    "description": {
-                        "fr": "Décrivez ici en petit détail en quoi il consiste",
-                        "en": "Describe here in small detail what it consists of"
-                    },
-                    "available": true
-                }
-            ]
-        },
-        {
-            "id": "bodyAquarela",
-            "title": {
-                "fr": "Corporelles",
-                "en": "Body"
-            },
-            "description": {
-                "fr": "Peintures sensuelles du corps de la femme, par là, je veux dire mon corps, oui, je suis sexy comme de la merde.",
-                "en": "Sensual female body paintings, by that I mean my body, yes I'm sexy as fuck."
-            },
-            "titlePosition": "top-left",
-            "subCategory": {
-                "fr": "Aquarela",
-                "en": "Aquarella"
-            },
-            "flower": {
-                "id": 5,
-                "position": "bottom-left"
-            },
-            "blobs": [
-                {
-                    "color": "blue",
-                    "id": 7
-                },
-                {
-                    "color": "cream",
-                    "id": 4
-                }
-            ],
-            "images": [
-                {
-                    "src": "body01",
-                    "title": {
-                        "fr": "Body 01",
-                        "en": "Body 01"
-                    },
-                    "description": {
-                        "fr": "Décrivez ici en petit détail en quoi il consiste",
-                        "en": "Describe here in small detail what it consists of"
-                    },
-                    "available": true
-                },
-                {
-                    "src": "body02",
-                    "title": {
-                        "fr": "Body 02",
-                        "en": "Body 02"
-                    },
-                    "description": {
-                        "fr": "Décrivez ici en petit détail en quoi il consiste",
-                        "en": "Describe here in small detail what it consists of"
-                    },
-                    "available": true
-                },
-                {
-                    "src": "body03",
-                    "title": {
-                        "fr": "Body 03",
-                        "en": "Body 03"
-                    },
-                    "description": {
-                        "fr": "Décrivez ici en petit détail en quoi il consiste",
-                        "en": "Describe here in small detail what it consists of"
-                    },
-                    "available": false
-                },
-                {
-                    "src": "body04",
-                    "title": {
-                        "fr": "Body 04",
-                        "en": "Body 04"
-                    },
-                    "description": {
-                        "fr": "Décrivez ici en petit détail en quoi il consiste",
-                        "en": "Describe here in small detail what it consists of"
-                    },
-                    "available": true
-                }
-            ]
+          "color": "blue",
+          "id": 5,
+          "size": "small"
         }
-    ]
+      ],
+      "images": [
+        {
+          "src": "nails01",
+          "title": {
+            "fr": "Ongles 01",
+            "en": "Nails 01"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "price": 10,
+          "duration": 60
+        },
+        {
+          "src": "nails02",
+          "title": {
+            "fr": "Ongles 02",
+            "en": "Nails 02"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "price": 20,
+          "duration": 120
+        },
+        {
+          "src": "nails03",
+          "title": {
+            "fr": "Ongles 03",
+            "en": "Nails 03"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "price": 30,
+          "duration": 150
+        },
+        {
+          "src": "nails01",
+          "title": {
+            "fr": "Ongles 04",
+            "en": "Nails 04"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "price": 40,
+          "duration": 60
+        },
+        {
+          "src": "nails02",
+          "title": {
+            "fr": "Ongles 05",
+            "en": "Nails 05"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "price": 50,
+          "duration": 60
+        },
+        {
+          "src": "nails03",
+          "title": {
+            "fr": "Ongles 06",
+            "en": "Nails 06"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "price": 60,
+          "duration": 60
+        }
+      ]
+    },
+    {
+      "id": "mandala",
+      "title": {
+        "fr": "Mandalas",
+        "en": "Mandalas"
+      },
+      "description": {
+        "fr": "”Des mandalas colorés et variés, réalisés en numérique ou sur toile”",
+        "en": "”Colorful and varied mandalas, made digitally or on canvas”"
+      },
+      "titlePosition": "top-left",
+      "flower": {
+        "id": 4,
+        "position": "bottom-left"
+      },
+      "blobs": [
+        {
+          "color": "cream",
+          "id": 9
+        },
+        {
+          "color": "blue",
+          "id": 7,
+          "angle": 75
+        }
+      ],
+      "images": [
+        {
+          "src": "mandala01",
+          "title": {
+            "fr": "Mandala 01",
+            "en": "Mandala 01"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "abstract",
+      "title": {
+        "fr": "Peintures abstraites",
+        "en": "Abstract paitings"
+      },
+      "description": {
+        "fr": "Peintures réalisées avec une technique qui pourrait être accentuée",
+        "en": "Paintings made with a technique that could be accentuated"
+      },
+      "titlePosition": "bottom-right",
+      "flower": {
+        "id": 3,
+        "position": "top-right"
+      },
+      "blobs": [
+        {
+          "color": "cream",
+          "id": 6
+        },
+        {
+          "color": "pink",
+          "id": 11
+        }
+      ],
+      "images": [
+        {
+          "src": "abstract01",
+          "title": {
+            "fr": "Abstract 01",
+            "en": "Abstract 01"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "bodyAquarela",
+      "title": {
+        "fr": "Corporelles",
+        "en": "Body"
+      },
+      "description": {
+        "fr": "Peintures sensuelles du corps de la femme, par là, je veux dire mon corps, oui, je suis sexy comme de la merde.",
+        "en": "Sensual female body paintings, by that I mean my body, yes I'm sexy as fuck."
+      },
+      "titlePosition": "top-left",
+      "subCategory": {
+        "fr": "Aquarela",
+        "en": "Aquarella"
+      },
+      "flower": {
+        "id": 5,
+        "position": "bottom-left"
+      },
+      "blobs": [
+        {
+          "color": "blue",
+          "id": 7
+        },
+        {
+          "color": "cream",
+          "id": 4
+        }
+      ],
+      "images": [
+        {
+          "src": "body01",
+          "title": {
+            "fr": "Body 01",
+            "en": "Body 01"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "available": true
+        },
+        {
+          "src": "body02",
+          "title": {
+            "fr": "Body 02",
+            "en": "Body 02"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "available": true
+        },
+        {
+          "src": "body03",
+          "title": {
+            "fr": "Body 03",
+            "en": "Body 03"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "available": false
+        },
+        {
+          "src": "body04",
+          "title": {
+            "fr": "Body 04",
+            "en": "Body 04"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "available": true
+        }
+      ]
+    }
+  ],
+  "profile": {
+    "text": "Présente-toi, Rita! Rédigez une petite présentation sur pourquoi vous aimez peindre, quelles sont vos inspirations, ce que vous aimez le plus faire. Parlez peut-être un peu plus de votre travail d'ongles, je ne sais pas!"
+  }
 }

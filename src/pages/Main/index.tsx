@@ -3,6 +3,7 @@ import Home from "components/Home";
 import data from "data.json";
 import Category from "components/Category";
 import Form from "components/Form";
+import About from "components/About";
 import "./styles.scss";
 
 const Main = () => {
@@ -17,6 +18,7 @@ const Main = () => {
       <Home />
       {renderCategories()}
       <Form />
+      <About profileText={data.profile.text} />
     </div>
   );
 };
