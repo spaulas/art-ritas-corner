@@ -1,0 +1,54 @@
+@import "styles/imports.scss";
+
+.profile-pic {
+  @include shadow-gray-medium;
+  width: 580px;
+  height: 580px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid $pink;
+  position: absolute;
+
+  .overlay {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(22, 22, 22, 0.6);
+    mix-blend-mode: normal;
+    backdrop-filter: blur(6px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+  }
+
+  .profile-text {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    color: $white;
+    font-family: Saudagar;
+    font-size: 24px;
+    text-align: center;
+    padding: 24px;
+  }
+
+  img {
+    width: 580px;
+    height: 580px;
+  }
+
+  &:hover {
+    .overlay {
+      opacity: 1;
+    }
+
+    .profile-text {
+      opacity: 1;
+    }
+  }
+}
