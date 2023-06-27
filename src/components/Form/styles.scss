@@ -8,7 +8,25 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  z-index: 2;
+
+  .form-blobs {
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+
+    .form-blob-cream {
+      position: absolute;
+      transform: rotate(148deg);
+      left: -140px;
+      top: -40px;
+    }
+
+    .form-blob-blue {
+      position: absolute;
+      right: -36px;
+      top: -100px;
+    }
+  }
 
   .form-box {
     @include shadow-gray-medium;
@@ -20,6 +38,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 2;
   }
 
   .form-title {

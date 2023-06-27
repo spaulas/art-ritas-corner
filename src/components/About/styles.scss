@@ -11,6 +11,26 @@
   flex-direction: row;
   justify-content: center;
 
+  .about-blobs {
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+
+    .about-blob-cream {
+      position: absolute;
+      transform: rotate(72deg);
+      right: -220px;
+      top: -150px;
+    }
+
+    .about-blob-blue {
+      position: absolute;
+      left: -156px;
+      top: -100px;
+      transform: rotate(-16deg);
+    }
+  }
+
   .profile-pic {
     z-index: 2;
   }
