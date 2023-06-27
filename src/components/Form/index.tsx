@@ -1,21 +1,41 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import NailsForm from "./NailsForm";
 import PaintingForm from "./PaintingForm";
 import Button from "components/common/Button";
 import blobBlue03 from "assets/Blobs/blob_blue_03.png";
 import blobCream09 from "assets/Blobs/blob_cream_09.png";
 import "./styles.scss";
+import { FormContext } from "context/FormProvider";
 
 const ContactForm = () => {
-  const [currentForm, setCurrentForm] = useState("nails");
+  const {
+    basicFields,
+    nailsFields,
+    paintingsFields,
+    updateBasicFields,
+    updateNailsFields,
+    updatePaintingsFields,
+  } = useContext(FormContext);
 
   const renderForm = () => {
-    switch (currentForm) {
-      case "paitings":
-        return <PaintingForm />;
+    switch (basicFields.type) {
+      case "paintings":
+        return (
+          <PaintingForm
+            fields={{ ...basicFields, ...paintingsFields }}
+            updateBasicFields={updateBasicFields}
+            updatePaintingsFields={updatePaintingsFields}
+          />
+        );
       case "nails":
       default:
-        return <NailsForm />;
+        return (
+          <NailsForm
+            fields={{ ...basicFields, ...nailsFields }}
+            updateBasicFields={updateBasicFields}
+            updateNailsFields={updateNailsFields}
+          />
+        );
     }
   };
 
