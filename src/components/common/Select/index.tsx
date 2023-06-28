@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./styles.scss";
 
 export type Option = {
   label: string;
   value: string;
+  isDisabled?: boolean;
 };
 
 type SelectProps = {
@@ -23,33 +24,56 @@ const Select = ({
 }: SelectProps) => {
   const [hasError, setHasError] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
 
-  const handleOnSelect = (newValue: string) => {
-    console.log('handle on select! = ', newValue)
-    onUpdate(newValue);
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (menuRef.current?.contains(e.target as Node)) return;
+      setIsOpen(false);
+    };
+
+    document.addEventListener("mouseup", handleClickOutside);
+    return () => {
+      document.removeEventListener("mouseup", handleClickOutside);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const handleOnSelect = (_value: string, _isDisabled?: boolean) => {
+    if (isDisabled) return;
+
+    onUpdate(_value);
     setIsOpen(false);
     setHasError(false);
   };
 
-  // TODO: handle click outside
+  const getLabelFromValue = () => {
+    const currentOption = options.find(({ value: _value }) => _value === value);
+    return currentOption?.label;
+  };
 
   return (
     <div
       className={`dropdown-form-field ${isDisabled ? "disabled" : ""}`}
-      onClick={() => setIsOpen(!isOpen && !isDisabled)}
+      ref={menuRef}
     >
-      <div className="dropdown-container">
+      <div
+        className="dropdown-container"
+        onClick={() => !isDisabled && setIsOpen(!isOpen)}
+      >
         <div className={`dropdown-input ${isOpen || value ? "focus" : ""}`} />
         <label>
           <span>{label}</span>
-          <span className="label-value">{value}</span>
+          <span className="label-value">{getLabelFromValue()}</span>
         </label>
       </div>
       <div className={`dropdown-content ${isOpen ? "focus" : ""}`}>
-        {options.map(({ label, value: _value }) => (
+        {options.map(({ label, value: _value, isDisabled: _isDisabled }) => (
           <div
-            className={`dropdown-option ${value === _value ? "active" : ""}`}
-            onClick={() => handleOnSelect(_value)}
+            className={`dropdown-option ${value === _value ? "active" : ""} ${
+              _isDisabled ? "disabled" : ""
+            }`}
+            onClick={() => handleOnSelect(_value, _isDisabled)}
           >
             {label}
           </div>

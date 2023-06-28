@@ -20,30 +20,21 @@ export type PaintingsFormFields = {
 };
 
 export type UpdateBasicFieldsFunction = (
-  key: keyof BasicFormFields,
-  value: string | "nails" | "paintings"
+  newValues: Partial<BasicFormFields>
 ) => void;
 
 export type UpdateNailsFieldsFunction = (
-  key: keyof NailsFormFields,
-  value: string
+  newValues: Partial<NailsFormFields>
 ) => void;
 
 export type UpdatePaintingsFieldsFunction = (
-  key: keyof PaintingsFormFields,
-  value: string
+  newValues: Partial<PaintingsFormFields>
 ) => void;
 
 export const FormContext = createContext({
-  updateBasicFields: (
-    _key: keyof BasicFormFields,
-    _value: string | "nails" | "paintings"
-  ) => {},
-  updateNailsFields: (_key: keyof NailsFormFields, _value: string) => {},
-  updatePaintingsFields: (
-    _key: keyof PaintingsFormFields,
-    _value: string
-  ) => {},
+  updateBasicFields: (_newValues: Partial<BasicFormFields>) => {},
+  updateNailsFields: (_newValues: Partial<NailsFormFields>) => {},
+  updatePaintingsFields: (_newValues: Partial<PaintingsFormFields>) => {},
   basicFields: {
     name: "",
     email: "",
@@ -82,22 +73,16 @@ function FormProvider({ children }: PropsWithChildren<unknown>) {
     painting: "",
   });
 
-  const updateBasicFields = (
-    key: keyof BasicFormFields,
-    value: string | "nails" | "paintings"
-  ) => {
-    setBasicFields({ ...basicFields, [key]: value });
+  const updateBasicFields = (newValues: Partial<BasicFormFields>) => {
+    setBasicFields({ ...basicFields, ...newValues });
   };
 
-  const updateNailsFields = (key: keyof NailsFormFields, value: string) => {
-    setNailsFields({ ...nailsFields, [key]: value });
+  const updateNailsFields = (newValues: Partial<NailsFormFields>) => {
+    setNailsFields({ ...nailsFields, ...newValues });
   };
 
-  const updatePaintingsFields = (
-    key: keyof PaintingsFormFields,
-    value: string
-  ) => {
-    setPaintingsFields({ ...paintingsFields, [key]: value });
+  const updatePaintingsFields = (newValues: Partial<PaintingsFormFields>) => {
+    setPaintingsFields({ ...paintingsFields, ...newValues });
   };
 
   return (
