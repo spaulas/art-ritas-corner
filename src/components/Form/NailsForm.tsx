@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState, useRef } from "react";
 import Input from "components/common/Input";
 import Select, { type Option } from "components/common/Select";
 import "./styles.scss";
-import {
+import type {
   BasicFormFields,
   NailsFormFields,
   UpdateBasicFieldsFunction,
@@ -11,6 +11,7 @@ import {
 import data from "data.json";
 import { LanguageContext } from "components/LanguageProvider";
 import { CategoryProps } from "components/Category";
+import Calendar from "react-calendar";
 
 type NailsFormProps = {
   fields: BasicFormFields & NailsFormFields;
@@ -64,9 +65,8 @@ const NailsForm = (props: NailsFormProps) => {
     function getNailsSchedules() {
       if (!fields.service) return;
 
-      // TODO: Get date from fields
-      const tempDate = new Date();
-      const weekDay = tempDate.toLocaleString("default", { weekday: "long" });
+      const selectedDate = new Date(fields.date);
+      const weekDay = selectedDate.toLocaleString("default", { weekday: "long" });
       const availableTimesForWeekDay =
         data.calendar.schedules[weekDay.toLowerCase() as WeekDay];
       getBusyTimesForSelectedDate();
@@ -87,12 +87,11 @@ const NailsForm = (props: NailsFormProps) => {
       setNailsScheduleOptions([...morningSchedules, ...afternoonSchedules]);
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [fields.service]
+    [fields.service, fields.date]
   );
 
   const getBusyTimesForSelectedDate = () => {
-    // TODO: replace with fields.date
-    const tempDate = new Date();
+    const selectedDate = new Date(fields.date);
     busyTimesForSelectedDate.current = data.calendar.busy.reduce(
       (acc: ScheduleTimes[], { start: busyStart, end: busyEnd }) => {
         const busyStartDate = new Date(busyStart);
@@ -100,8 +99,8 @@ const NailsForm = (props: NailsFormProps) => {
         const day = 24 * 60 * 60 * 1000;
 
         const isOnTheSelectedDay =
-          busyStartDate.getDate() === tempDate.getDate() &&
-          Math.abs(busyStartDate.getTime() - tempDate.getTime()) < day;
+          busyStartDate.getDate() === selectedDate.getDate() &&
+          Math.abs(busyStartDate.getTime() - selectedDate.getTime()) < day;
 
         if (!isOnTheSelectedDay) {
           return acc;
@@ -226,18 +225,16 @@ const NailsForm = (props: NailsFormProps) => {
           label="Schedule"
           value={fields.schedule}
           options={nailsScheduleOptions}
-          isDisabled={!fields.service} /* TODO: add fields.date */
+          isDisabled={!fields.service && !fields.date}
           onUpdate={(value: string) => updateNailsFields({ schedule: value })}
           infoMessage={!fields.service ? "Sélectionnez d'abord le service" : ""}
         />
       </div>
 
       <div className="fields">
-        <Input
-          type="text"
-          label="Nom"
-          value={fields.name}
-          onUpdate={(value: string) => updateBasicFields({ name: value })}
+        <Calendar
+          onChange={(value) => updateNailsFields({ date: value?.toString() })}
+          value={new Date(fields.date)}
         />
       </div>
     </div>

@@ -8,7 +8,7 @@ export type BasicFormFields = {
 };
 
 export type NailsFormFields = {
-  date: string;
+  date: string
   service: string;
   schedule: string;
   address: string;
