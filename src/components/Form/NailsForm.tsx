@@ -234,7 +234,7 @@ const NailsForm = (props: NailsFormProps) => {
       <div className="fields">
         <Calendar
           onChange={(value) => updateNailsFields({ date: value?.toString() })}
-          value={new Date(fields.date)}
+          value={fields.date ? new Date(fields.date) : null}
         />
       </div>
     </div>
