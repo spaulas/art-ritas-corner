@@ -37,6 +37,7 @@ const NailsForm = (props: NailsFormProps) => {
   const { fields, updateBasicFields, updateNailsFields } = props;
   const { language } = useContext(LanguageContext);
   const busyTimesForSelectedDate = useRef<ScheduleTimes[]>([]);
+  const categoryDuration = useRef<number>(1);
   const [nailsServiceOptions, setNailsServiceOptions] = useState<Option[]>([]);
   const [nailsScheduleOptions, setNailsScheduleOptions] = useState<Option[]>(
     []
@@ -70,19 +71,17 @@ const NailsForm = (props: NailsFormProps) => {
         data.calendar.schedules[weekDay.toLowerCase() as WeekDay];
       getBusyTimesForSelectedDate();
 
-      const categoryDuration =
+      categoryDuration.current =
         nailsCategory?.images[parseInt(fields.service)]?.duration ?? 0;
 
       const morningSchedules = getSchedulesFromAvailableHours(
         availableTimesForWeekDay.morning.start,
-        availableTimesForWeekDay.morning.end,
-        categoryDuration
+        availableTimesForWeekDay.morning.end
       );
 
       const afternoonSchedules = getSchedulesFromAvailableHours(
         availableTimesForWeekDay.afternoon.start,
-        availableTimesForWeekDay.afternoon.end,
-        categoryDuration
+        availableTimesForWeekDay.afternoon.end
       );
 
       setNailsScheduleOptions([...morningSchedules, ...afternoonSchedules]);
@@ -90,8 +89,6 @@ const NailsForm = (props: NailsFormProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [fields.service]
   );
-
-  // TODO: create nails info tooltip when one is selected!
 
   const getBusyTimesForSelectedDate = () => {
     // TODO: replace with fields.date
@@ -124,8 +121,7 @@ const NailsForm = (props: NailsFormProps) => {
 
   const getSchedulesFromAvailableHours = (
     start: number,
-    end: number,
-    categoryDuration: number
+    end: number
   ): Option[] => {
     const hours = end - start;
 
@@ -133,7 +129,7 @@ const NailsForm = (props: NailsFormProps) => {
       .fill(1)
       .reduce((acc, _value, index) => {
         const startInt = start + index * SCHEDULES_INTERVAL;
-        const endInt = startInt + categoryDuration / 60;
+        const endInt = startInt + categoryDuration.current / 60;
 
         if (endInt > end) return acc;
 
@@ -222,6 +218,9 @@ const NailsForm = (props: NailsFormProps) => {
           onUpdate={(value: string) =>
             updateNailsFields({ service: value, schedule: "" })
           }
+          infoMessage={
+            fields.service ? `Durée de: ${categoryDuration.current} min` : ""
+          }
         />
         <Select
           label="Schedule"
@@ -229,6 +228,7 @@ const NailsForm = (props: NailsFormProps) => {
           options={nailsScheduleOptions}
           isDisabled={!fields.service} /* TODO: add fields.date */
           onUpdate={(value: string) => updateNailsFields({ schedule: value })}
+          infoMessage={!fields.service ? "Sélectionnez d'abord le service" : ""}
         />
       </div>
 

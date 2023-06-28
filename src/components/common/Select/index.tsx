@@ -13,6 +13,7 @@ type SelectProps = {
   value: string;
   onUpdate: (_value: string) => void;
   isDisabled?: boolean;
+  infoMessage?: string;
 };
 
 const Select = ({
@@ -21,6 +22,7 @@ const Select = ({
   value,
   onUpdate,
   isDisabled,
+  infoMessage,
 }: SelectProps) => {
   const [hasError, setHasError] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -61,6 +63,12 @@ const Select = ({
         className="dropdown-container"
         onClick={() => !isDisabled && setIsOpen(!isOpen)}
       >
+        {infoMessage ? (
+          <div className="info-message-container">
+            <div className="icon">i</div>
+            <div className="message">{infoMessage}</div>
+          </div>
+        ) : null}
         <div className={`dropdown-input ${isOpen || value ? "focus" : ""}`} />
         <label>
           <span>{label}</span>
