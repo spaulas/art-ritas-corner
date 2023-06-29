@@ -43,7 +43,7 @@ const Card = ({ image, isOpen, isSliding, zIndex = 1 }: CardProps) => {
   const className = classNames("image-card", { opened: isOpen && !isSliding });
 
   return (
-    <div key={image.src} className={className} style={{ zIndex }}>
+    <div key={image.id} className={className} style={{ zIndex }}>
       <img src={tempHelper[image.src]} alt={image.title[language]} />
       <Description {...image} />
     </div>

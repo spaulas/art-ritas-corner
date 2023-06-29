@@ -29,6 +29,7 @@
       ],
       "images": [
         {
+          "id": "nails01",
           "src": "nails01",
           "title": {
             "fr": "Ongles 01",
@@ -42,6 +43,7 @@
           "duration": 60
         },
         {
+          "id": "nails02",
           "src": "nails02",
           "title": {
             "fr": "Ongles 02",
@@ -55,6 +57,7 @@
           "duration": 120
         },
         {
+          "id": "nails03",
           "src": "nails03",
           "title": {
             "fr": "Ongles 03",
@@ -68,6 +71,7 @@
           "duration": 150
         },
         {
+          "id": "nails04",
           "src": "nails01",
           "title": {
             "fr": "Ongles 04",
@@ -81,6 +85,7 @@
           "duration": 60
         },
         {
+          "id": "nails05",
           "src": "nails02",
           "title": {
             "fr": "Ongles 05",
@@ -94,6 +99,7 @@
           "duration": 60
         },
         {
+          "id": "nails06",
           "src": "nails03",
           "title": {
             "fr": "Ongles 06",
@@ -136,6 +142,7 @@
       ],
       "images": [
         {
+          "id": "mandala01",
           "src": "mandala01",
           "title": {
             "fr": "Mandala 01",
@@ -176,6 +183,7 @@
       ],
       "images": [
         {
+          "id": "abstract01",
           "src": "abstract01",
           "title": {
             "fr": "Abstract 01",
@@ -220,6 +228,7 @@
       ],
       "images": [
         {
+          "id": "body01",
           "src": "body01",
           "title": {
             "fr": "Body 01",
@@ -232,6 +241,7 @@
           "available": true
         },
         {
+          "id": "body02",
           "src": "body02",
           "title": {
             "fr": "Body 02",
@@ -244,6 +254,7 @@
           "available": true
         },
         {
+          "id": "body03",
           "src": "body03",
           "title": {
             "fr": "Body 03",
@@ -256,6 +267,7 @@
           "available": false
         },
         {
+          "id": "body04",
           "src": "body04",
           "title": {
             "fr": "Body 04",

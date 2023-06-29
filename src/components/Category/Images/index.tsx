@@ -6,6 +6,7 @@ import classNames from "classnames";
 import Card from "./Card";
 
 export type Image = {
+  id: string;
   title: Text;
   description: Text;
   price?: number;
@@ -70,7 +71,7 @@ const Images = ({ images, isHoverRight }: ImageProps) => {
   };
 
   const handleMouseDown = (e: any) => {
-    if (!isOpen) return;
+    if (!isOpen || e.target.id.includes("image-description")) return;
 
     setIsSliding(true);
     startX.current = e.pageX + (marginLeft / SLIDING_SPEED) * -1;

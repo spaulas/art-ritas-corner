@@ -3,11 +3,17 @@ import "./styles.scss";
 
 type ButtonProps = {
   title: string;
+  id?: string;
   onClick: () => void;
+  onMouseEnter?: () => void
 };
 
-const Button = ({ title, onClick }: ButtonProps) => {
-  return <button onClick={onClick}>{title}</button>;
+const Button = ({ title, id, onClick, onMouseEnter }: ButtonProps) => {
+  return (
+    <button id={id} onClick={onClick} onMouseEnter={onMouseEnter}>
+      {title}
+    </button>
+  );
 };
 
 export default Button;

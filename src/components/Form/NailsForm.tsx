@@ -75,7 +75,7 @@ const NailsForm = (props: NailsFormProps) => {
         ...acc,
         {
           label: category.title[language],
-          value: index.toString(),
+          value: category.id,
         },
       ],
       []
@@ -314,11 +314,9 @@ const NailsForm = (props: NailsFormProps) => {
           onChange={(value) => {
             if (value instanceof Date) {
               setSelectedDate(value);
-              console.log("on change value = ", typeof value);
               updateNailsFields({ date: value });
             }
           }}
-          onDrillUp={() => console.log("on click month")}
           value={fields.date}
           locale={language}
           showNeighboringMonth={false}
