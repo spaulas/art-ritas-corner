@@ -4,6 +4,7 @@ import type { Image } from "../..";
 import "./styles.scss";
 import Button from "components/common/Button";
 
+/* TODO: Add click! */
 const Description = ({ title, description, price }: Image) => {
   const { language } = useContext(LanguageContext);
 

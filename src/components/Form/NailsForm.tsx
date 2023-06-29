@@ -34,6 +34,7 @@ const nailsCategory: CategoryProps | undefined = data.categories.find(
   ({ id }) => id === "nailArt"
 );
 
+// TODO: separate service and schedule dropdowns and calendar as well
 const NailsForm = (props: NailsFormProps) => {
   const { fields, updateBasicFields, updateNailsFields } = props;
   const { language } = useContext(LanguageContext);
@@ -43,7 +44,30 @@ const NailsForm = (props: NailsFormProps) => {
   const [nailsScheduleOptions, setNailsScheduleOptions] = useState<Option[]>(
     []
   );
+  const [selectedDate, setSelectedDate] = useState<Date>();
+  const today = new Date();
+  const [currentMonth, setCurrentMonth] = useState(today.getMonth());
+  const leftMonthButton = document.getElementsByClassName(
+    "react-calendar__navigation__arrow react-calendar__navigation__prev-button"
+  )[0];
+  const rightMonthButton = document.getElementsByClassName(
+    "react-calendar__navigation__arrow react-calendar__navigation__next-button"
+  )[0];
   const SCHEDULES_INTERVAL = 0.5;
+  const DISABLED_DAYS = 3;
+  const MAX_MONTHS = 3;
+
+  leftMonthButton?.addEventListener("click", () => {
+    if (currentMonth > today.getMonth()) {
+      setCurrentMonth(currentMonth - 1);
+    }
+  });
+
+  rightMonthButton?.addEventListener("click", () => {
+    if (currentMonth < today.getMonth() + MAX_MONTHS) {
+      setCurrentMonth(currentMonth + 1);
+    }
+  });
 
   useEffect(function getNailsServices() {
     const nailsOptions = nailsCategory?.images.reduce(
@@ -65,10 +89,11 @@ const NailsForm = (props: NailsFormProps) => {
     function getNailsSchedules() {
       if (!fields.service) return;
 
-      const selectedDate = new Date(fields.date);
-      const weekDay = selectedDate.toLocaleString("default", { weekday: "long" });
+      const weekDay = fields.date.toLocaleString("default", {
+        weekday: "long",
+      });
       const availableTimesForWeekDay =
-        data.calendar.schedules[weekDay.toLowerCase() as WeekDay];
+        data.calendar.schedules[weekDay?.toLowerCase() as WeekDay];
       getBusyTimesForSelectedDate();
 
       categoryDuration.current =
@@ -91,7 +116,6 @@ const NailsForm = (props: NailsFormProps) => {
   );
 
   const getBusyTimesForSelectedDate = () => {
-    const selectedDate = new Date(fields.date);
     busyTimesForSelectedDate.current = data.calendar.busy.reduce(
       (acc: ScheduleTimes[], { start: busyStart, end: busyEnd }) => {
         const busyStartDate = new Date(busyStart);
@@ -99,8 +123,8 @@ const NailsForm = (props: NailsFormProps) => {
         const day = 24 * 60 * 60 * 1000;
 
         const isOnTheSelectedDay =
-          busyStartDate.getDate() === selectedDate.getDate() &&
-          Math.abs(busyStartDate.getTime() - selectedDate.getTime()) < day;
+          busyStartDate.getDate() === fields.date.getDate() &&
+          Math.abs(busyStartDate.getTime() - fields.date.getTime()) < day;
 
         if (!isOnTheSelectedDay) {
           return acc;
@@ -136,7 +160,7 @@ const NailsForm = (props: NailsFormProps) => {
           startInt
         )} - ${convertIntToHourString(endInt)}`;
 
-        const isDisabled = checkIsDisabled(startInt, endInt);
+        const isDisabled = isTimeScheduleDisabled(startInt, endInt);
 
         return [
           ...acc,
@@ -154,7 +178,7 @@ const NailsForm = (props: NailsFormProps) => {
     return `${Math.floor(hour)}h${minutes === 0 ? "00" : minutes}`;
   };
 
-  const checkIsDisabled = (start: number, end: number) => {
+  const isTimeScheduleDisabled = (start: number, end: number) => {
     let isDisabled = false;
 
     busyTimesForSelectedDate.current = busyTimesForSelectedDate.current.reduce(
@@ -176,6 +200,56 @@ const NailsForm = (props: NailsFormProps) => {
     );
 
     return isDisabled;
+  };
+
+  const getMonthDays = (date: Date) => {
+    switch (date.getMonth()) {
+      case 0:
+      case 2:
+      case 4:
+      case 6:
+      case 7:
+      case 9:
+      case 11:
+        return 31;
+      case 1:
+        return 28; // TODO: checky year!
+      default:
+        return 30;
+    }
+  };
+
+  const getCalendarClassName = () => {
+    const firstMonthDay = getMonthDays(today);
+    const firstMonthDisabledDays =
+      today.getDate() + DISABLED_DAYS > firstMonthDay
+        ? firstMonthDay
+        : today.getDate() + DISABLED_DAYS;
+    const secondMonthDisabledDays =
+      today.getDate() + DISABLED_DAYS > firstMonthDay
+        ? DISABLED_DAYS - (firstMonthDay - today.getDate())
+        : 0;
+
+    let finalDisabledDays = 0;
+    if (currentMonth === today.getMonth()) {
+      finalDisabledDays = firstMonthDisabledDays;
+    } else if (currentMonth === today.getMonth() + 1) {
+      finalDisabledDays = secondMonthDisabledDays;
+    }
+
+    let selectedDayClassName = "";
+    if (selectedDate && selectedDate.getMonth() === currentMonth) {
+      selectedDayClassName = `calendar-selected-day-${selectedDate.getDate()}`;
+    }
+
+    let disabledMonthArrowsClassName = "";
+    if (currentMonth === today.getMonth()) {
+      disabledMonthArrowsClassName = "calendar-disabled-left-arrow";
+    } else if (currentMonth === today.getMonth() + MAX_MONTHS) {
+      disabledMonthArrowsClassName = "calendar-disabled-right-arrow";
+    }
+
+    return `calendar-disabled-days-${finalDisabledDays} ${selectedDayClassName} ${disabledMonthArrowsClassName}`;
   };
 
   return (
@@ -200,7 +274,7 @@ const NailsForm = (props: NailsFormProps) => {
           onUpdate={(value: string) => updateBasicFields({ phone: value })}
         />
         <Select
-          label="Type"
+          label="Genre"
           options={[
             { label: "Clous", value: "nails" },
             { label: "Peintures", value: "paintings" },
@@ -222,19 +296,38 @@ const NailsForm = (props: NailsFormProps) => {
           }
         />
         <Select
-          label="Schedule"
+          label="Calendrier"
           value={fields.schedule}
           options={nailsScheduleOptions}
-          isDisabled={!fields.service && !fields.date}
+          isDisabled={!fields.service || !selectedDate}
           onUpdate={(value: string) => updateNailsFields({ schedule: value })}
-          infoMessage={!fields.service ? "Sélectionnez d'abord le service" : ""}
+          infoMessage={
+            !fields.service || !selectedDate
+              ? "Sélectionner une prestation et une date"
+              : ""
+          }
         />
       </div>
 
       <div className="fields">
         <Calendar
-          onChange={(value) => updateNailsFields({ date: value?.toString() })}
-          value={fields.date ? new Date(fields.date) : null}
+          onChange={(value) => {
+            if (value instanceof Date) {
+              setSelectedDate(value);
+              console.log("on change value = ", typeof value);
+              updateNailsFields({ date: value });
+            }
+          }}
+          onDrillUp={() => console.log("on click month")}
+          value={fields.date}
+          locale={language}
+          showNeighboringMonth={false}
+          maxDetail="month"
+          minDate={today}
+          maxDate={
+            new Date(new Date(today).setMonth(today.getMonth() + MAX_MONTHS))
+          }
+          className={getCalendarClassName()}
         />
       </div>
     </div>
