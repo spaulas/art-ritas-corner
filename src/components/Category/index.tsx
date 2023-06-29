@@ -6,9 +6,15 @@ import Blobs from "./Blobs";
 import type { FlowerProps } from "./Flower";
 import type { TitleProps } from "./Title";
 import type { CategoryType } from "data";
+import { BasicFormFields } from "context/FormProvider";
 import "./styles.scss";
 
+type CategoryProps = {
+  formName: BasicFormFields["type"];
+} & CategoryType;
+
 const Category = ({
+  id,
   title,
   description,
   subCategory,
@@ -16,7 +22,8 @@ const Category = ({
   flower,
   images,
   blobs,
-}: CategoryType) => {
+  formName,
+}: CategoryProps) => {
   const isTitleRight = titlePosition.includes("right");
   return (
     <div className={`category ${isTitleRight ? "invert" : ""}`}>
@@ -32,7 +39,12 @@ const Category = ({
         } `}
       >
         <Blobs blobs={blobs} />
-        <Images images={images} isHoverRight={isTitleRight} />
+        <Images
+          categoryID={id}
+          images={images}
+          isHoverRight={isTitleRight}
+          formName={formName}
+        />
       </div>
       <Flower
         id={flower.id}

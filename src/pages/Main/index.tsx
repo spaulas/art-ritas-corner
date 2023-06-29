@@ -11,7 +11,11 @@ import type { DataType } from "data.d";
 const Main = () => {
   const renderCategories = () => {
     return Object.values((data as DataType).categories).map((category) => (
-      <Category key={category.id} {...category} />
+      <Category
+        key={category.id}
+        formName={category.id === "nailsArt" ? "nails" : "paintings"}
+        {...category}
+      />
     ));
   };
 

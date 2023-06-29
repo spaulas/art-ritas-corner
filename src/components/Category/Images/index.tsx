@@ -3,13 +3,16 @@ import type { ImageType } from "data";
 import classNames from "classnames";
 import Card from "./Card";
 import "./styles.scss";
+import { BasicFormFields } from "context/FormProvider";
 
 type ImageProps = {
+  categoryID: string;
   images: ImageType[];
   isHoverRight: boolean;
+  formName: BasicFormFields["type"];
 };
 
-const Images = ({ images, isHoverRight }: ImageProps) => {
+const Images = ({ images, isHoverRight, formName, categoryID }: ImageProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSliding, setIsSliding] = useState(false);
   const [marginLeft, setMarginLeft] = useState(0);
@@ -115,10 +118,12 @@ const Images = ({ images, isHoverRight }: ImageProps) => {
         {currentImages.map((image, index) => (
           <Card
             key={image.id}
+            categoryID={categoryID}
             image={image}
             zIndex={IMAGES_VISIBLE_ON_HOVER - index}
             isOpen={isOpen || currentImages.length === 1}
             isSliding={isSliding}
+            formName={formName}
           />
         ))}
       </div>
