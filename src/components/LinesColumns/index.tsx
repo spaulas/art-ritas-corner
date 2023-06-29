@@ -10,10 +10,10 @@ export const LinesColumns = () => {
 
   return (
     <div className="lines-columns-container">
-      {linesColumnsArray.map(() => (
-        <div className="lines-column">
-          {linesArray.map(() => (
-            <div className="line" />
+      {linesColumnsArray.map((_value, columnIndex) => (
+        <div key={`lines-column-${columnIndex}`} className="lines-column">
+          {linesArray.map((_value, lineIndex) => (
+            <div key={`line-${columnIndex}-${lineIndex}`} className="line" />
           ))}
         </div>
       ))}

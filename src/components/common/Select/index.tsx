@@ -79,6 +79,7 @@ const Select = ({
       <div className={`dropdown-content ${isOpen ? "focus" : ""}`}>
         {options.map(({ label, value: _value, isDisabled: _isDisabled }) => (
           <div
+            key={_value}
             className={`dropdown-option ${value === _value ? "active" : ""} ${
               _isDisabled ? "disabled" : ""
             }`}

@@ -17,6 +17,7 @@ export type NailsFormFields = {
 export type PaintingsFormFields = {
   category: string;
   painting: string;
+  notes: string;
 };
 
 export type UpdateBasicFieldsFunction = (
@@ -50,6 +51,7 @@ export const FormContext = createContext({
   paintingsFields: {
     category: "",
     painting: "",
+    notes: "",
   },
 });
 
@@ -71,6 +73,7 @@ function FormProvider({ children }: PropsWithChildren<unknown>) {
   const [paintingsFields, setPaintingsFields] = useState<PaintingsFormFields>({
     category: "",
     painting: "",
+    notes: "",
   });
 
   const updateBasicFields = (newValues: Partial<BasicFormFields>) => {

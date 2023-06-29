@@ -124,6 +124,7 @@ const Images = ({ images, isHoverRight }: ImageProps) => {
       >
         {currentImages.map((image, index) => (
           <Card
+            key={image.id}
             image={image}
             zIndex={IMAGES_VISIBLE_ON_HOVER - index}
             isOpen={isOpen || currentImages.length === 1}
