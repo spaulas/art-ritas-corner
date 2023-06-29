@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "../styles.scss";
 import type {
   NailsFormFields,
@@ -20,7 +20,7 @@ const NailsCalendar = (props: NailsFormProps) => {
   const { fieldDate, updateNailsFields } = props;
   const { language } = useContext(LanguageContext);
   const [selectedDate, setSelectedDate] = useState<Date>();
-  const [currentMonth, setCurrentMonth] = useState(today.getMonth());
+  const [currentMonth, setCurrentMonth] = useState<number>(-1);
 
   const leftMonthButton = document.getElementsByClassName(
     "react-calendar__navigation__arrow react-calendar__navigation__prev-button"
@@ -91,6 +91,11 @@ const NailsCalendar = (props: NailsFormProps) => {
     return `calendar-disabled-days-${finalDisabledDays} ${selectedDayClassName} ${disabledMonthArrowsClassName}`;
   };
 
+  useEffect(() => {
+    setCurrentMonth(today.getMonth());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <Calendar
       onChange={(value) => {
@@ -108,6 +113,7 @@ const NailsCalendar = (props: NailsFormProps) => {
         new Date(new Date(today).setMonth(today.getMonth() + MAX_MONTHS))
       }
       className={getCalendarClassName()}
+      onViewChange={(e) => console.log("on view change e = ", e)}
     />
   );
 };
