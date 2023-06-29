@@ -3,22 +3,10 @@ import Title from "./Title";
 import Flower from "./Flower";
 import Images from "./Images";
 import Blobs from "./Blobs";
-import type { Text } from "./Title";
 import type { FlowerProps } from "./Flower";
 import type { TitleProps } from "./Title";
-import type { Image as ImageType } from "./Images";
-import type { BlobType } from "./Blobs";
+import type { CategoryType } from "data";
 import "./styles.scss";
-
-export type CategoryProps = {
-  title: Text;
-  description: Text;
-  subCategory?: Text;
-  titlePosition: string;
-  flower: { id: number; position: string };
-  images: ImageType[];
-  blobs: BlobType[];
-};
 
 const Category = ({
   title,
@@ -28,7 +16,7 @@ const Category = ({
   flower,
   images,
   blobs,
-}: CategoryProps) => {
+}: CategoryType) => {
   const isTitleRight = titlePosition.includes("right");
   return (
     <div className={`category ${isTitleRight ? "invert" : ""}`}>

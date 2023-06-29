@@ -6,10 +6,11 @@ import Form from "components/Form";
 import About from "components/About";
 import "./styles.scss";
 import { LinesColumns } from "components/LinesColumns";
+import type { DataType } from "data.d";
 
 const Main = () => {
   const renderCategories = () => {
-    return Object.values(data.categories).map((category) => (
+    return Object.values((data as DataType).categories).map((category) => (
       <Category key={category.id} {...category} />
     ));
   };

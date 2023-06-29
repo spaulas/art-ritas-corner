@@ -9,7 +9,7 @@ import type {
 } from "context/FormProvider";
 import data from "data.json";
 import { LanguageContext } from "components/LanguageProvider";
-import { CategoryProps } from "components/Category";
+import type { CategoryType, DataType } from "data";
 
 type NailsFieldsProps = {
   fields: BasicFormFields & NailsFormFields;
@@ -28,12 +28,11 @@ type WeekDay =
 
 type ScheduleTimes = { start: number; end: number };
 
-const nailsCategory: CategoryProps | undefined = data.categories.find(
-  ({ id }) => id === "nailArt"
-);
+const nailsCategory: CategoryType | undefined = (
+  data as DataType
+).categories.find(({ id }) => id === "nailArt");
 
-const NailsFields = (props: NailsFieldsProps) => {
-  const { fields, updateNailsFields } = props;
+const NailsFields = ({ fields, updateNailsFields }: NailsFieldsProps) => {
   const { language } = useContext(LanguageContext);
   const busyTimesForSelectedDate = useRef<ScheduleTimes[]>([]);
   const categoryDuration = useRef<number>(1);
@@ -46,7 +45,7 @@ const NailsFields = (props: NailsFieldsProps) => {
 
   useEffect(function getNailsServices() {
     const nailsOptions = nailsCategory?.images.reduce(
-      (acc: Option[], category, index) => [
+      (acc: Option[], category) => [
         ...acc,
         {
           label: category.title[language],
@@ -200,7 +199,7 @@ const NailsFields = (props: NailsFieldsProps) => {
         onUpdate={(value: string) => updateNailsFields({ schedule: value })}
         infoMessage={
           !fields.service || fields.date.getTime() === new Date(0).getTime()
-            ? "Sélectionner une prestation et une date"
+            ? "Sélectionner une service et une date"
             : ""
         }
       />

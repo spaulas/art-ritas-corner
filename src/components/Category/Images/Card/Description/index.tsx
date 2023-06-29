@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "components/LanguageProvider";
-import type { Image } from "../..";
 import "./styles.scss";
 import Button from "components/common/Button";
 import { FormContext } from "context/FormProvider";
+import { ImageType } from "data";
 
 type DescriptionProps = {
   hasOpenButton?: boolean;
-} & Image;
+} & ImageType;
 
 /* TODO: Add click! */
 const Description = ({

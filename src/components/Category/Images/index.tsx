@@ -1,21 +1,11 @@
 import React, { useRef, useState, useEffect } from "react";
-import type { Text } from "../Title";
-import "./styles.scss";
-
+import type { ImageType } from "data";
 import classNames from "classnames";
 import Card from "./Card";
-
-export type Image = {
-  id: string;
-  title: Text;
-  description: Text;
-  price?: number;
-  duration?: number;
-  src: string;
-};
+import "./styles.scss";
 
 type ImageProps = {
-  images: Image[];
+  images: ImageType[];
   isHoverRight: boolean;
 };
 

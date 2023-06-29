@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import type { Image } from "..";
 import { LanguageContext } from "components/LanguageProvider";
 // TODO: remove this after the images are stored correctly
 import {
@@ -16,6 +15,7 @@ import {
 import classNames from "classnames";
 import "./styles.scss";
 import Description from "./Description";
+import { ImageType } from "data";
 
 // TODO: remove after using images links!
 const tempHelper: Record<string, string> = {
@@ -31,7 +31,7 @@ const tempHelper: Record<string, string> = {
 };
 
 type CardProps = {
-  image: Image;
+  image: ImageType;
   isOpen: boolean;
   isSliding: boolean;
   zIndex?: number;
