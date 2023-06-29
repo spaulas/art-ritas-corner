@@ -13,7 +13,7 @@ type AboutProps = {
 
 const About = ({ profileText }: AboutProps) => {
   return (
-    <div className="about-page">
+    <div className="about-page" id="about-page">
       <div className="about-blobs">
         <img
           className="about-blob-blue"

@@ -54,6 +54,7 @@ const Select = ({
     return currentOption?.label;
   };
 
+  /* TODO: add down arrow */
   return (
     <div
       className={`dropdown-form-field ${isDisabled ? "disabled" : ""}`}

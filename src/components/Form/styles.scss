@@ -63,7 +63,107 @@
     width: 50%;
     max-width: 336px;
   }
-}
 
-.paintings-form {
+  .react-calendar {
+    width: 100%;
+    color: $white;
+    font-family: Saudagar;
+    font-size: 14px;
+
+    .react-calendar__navigation {
+      display: flex;
+      gap: 8px;
+
+      & > button {
+        margin-top: 0;
+
+        &:nth-child(3) {
+          background-color: $white;
+          color: rgba(22, 22, 22, 0.6);
+          cursor: default;
+          user-select: none;
+          pointer-events: none;
+        }
+
+        &:first-child,
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+
+    .react-calendar__viewContainer {
+      .react-calendar__month-view {
+        .react-calendar__month-view__weekdays {
+          gap: 0;
+          text-align: center;
+          margin-top: 16px;
+        }
+
+        .react-calendar__month-view__days {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0px 4px;
+
+          & > button {
+            flex-basis: calc(14.2857% - 4px) !important;
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
+      }
+    }
+
+    &.calendar-disabled-left-arrow {
+      .react-calendar__navigation {
+        & > button:nth-child(2) {
+          background-color: $grey;
+          color: $black;
+          pointer-events: none;
+        }
+      }
+    }
+
+    &.calendar-disabled-right-arrow {
+      .react-calendar__navigation {
+        button:nth-child(4) {
+          background-color: $grey;
+          color: $black;
+          pointer-events: none;
+        }
+      }
+    }
+
+    @for $i from 1 through 31 {
+      &.calendar-disabled-days-#{$i} {
+        @for $j from 1 through $i {
+          .react-calendar__viewContainer {
+            .react-calendar__month-view {
+              .react-calendar__month-view__days {
+                button:nth-child(#{$j}) {
+                  background-color: $grey;
+                  color: rgba(22, 22, 22, 0.6);
+                  pointer-events: none;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.calendar-selected-day-#{$i} {
+        .react-calendar__viewContainer {
+          .react-calendar__month-view {
+            .react-calendar__month-view__days {
+              button:nth-child(#{$i}) {
+                background-color: $light-pink;
+                color: $pink;
+                border-color: $pink;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

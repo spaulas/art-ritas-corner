@@ -40,7 +40,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="form-page">
+    <div className="form-page" id="form-page">
       <div className="form-blobs">
         <img
           className="form-blob-cream"

@@ -1,30 +1,32 @@
-import React from "react";
-import Link from "components/common/Link"
-import "./styles.scss"
+import React, { useContext } from "react";
+import Link from "components/common/Link";
+import { FormContext } from "context/FormProvider";
+import "./styles.scss";
 
 const TopBar = () => {
-    const handleAboutMeClick = () => {
-        console.log('About me')
-    }
+  const { updateBasicFields } = useContext(FormContext);
 
-    const handleContactMeClick = () => {
-        console.log('Contact me')
-    }
+  const handleAboutMeClick = () => {
+    document.getElementById("about-page")?.scrollIntoView();
+  };
 
-    const handleInstagramClick = () => {
-        window.open("https://www.instagram.com/art_ritascorner/")
-    }
+  const handleContactMeClick = () => {
+    updateBasicFields({ type: "paintings" });
+    document.getElementById("form-page")?.scrollIntoView();
+  };
 
-    const handleLanguageClick = () => {
-        console.log('Language')
-    }
+  const handleInstagramClick = () => {
+    window.open("https://www.instagram.com/art_ritascorner/");
+  };
 
-    return <div className="top-bar">
-        <Link onClick={handleAboutMeClick}>Sur moi</Link>
-        <Link onClick={handleContactMeClick}>Contactez moi</Link>
-        <Link onClick={handleInstagramClick}>Instagram</Link>
-        <Link onClick={handleLanguageClick}>FR</Link>
+  return (
+    <div className="top-bar">
+      <Link onClick={handleAboutMeClick}>Sur moi</Link>
+      <Link onClick={handleContactMeClick}>Contactez moi</Link>
+      <Link onClick={handleInstagramClick}>Instagram</Link>
+      {/* TODO: <Link onClick={handleLanguageClick}>FR</Link> */}
     </div>
-}
+  );
+};
 
 export default TopBar;
