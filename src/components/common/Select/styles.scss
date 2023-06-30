@@ -47,7 +47,7 @@
       left: 16px;
       pointer-events: none;
       font-family: Saudagar;
-      color: $black;
+      color: $grey--dark;
       font-size: 20px;
       width: 100%;
 
@@ -56,6 +56,10 @@
         bottom: 0px;
         left: 0px;
         transition: all 0.3s ease;
+      }
+
+      .label-value {
+        color: $black;
       }
     }
   }
@@ -135,7 +139,6 @@
     left: -8px;
     gap: 6px;
 
-
     .message {
       opacity: 0;
       transition: all 0.3s ease;
@@ -145,7 +148,7 @@
       background-color: $pink;
       z-index: 10;
     }
-    
+
     .icon {
       font-family: Saudagar;
       color: $white;
@@ -162,6 +165,5 @@
         }
       }
     }
-
   }
 }
