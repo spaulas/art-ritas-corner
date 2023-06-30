@@ -1,13 +1,7 @@
 import React from "react";
 import { blobValues } from "./Imports";
+import type { BlobType } from "data";
 import "./styles.scss";
-
-export type BlobType = {
-  color: string;
-  id: number;
-  angle?: number;
-  size?: string;
-};
 
 type BlobsProps = {
   blobs: BlobType[];

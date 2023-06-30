@@ -1,3 +1,4 @@
+import Textbox from "components/common/Textbox";
 import {
   PaintingsFormFields,
   UpdatePaintingsFieldsFunction,
@@ -9,8 +10,17 @@ type PaitingsNotesProps = {
   updatePaintingsFields: UpdatePaintingsFieldsFunction;
 };
 
-const PaitingsNotes = (props: PaitingsNotesProps) => {
-  return <div></div>;
+const PaitingsNotes = ({
+  fieldNote,
+  updatePaintingsFields,
+}: PaitingsNotesProps) => {
+  return (
+    <Textbox
+      label="Remarques"
+      value={fieldNote}
+      onUpdate={(value: string) => updatePaintingsFields({ notes: value })}
+    />
+  );
 };
 
 export default PaitingsNotes;

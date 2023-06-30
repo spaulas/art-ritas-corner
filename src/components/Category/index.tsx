@@ -3,24 +3,18 @@ import Title from "./Title";
 import Flower from "./Flower";
 import Images from "./Images";
 import Blobs from "./Blobs";
-import type { Text } from "./Title";
 import type { FlowerProps } from "./Flower";
 import type { TitleProps } from "./Title";
-import type { Image as ImageType } from "./Images";
-import type { BlobType } from "./Blobs";
+import type { CategoryType } from "data";
+import { BasicFormFields } from "context/FormProvider";
 import "./styles.scss";
 
-export type CategoryProps = {
-  title: Text;
-  description: Text;
-  subCategory?: Text;
-  titlePosition: string;
-  flower: { id: number; position: string };
-  images: ImageType[];
-  blobs: BlobType[];
-};
+type CategoryProps = {
+  formName: BasicFormFields["type"];
+} & CategoryType;
 
 const Category = ({
+  id,
   title,
   description,
   subCategory,
@@ -28,6 +22,7 @@ const Category = ({
   flower,
   images,
   blobs,
+  formName,
 }: CategoryProps) => {
   const isTitleRight = titlePosition.includes("right");
   return (
@@ -44,7 +39,12 @@ const Category = ({
         } `}
       >
         <Blobs blobs={blobs} />
-        <Images images={images} isHoverRight={isTitleRight} />
+        <Images
+          categoryID={id}
+          images={images}
+          isHoverRight={isTitleRight}
+          formName={formName}
+        />
       </div>
       <Flower
         id={flower.id}
