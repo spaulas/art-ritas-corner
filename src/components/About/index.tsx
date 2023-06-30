@@ -6,7 +6,7 @@ import blobBlue08 from "assets/Blobs/blob_blue_08.png";
 import blobCream13 from "assets/Blobs/blob_cream_13.png";
 import flower02 from "assets/Flowers/flower02.png";
 import flower06 from "assets/Flowers/flower06.png";
-import { LanguageContext } from "components/LanguageProvider";
+import { LanguageContext } from "context/LanguageProvider";
 import type { Text } from "data.d";
 
 type AboutProps = {

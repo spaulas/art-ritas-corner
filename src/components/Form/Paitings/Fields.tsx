@@ -5,7 +5,7 @@ import {
 import React, { useState, useEffect, useContext } from "react";
 import Select, { type Option } from "components/common/Select";
 import data from "data.json";
-import { LanguageContext } from "components/LanguageProvider";
+import { LanguageContext } from "context/LanguageProvider";
 import type { DataType, CategoryType } from "data";
 
 type PaintingsFieldsProps = {

@@ -8,7 +8,7 @@ import type {
   UpdateNailsFieldsFunction,
 } from "context/FormProvider";
 import data from "data.json";
-import { LanguageContext } from "components/LanguageProvider";
+import { LanguageContext } from "context/LanguageProvider";
 import type { CategoryType, DataType } from "data";
 
 type NailsFieldsProps = {

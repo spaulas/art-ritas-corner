@@ -2,7 +2,7 @@ import React from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Details from "../pages/Details";
 import Main from "../pages/Main";
-import LanguageProvider from "components/LanguageProvider";
+import LanguageProvider from "context/LanguageProvider";
 import FormProvider from "context/FormProvider";
 
 const App = (): React.ReactElement => {

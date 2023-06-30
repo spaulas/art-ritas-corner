@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { LanguageContext } from "components/LanguageProvider";
+import { LanguageContext } from "context/LanguageProvider";
 import "./styles.scss";
 
 export type Text = {

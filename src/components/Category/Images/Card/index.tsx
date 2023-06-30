@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { LanguageContext } from "components/LanguageProvider";
+import { LanguageContext } from "context/LanguageProvider";
 // TODO: remove this after the images are stored correctly
 import {
   nails01,

@@ -4,7 +4,7 @@ import type {
   NailsFormFields,
   UpdateNailsFieldsFunction,
 } from "context/FormProvider";
-import { LanguageContext } from "components/LanguageProvider";
+import { LanguageContext } from "context/LanguageProvider";
 import Calendar from "react-calendar";
 
 type NailsFormProps = {
