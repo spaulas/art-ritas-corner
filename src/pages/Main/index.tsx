@@ -13,7 +13,7 @@ const Main = () => {
     return Object.values((data as DataType).categories).map((category) => (
       <Category
         key={category.id}
-        formName={category.id === "nailsArt" ? "nails" : "paintings"}
+        formName={category.id === "nailArt" ? "nails" : "paintings"}
         {...category}
       />
     ));
