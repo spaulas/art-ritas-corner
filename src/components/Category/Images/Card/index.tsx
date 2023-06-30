@@ -55,7 +55,7 @@ const Card = ({
   return (
     <div key={image.id} className={className} style={{ zIndex }}>
       <img src={tempHelper[image.src]} alt={image.title[language]} />
-      <Description {...image} formName={formName} categoryID={categoryID} />
+      <Description {...image} formName={formName} categoryID={categoryID} hasOpenButton={formName === "paintings"} />
     </div>
   );
 };
