@@ -367,5 +367,128 @@
         "end": 1701945000000
       }
     ]
-  }
+  },
+  "nailsPrices": [
+    {
+      "id": "manicure",
+      "serviceName": {
+        "fr": "Manucure (Mison forme d'ongle et cuticules)",
+        "en": "Manicure (Mison nail shape and cuticles)"
+      },
+      "price": 18
+    },
+    {
+      "id": "manicureAndVernis",
+      "serviceName": {
+        "fr": "Manucure + Vernis semi permanent (VSP)",
+        "en": "Manicure + Semi-permanent varnish (VSP)"
+      },
+      "price": 25
+    },
+    {
+      "id": "removal",
+      "serviceName": {
+        "fr": "Dépose VSP/Gel/poly gel/capsules",
+        "en": "VSP/Gel/poly gel/capsule removal"
+      },
+      "price": 8
+    },
+    {
+      "id": "vsp",
+      "serviceName": {
+        "fr": "Pose VSP",
+        "en": "VSP laying"
+      },
+      "price": 15
+    },
+    {
+      "id": "reinforcement",
+      "serviceName": {
+        "fr": "Renforcement gel (acheter pose VSP avec)/poly gel sur ongles naturels",
+        "en": "Reinforcement gel (buy pose VSP with)/poly gel on natural nails"
+      },
+      "price": 25
+    },
+    {
+      "id": "gelExtension",
+      "serviceName": {
+        "fr": "Extensions chablons gel",
+        "en": "Gel stencil extensions"
+      },
+      "price": 40
+    },
+    {
+      "id": "americanCapsules",
+      "serviceName": {
+        "fr": "Capsules americaines",
+        "en": "American capsules"
+      },
+      "price": 30
+    },
+    {
+      "id": "fillingAmericanCapsules",
+      "serviceName": {
+        "fr": "Remplissage capsules américaines (posé pour moi avant)",
+        "en": "Filling American capsules (posed for me before)"
+      },
+      "price": 25
+    },
+    {
+      "id": "stickers",
+      "serviceName": {
+        "fr": "Déco stickers/feuilles dorée/strass",
+        "en": "Decorative stickers/gold leaves/rhinestones"
+      },
+      "price": {
+        "fr": "1 doigt offert+ 0.5/doigt",
+        "en": "1 finger offered + 0.5/finger"
+      }
+    },
+    {
+      "id": "babyBoomer",
+      "serviceName": {
+        "fr": "Baby-boomer",
+        "en": "Baby-boomer"
+      },
+      "price": {
+        "fr": "1/doigt ou 8/deux mains",
+        "en": "1/finger or 8/two hands"
+      }
+    },
+    {
+      "id": "frenchNail",
+      "serviceName": {
+        "fr": "French nail",
+        "en": "French nail"
+      },
+      "price": 5
+    },
+    {
+      "id": "nailArt",
+      "serviceName": {
+        "fr": "Nail art",
+        "en": "Nail art"
+      },
+      "price": {
+        "fr": "sur devis",
+        "en": "quotation"
+      }
+    },
+    {
+      "id": "pedicure",
+      "serviceName": {
+        "fr": "Pédicure",
+        "en": "Pedicure"
+      },
+      "price": 25
+    },
+    {
+      "id": "pedicureVSP",
+      "serviceName": {
+        "fr": "Pédicure + VSP",
+        "en": "Pedicure + VSP"
+      },
+      "price": 35
+    }
+  ]
 }
