@@ -59,6 +59,17 @@ export type NailsPrices = {
   price: number | Text;
 };
 
+export type TCCategory = {
+  title: Text;
+  description?: Text;
+  ranges?: Text[];
+};
+
+export type NailsTC = {
+  paragraphs: Text[];
+  categories: TCCategory[]
+};
+
 export type DataType = {
   categories: CategoryType[];
   profile: {
@@ -66,4 +77,5 @@ export type DataType = {
   };
   calendar: CalendarType;
   nailsPrices: NailsPrices[];
+  nailsTC: NailsTC
 };

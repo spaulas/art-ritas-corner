@@ -490,5 +490,85 @@
       },
       "price": 35
     }
-  ]
+  ],
+  "nailsTC": {
+    "paragraphs": [
+      {
+        "fr": "Onglerie à domicile. Je vous propose un service d'onglerie a domicile, faite vous ongle dans le confort de chez vous.",
+        "en": "Nail salon at home. I offer you a nail service at home, do your nails in the comfort of your home."
+      },
+      {
+        "fr": "Tout le matériel est désinfecté ou jetable à chaque cliente, pour la pédicure je vous demande de lavée vous pieds juste avant le rdv, la désinfection sera effectuée pour moi avant la procédure.",
+        "en": "All the material is disinfected or disposable for each client, for the pedicure I ask you to wash your feet just before the appointment, the disinfection will be done for me before the procedure."
+      },
+      {
+        "fr": "RDV: Pour obtenir un rendez-vous, vous n'avez besoin que de 2 étapes. (Pour une question de securité, vous seras demandé d'effectuer un pré payement pour l'acquisition d'un rdv).",
+        "en": "RDV: To get an appointment, you only need 2 steps. (For a question of security, you will be asked to make a prepayment for the acquisition of an appointment)."
+      },
+      {
+        "fr": "Allez d'abord à « mon rendez-vous » et remplissez les informations (nom, adresse du rendez-vous, décrivez vos ongles à ce moment et dites-moi quel service vous souhaitez acheter et enfin ajoutez quelques photos).",
+        "en": "First go to « my appointment » and fill in the information (name, address of the appointment, describe your nails at this moment and tell me which service you want to buy and finally add some photos)."
+      },
+      {
+        "fr": "Après cette première étape, vous devez attendre l'e-mail de confirmation. Dans cet e-mail, vous allez maintenant finir de bloquer votre rendez-vous, pour cela, vous devez payer la moitié du prix final de l’achat et après votre rdv seras enregistré. ",
+        "en": "After this first step, you must wait for the confirmation email. In this e-mail, you will now finish blocking your appointment, for this you must pay half of the final purchase price and after that your appointment will be registered."
+      }
+    ],
+    "categories": [
+      {
+        "title": {
+          "fr": "Frais de déplacement",
+          "en": "Travelling expenses"
+        },
+        "ranges": [
+          {
+            "fr": "Jusqu'a 5km gratuit",
+            "en": "Up to 5km free"
+          },
+          {
+            "fr": "De 5 km a 7 km + 5 euros",
+            "en": "From 5 km to 7 km + 5 euros"
+          },
+          {
+            "fr": "De 7 km a 10 km + 10 euros",
+            "en": "From 7 km to 10 km + 10 euros"
+          }
+        ]
+      },
+      {
+        "title": {
+          "fr": "Annulation",
+          "en": "Cancellation"
+        },
+        "description": {
+          "fr": "Pour se faire rembourser du pré payement faut annuler le rdv 12h avant.",
+          "en": "To be reimbursed for the pre-payment, the appointment must be canceled 12 hours before."
+        }
+      },
+      {
+        "title": {
+          "fr": "Carte fidélité",
+          "en": "Loyalty card"
+        },
+        "description": {
+          "fr": "Une carte fidélité que donne différents avantages.",
+          "en": "A loyalty card that gives different advantages."
+        },
+        "ranges": [
+          {
+            "fr": "7 prestation: 30% remise",
+            "en": "7 service: 30% discount"
+          },
+          {
+            "fr": "10 prestation: gratuite!!",
+            "en": "10 services: free!!"
+          },
+          {
+            "fr": "Anniversaire: 50% remise",
+            "en": "Birthday: 50% discount"
+          }
+        ]
+      }
+    ]
+  }
 }
