@@ -1,9 +1,10 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useContext } from "react";
 import type { ImageType } from "data";
 import classNames from "classnames";
 import Card from "./Card";
 import "./styles.scss";
 import { BasicFormFields } from "context/FormProvider";
+import { BackdropContext } from "context/BackdropProvider";
 
 type ImageProps = {
   categoryID: string;
@@ -16,6 +17,8 @@ const Images = ({ images, isHoverRight, formName, categoryID }: ImageProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSliding, setIsSliding] = useState(false);
   const [marginLeft, setMarginLeft] = useState(0);
+
+  const { setIsBackdropVisible } = useContext(BackdropContext);
 
   const startX = useRef(0);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -30,10 +33,12 @@ const Images = ({ images, isHoverRight, formName, categoryID }: ImageProps) => {
   useEffect(() => {
     const onScroll = () => {
       setIsOpen(false);
+      setIsBackdropVisible(false)
       setMarginLeft(0);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const calculateSlidingDistance = (e: any): number => {
@@ -89,6 +94,11 @@ const Images = ({ images, isHoverRight, formName, categoryID }: ImageProps) => {
     setMarginLeft(_marginLeft);
   };
 
+  const handleOnClick = () => {
+    setIsBackdropVisible(true)
+    setIsOpen(true);
+  };
+
   const imagesClassName = classNames(
     "images-slider",
     `container-width-${currentImages.length}`,
@@ -112,7 +122,7 @@ const Images = ({ images, isHoverRight, formName, categoryID }: ImageProps) => {
       <div
         ref={containerRef}
         className={imagesClassName}
-        onClick={() => setIsOpen(true)}
+        onClick={handleOnClick}
         style={{ marginLeft }}
       >
         {currentImages.map((image, index) => (

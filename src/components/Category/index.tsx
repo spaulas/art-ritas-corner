@@ -25,6 +25,7 @@ const Category = ({
   formName,
 }: CategoryProps) => {
   const isTitleRight = titlePosition.includes("right");
+  
   return (
     <div className={`category ${isTitleRight ? "invert" : ""}`}>
       <Title

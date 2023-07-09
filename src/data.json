@@ -288,6 +288,22 @@
       "fr": "Présente-toi, Rita! Rédigez une petite présentation sur pourquoi vous aimez peindre, quelles sont vos inspirations, ce que vous aimez le plus faire. Parlez peut-être un peu plus de votre travail d'ongles, je ne sais pas!"
     }
   },
+  "welcome": {
+    "paragraphs": [
+      {
+        "fr": "Bienvenue dans « Ritas Art Corner », ici vous pouvez trouver quelques-unes de mes projets d'art. Depuis que je suis enfant, j'ai toujours aimé dessiner et peindre, en grandissant, j'ai toujours gardé cela comme passe-temps et dans mes vingt ans, j'ai commencé à le prendre plus au sérieux.",
+        "en": "Welcome to « Ritas Art Corner », here you can find some of my art projects. Ever since I was a child I always loved to draw and paint, growing up I always kept it as a hobby and in my twenties I started to take it more seriously."
+      },
+      {
+        "fr": "Dans la galerie, vous pouvez trouver certains de mes travaux, de la peinture à l'aquarelle à la peinture acrylique et aux peintures murales. Dans mes réseaux sociaux, vous pouvez également trouver des peintures d'entraînement, des croquis et des vidéos de progrès.",
+        "en": "In the gallery you can find some of my work, from watercolor painting to acrylic painting and murals. In my social networks you can also find training paintings, sketches and progress videos."
+      },
+      {
+        "fr": "Plus récemment, j'ai aussi commencé à faire du nail art, j'ai toujours aimé avoir des ongles longs et chaque fois que j'en avais l'occasion, je faisais quelque chose de différent avec mes ongles. Vous pouvez consulter quelques photos et vidéos ci-dessous, également prendre rendez-vous et me suivre sur les réseaux sociaux pour en savoir plus.",
+        "en": "More recently I also started doing nail art, I always liked having long nails and every time I had the chance I did something different with my nails. You can check out some photos and videos below, also make an appointment and follow me on social media for more."
+      }
+    ]
+  },
   "calendar": {
     "schedules": {
       "monday": {

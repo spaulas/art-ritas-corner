@@ -70,11 +70,16 @@ export type NailsTC = {
   categories: TCCategory[]
 };
 
+export type Welcome = {
+  paragraphs: Text[];
+}
+
 export type DataType = {
   categories: CategoryType[];
   profile: {
     text: Text;
   };
+  welcome: Welcome;
   calendar: CalendarType;
   nailsPrices: NailsPrices[];
   nailsTC: NailsTC
