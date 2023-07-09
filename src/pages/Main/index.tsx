@@ -1,4 +1,5 @@
 import React from "react";
+
 import Home from "components/Home";
 import data from "data.json";
 import Category from "components/Category";
@@ -7,6 +8,8 @@ import About from "components/About";
 import "./styles.scss";
 import { LinesColumns } from "components/LinesColumns";
 import type { DataType } from "data.d";
+import Backdrop from "components/Backdrop";
+import WelcomeModal from "components/WelcomeModal";
 
 const Main = () => {
   const renderCategories = () => {
@@ -20,13 +23,17 @@ const Main = () => {
   };
 
   return (
-    <div className="main-page">
-      <Home />
-      {renderCategories()}
-      <Form />
-      <About profileText={data.profile.text} />
-      <LinesColumns />
-    </div>
+    <>
+      <div className="main-page">
+        <Home />
+        {renderCategories()}
+        <Form />
+        <About profileText={data.profile.text} />
+        <LinesColumns />
+      </div>
+      <Backdrop />
+      <WelcomeModal />
+    </>
   );
 };
 

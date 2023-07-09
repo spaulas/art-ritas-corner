@@ -57,7 +57,7 @@ $slidingOffset-tiny: 180px;
   .images-slider {
     position: relative;
     height: 100%;
-    z-index: 2;
+    z-index: 999;
 
     &.hover-right:hover {
       cursor: pointer;

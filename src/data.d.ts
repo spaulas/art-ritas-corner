@@ -53,10 +53,34 @@ export type CalendarType = {
   busy: ScheduleType[];
 };
 
+export type NailsPrices = {
+  id: string;
+  serviceName: Text;
+  price: number | Text;
+};
+
+export type TCCategory = {
+  title: Text;
+  description?: Text;
+  ranges?: Text[];
+};
+
+export type NailsTC = {
+  paragraphs: Text[];
+  categories: TCCategory[]
+};
+
+export type Welcome = {
+  paragraphs: Text[];
+}
+
 export type DataType = {
   categories: CategoryType[];
   profile: {
     text: Text;
   };
+  welcome: Welcome;
   calendar: CalendarType;
+  nailsPrices: NailsPrices[];
+  nailsTC: NailsTC
 };

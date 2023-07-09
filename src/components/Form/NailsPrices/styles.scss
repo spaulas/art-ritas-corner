@@ -1,0 +1,19 @@
+@import "styles/imports.scss";
+
+.nails-prices-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 728px;
+  max-height: 342px;
+  overflow-y: scroll;
+  color: $white;
+  font-family: Saudagar;
+
+  .nails-price-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+  }
+}

@@ -1,22 +1,23 @@
 import React from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import Details from "../pages/Details";
 import Main from "../pages/Main";
 import LanguageProvider from "context/LanguageProvider";
 import FormProvider from "context/FormProvider";
+import BackdropProvider from "context/BackdropProvider";
 
 const App = (): React.ReactElement => {
   return (
-    <LanguageProvider>
-      <FormProvider>
-        <Router>
-          <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="/details/:id" element={<Details />} />
-          </Routes>
-        </Router>
-      </FormProvider>
-    </LanguageProvider>
+    <BackdropProvider>
+      <LanguageProvider>
+        <FormProvider>
+          <Router>
+            <Routes>
+              <Route path="/" element={<Main />} />
+            </Routes>
+          </Router>
+        </FormProvider>
+      </LanguageProvider>
+    </BackdropProvider>
   );
 };
 

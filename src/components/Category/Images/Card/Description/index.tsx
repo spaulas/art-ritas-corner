@@ -4,6 +4,7 @@ import "./styles.scss";
 import Button from "components/common/Button";
 import { BasicFormFields, FormContext } from "context/FormProvider";
 import { ImageType } from "data";
+import { useNavigate } from "react-router-dom";
 
 type DescriptionProps = {
   categoryID: string;
@@ -11,7 +12,6 @@ type DescriptionProps = {
   formName: BasicFormFields["type"];
 } & ImageType;
 
-// TODO: create open
 const Description = ({
   categoryID,
   id,
@@ -22,7 +22,13 @@ const Description = ({
   formName,
 }: DescriptionProps) => {
   const { language } = useContext(LanguageContext);
-  const { updateBasicFields, updateNailsFields, updatePaintingsFields } = useContext(FormContext);
+  const { updateBasicFields, updateNailsFields, updatePaintingsFields } =
+    useContext(FormContext);
+  const navigate = useNavigate();
+
+  const onOpen = () => {
+    navigate(`/${categoryID}/${id}`);
+  };
 
   const onScheduleClick = () => {
     updateBasicFields({
@@ -55,7 +61,7 @@ const Description = ({
         <Button
           id="image-description__open"
           title="Ouvrir"
-          onClick={() => console.log("open details")}
+          onClick={onOpen}
         />
       )}
       {formName === "nails" && (

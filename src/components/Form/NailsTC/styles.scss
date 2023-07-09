@@ -1,0 +1,38 @@
+@import "styles/imports.scss";
+
+.nails-tc-container {
+  color: $white;
+  font-family: Saudagar;
+  width: 100%;
+  max-width: 728px;
+  max-height: 342px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+
+  .nails-tc-paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &::after {
+        content: "";
+        width: 50%;
+        height: 1px;
+        background: $white;
+        align-self: center;
+        margin: 16px 0;
+    }
+  }
+
+  .nails-tc-categories {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .nails-tc-category-title{
+        font-size: 20px;
+    }
+  }
+}
