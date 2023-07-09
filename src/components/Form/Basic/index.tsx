@@ -1,13 +1,11 @@
 import React, { useContext } from "react";
 import Input from "components/common/Input";
-import Select from "components/common/Select";
-import "../styles.scss";
-import type { BasicFormFields } from "context/FormProvider";
 import NailsCalendar from "../Nails/Calendar";
 import PaitingsNotes from "../Paitings/Notes";
 import PaintingsFields from "../Paitings/Fields";
 import NailsFields from "../Nails/Fields";
 import { FormContext } from "context/FormProvider";
+import "../styles.scss";
 
 const BasicForm = () => {
   const {
@@ -80,17 +78,6 @@ const BasicForm = () => {
           label="Numéro de téléphone"
           value={basicFields.phone}
           onUpdate={(value: string) => updateBasicFields({ phone: value })}
-        />
-        <Select
-          label="Genre"
-          options={[
-            { label: "Clous", value: "nails" },
-            { label: "Peintures", value: "paintings" },
-          ]}
-          value={basicFields.type}
-          onUpdate={(value: string) =>
-            updateBasicFields({ type: value as BasicFormFields["type"] })
-          }
         />
         {renderLeftFields()}
       </div>

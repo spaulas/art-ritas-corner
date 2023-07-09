@@ -14,7 +14,7 @@ type NailsFormProps = {
 
 const NailsCalendar = (props: NailsFormProps) => {
   const today = new Date();
-  const DISABLED_DAYS = 3;
+  const DISABLED_DAYS = 2;
   const MAX_MONTHS = 3;
 
   const { fieldDate, updateNailsFields } = props;

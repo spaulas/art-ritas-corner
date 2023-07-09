@@ -1,0 +1,30 @@
+@import "styles/imports.scss";
+
+.form-selector {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  color: $white;
+  font-family: Saudagar;
+  font-size: 16px;
+  margin-bottom: 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  height: 20px;
+
+  & > div {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &.form-selector-current {
+      font-size: 20px;
+      text-decoration: underline;
+    }
+  }
+}

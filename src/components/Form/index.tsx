@@ -2,6 +2,7 @@ import React from "react";
 import Button from "components/common/Button";
 import blobBlue03 from "assets/Blobs/blob_blue_03.png";
 import blobCream09 from "assets/Blobs/blob_cream_09.png";
+import Selector from "./Selector"
 import "./styles.scss";
 import BasicForm from "./Basic";
 
@@ -18,6 +19,7 @@ const ContactForm = () => {
       </div>
       <div className="form-box">
         <div className="form-title">Contactez moi</div>
+        <Selector />
         <BasicForm />
         <Button
           title="Reservez-le"

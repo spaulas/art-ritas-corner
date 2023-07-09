@@ -4,7 +4,7 @@ export type BasicFormFields = {
   name: string;
   email: string;
   phone: string;
-  type: "nails" | "paintings";
+  type: "paintings" | "nails" | "nailsPrices" | "nailsTC";
 };
 
 export type NailsFormFields = {
