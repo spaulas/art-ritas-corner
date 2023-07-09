@@ -1,120 +1,6 @@
 {
   "categories": [
     {
-      "id": "nailArt",
-      "title": {
-        "fr": "Artiste d'ongles",
-        "en": "Nail art"
-      },
-      "description": {
-        "fr": "Divers services de mannucure effectués à domicile",
-        "en": "Various manicure services performed at home"
-      },
-      "titlePosition": "top-right",
-      "flower": {
-        "id": 1,
-        "position": "bottom-right"
-      },
-      "blobs": [
-        {
-          "color": "pink",
-          "id": 1,
-          "angle": 75
-        },
-        {
-          "color": "blue",
-          "id": 5,
-          "size": "small"
-        }
-      ],
-      "images": [
-        {
-          "id": "nails01",
-          "src": "nails01",
-          "title": {
-            "fr": "Ongles 01",
-            "en": "Nails 01"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
-          "price": 10,
-          "duration": 60
-        },
-        {
-          "id": "nails02",
-          "src": "nails02",
-          "title": {
-            "fr": "Ongles 02",
-            "en": "Nails 02"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
-          "price": 20,
-          "duration": 120
-        },
-        {
-          "id": "nails03",
-          "src": "nails03",
-          "title": {
-            "fr": "Ongles 03",
-            "en": "Nails 03"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
-          "price": 30,
-          "duration": 150
-        },
-        {
-          "id": "nails04",
-          "src": "nails01",
-          "title": {
-            "fr": "Ongles 04",
-            "en": "Nails 04"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
-          "price": 40,
-          "duration": 60
-        },
-        {
-          "id": "nails05",
-          "src": "nails02",
-          "title": {
-            "fr": "Ongles 05",
-            "en": "Nails 05"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
-          "price": 50,
-          "duration": 60
-        },
-        {
-          "id": "nails06",
-          "src": "nails03",
-          "title": {
-            "fr": "Ongles 06",
-            "en": "Nails 06"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
-          "price": 60,
-          "duration": 60
-        }
-      ]
-    },
-    {
       "id": "mandala",
       "title": {
         "fr": "Mandalas",
@@ -278,6 +164,120 @@
             "en": "Describe here in small detail what it consists of"
           },
           "available": true
+        }
+      ]
+    },
+    {
+      "id": "nailArt",
+      "title": {
+        "fr": "Artiste d'ongles",
+        "en": "Nail art"
+      },
+      "description": {
+        "fr": "Divers services de mannucure effectués à domicile",
+        "en": "Various manicure services performed at home"
+      },
+      "titlePosition": "top-right",
+      "flower": {
+        "id": 1,
+        "position": "bottom-right"
+      },
+      "blobs": [
+        {
+          "color": "pink",
+          "id": 1,
+          "angle": 75
+        },
+        {
+          "color": "blue",
+          "id": 5,
+          "size": "small"
+        }
+      ],
+      "images": [
+        {
+          "id": "nails01",
+          "src": "nails01",
+          "title": {
+            "fr": "Ongles 01",
+            "en": "Nails 01"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "price": 10,
+          "duration": 60
+        },
+        {
+          "id": "nails02",
+          "src": "nails02",
+          "title": {
+            "fr": "Ongles 02",
+            "en": "Nails 02"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "price": 20,
+          "duration": 120
+        },
+        {
+          "id": "nails03",
+          "src": "nails03",
+          "title": {
+            "fr": "Ongles 03",
+            "en": "Nails 03"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "price": 30,
+          "duration": 150
+        },
+        {
+          "id": "nails04",
+          "src": "nails01",
+          "title": {
+            "fr": "Ongles 04",
+            "en": "Nails 04"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "price": 40,
+          "duration": 60
+        },
+        {
+          "id": "nails05",
+          "src": "nails02",
+          "title": {
+            "fr": "Ongles 05",
+            "en": "Nails 05"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "price": 50,
+          "duration": 60
+        },
+        {
+          "id": "nails06",
+          "src": "nails03",
+          "title": {
+            "fr": "Ongles 06",
+            "en": "Nails 06"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "price": 60,
+          "duration": 60
         }
       ]
     }
