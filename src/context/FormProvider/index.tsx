@@ -12,6 +12,8 @@ export type NailsFormFields = {
   service: string;
   schedule: string;
   address: string;
+  notes: string,
+  photos: string
 };
 
 export type PaintingsFormFields = {
@@ -40,13 +42,15 @@ export const FormContext = createContext({
     name: "",
     email: "",
     phone: "",
-    type: "nails" as BasicFormFields["type"],
+    type: "paintings" as BasicFormFields["type"],
   },
   nailsFields: {
     date: new Date(0),
     service: "",
     schedule: "",
     address: "",
+    notes: "",
+    photos: ""
   },
   paintingsFields: {
     category: "",
@@ -60,7 +64,7 @@ function FormProvider({ children }: PropsWithChildren<unknown>) {
     name: "",
     email: "",
     phone: "",
-    type: "nails" as BasicFormFields["type"],
+    type: "paintings" as BasicFormFields["type"],
   });
 
   const [nailsFields, setNailsFields] = useState<NailsFormFields>({
@@ -68,6 +72,8 @@ function FormProvider({ children }: PropsWithChildren<unknown>) {
     service: "",
     schedule: "",
     address: "",
+    notes: "",
+    photos: ""
   });
 
   const [paintingsFields, setPaintingsFields] = useState<PaintingsFormFields>({
