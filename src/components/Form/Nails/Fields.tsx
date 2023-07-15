@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState, useRef } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Select, { type Option } from "components/common/Select";
 import "../styles.scss";
 import type {
@@ -25,7 +25,6 @@ const nailsCategory: CategoryType | undefined = (
 
 const NailsFields = ({ fields, updateNailsFields }: NailsFieldsProps) => {
   const { language } = useContext(LanguageContext);
-  const categoryDuration = useRef<number>(1);
   const [nailsServiceOptions, setNailsServiceOptions] = useState<Option[]>([]);
 
   useEffect(function getNailsServices() {
@@ -56,11 +55,6 @@ const NailsFields = ({ fields, updateNailsFields }: NailsFieldsProps) => {
             updateNailsFields({ services: value, schedule: "" });
           }
         }}
-        infoMessage={
-          fields.services.length
-            ? `Durée de: ${categoryDuration.current} min`
-            : ""
-        }
       />
       <Textbox
         isSmall

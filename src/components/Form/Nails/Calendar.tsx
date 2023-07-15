@@ -79,11 +79,9 @@ const NailsCalendar = (props: NailsFormProps) => {
       });
       const availableTimesForWeekDay =
         data.calendar.schedules[weekDay?.toLowerCase() as WeekDay];
-      getBusyTimesForSelectedDate();
 
-      categoryDuration.current = 0;
-      // TODO: correct bug!
-      /* nailsCategory?.images[parseInt(fields.services)]?.duration ?? 0 */
+      getBusyTimesForSelectedDate();
+      getSelectedServicesTotalDuration();
 
       const morningSchedules = getSchedulesFromAvailableHours(
         availableTimesForWeekDay.morning.start,
@@ -101,6 +99,19 @@ const NailsCalendar = (props: NailsFormProps) => {
     [fields.services, fields.date]
   );
 
+  const getSelectedServicesTotalDuration = () => {
+    let sum = 0;
+
+    fields.services.forEach((service) => {
+      const serviceData = nailsCategory?.images.find(
+        (image) => image.id === service
+      );
+      sum += serviceData?.duration ?? 0;
+    });
+
+    categoryDuration.current = sum;
+  };
+
   const getMonthDays = (date: Date) => {
     switch (date.getMonth()) {
       case 0:
@@ -112,7 +123,8 @@ const NailsCalendar = (props: NailsFormProps) => {
       case 11:
         return 31;
       case 1:
-        return 28; // TODO: checky year!
+        const year = date.getFullYear();
+        return (year % 4 === 0 && year % 100) || year % 400 === 0 ? 29 : 28;
       default:
         return 30;
     }
@@ -256,7 +268,6 @@ const NailsCalendar = (props: NailsFormProps) => {
           new Date(new Date(today).setMonth(today.getMonth() + MAX_MONTHS))
         }
         className={getCalendarClassName()}
-        onViewChange={(e) => console.log("on view change e = ", e)}
       />
       <Select
         label="Calendrier"
@@ -268,9 +279,12 @@ const NailsCalendar = (props: NailsFormProps) => {
         }
         onUpdate={(value) => updateNailsFields({ schedule: value.toString() })}
         infoMessage={
-          !fields.services || fields.date.getTime() === new Date(0).getTime()
+          !fields.services.length ||
+          fields.date.getTime() === new Date(0).getTime()
             ? "Sélectionner une service et une date"
-            : ""
+            : `Durée totale de toutes les prestations: ${Math.floor(
+                categoryDuration.current / 60
+              )}h${categoryDuration.current % 60}`
         }
       />
     </>

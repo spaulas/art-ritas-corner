@@ -34,8 +34,7 @@ const Description = ({
     updateBasicFields({
       type: "nails",
     });
-    // TODO: CORRECT!
-    /* updateNailsFields({ service: id }); */
+    updateNailsFields({ services: [id] });
     document.getElementById("form-page")?.scrollIntoView();
   };
 
@@ -59,11 +58,7 @@ const Description = ({
         <div className="price" id="image-description__price">{`${price}€`}</div>
       )}
       {hasOpenButton && (
-        <Button
-          id="image-description__open"
-          title="Ouvrir"
-          onClick={onOpen}
-        />
+        <Button id="image-description__open" title="Ouvrir" onClick={onOpen} />
       )}
       {formName === "nails" && (
         <Button
