@@ -9,7 +9,7 @@ export type BasicFormFields = {
 
 export type NailsFormFields = {
   date: Date;
-  service: string;
+  services: string[];
   schedule: string;
   address: string;
   notes: string,
@@ -47,7 +47,7 @@ export const FormContext = createContext({
   },
   nailsFields: {
     date: new Date(0),
-    service: "",
+    services: [] as string[],
     schedule: "",
     address: "",
     notes: "",
@@ -71,7 +71,7 @@ function FormProvider({ children }: PropsWithChildren<unknown>) {
 
   const [nailsFields, setNailsFields] = useState<NailsFormFields>({
     date: new Date(0),
-    service: "",
+    services: [],
     schedule: "",
     address: "",
     notes: "",

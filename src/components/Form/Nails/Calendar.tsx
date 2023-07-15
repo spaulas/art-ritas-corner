@@ -70,10 +70,9 @@ const NailsCalendar = (props: NailsFormProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-
   useEffect(
     function getNailsSchedules() {
-      if (!fields.service) return;
+      if (!fields.services.length) return;
 
       const weekDay = fields.date.toLocaleString("default", {
         weekday: "long",
@@ -82,8 +81,9 @@ const NailsCalendar = (props: NailsFormProps) => {
         data.calendar.schedules[weekDay?.toLowerCase() as WeekDay];
       getBusyTimesForSelectedDate();
 
-      categoryDuration.current =
-        nailsCategory?.images[parseInt(fields.service)]?.duration ?? 0;
+      categoryDuration.current = 0;
+      // TODO: correct bug!
+      /* nailsCategory?.images[parseInt(fields.services)]?.duration ?? 0 */
 
       const morningSchedules = getSchedulesFromAvailableHours(
         availableTimesForWeekDay.morning.start,
@@ -98,7 +98,7 @@ const NailsCalendar = (props: NailsFormProps) => {
       setNailsScheduleOptions([...morningSchedules, ...afternoonSchedules]);
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [fields.service, fields.date]
+    [fields.services, fields.date]
   );
 
   const getMonthDays = (date: Date) => {
@@ -209,7 +209,6 @@ const NailsCalendar = (props: NailsFormProps) => {
       }, []);
   };
 
-
   const convertIntToHourString = (hour: number): string => {
     const minutes = (hour % 1) * 60;
     return `${Math.floor(hour)}h${minutes === 0 ? "00" : minutes}`;
@@ -264,11 +263,12 @@ const NailsCalendar = (props: NailsFormProps) => {
         value={fields.schedule}
         options={nailsScheduleOptions}
         isDisabled={
-          !fields.service || fields.date.getTime() === new Date(0).getTime()
+          !fields.services.length ||
+          fields.date.getTime() === new Date(0).getTime()
         }
-        onUpdate={(value: string) => updateNailsFields({ schedule: value })}
+        onUpdate={(value) => updateNailsFields({ schedule: value.toString() })}
         infoMessage={
-          !fields.service || fields.date.getTime() === new Date(0).getTime()
+          !fields.services || fields.date.getTime() === new Date(0).getTime()
             ? "Sélectionner une service et une date"
             : ""
         }

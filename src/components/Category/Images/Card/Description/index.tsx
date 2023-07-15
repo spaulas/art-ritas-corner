@@ -34,7 +34,8 @@ const Description = ({
     updateBasicFields({
       type: "nails",
     });
-    updateNailsFields({ service: id });
+    // TODO: CORRECT!
+    /* updateNailsFields({ service: id }); */
     document.getElementById("form-page")?.scrollIntoView();
   };
 

@@ -68,8 +68,8 @@ const PaintingsFields = ({
         label="Catégorie"
         value={fields.category}
         options={paintingsCategories}
-        onUpdate={(value: string) =>
-          updatePaintingsFields({ category: value, painting: "" })
+        onUpdate={(value) =>
+          updatePaintingsFields({ category: value.toString(), painting: "" })
         }
       />
       <Select
@@ -77,7 +77,7 @@ const PaintingsFields = ({
         value={fields.painting}
         options={paintingsNames}
         isDisabled={!fields.category}
-        onUpdate={(value: string) => updatePaintingsFields({ painting: value })}
+        onUpdate={(value) => updatePaintingsFields({ painting: value.toString() })}
         infoMessage={!fields.category ? "Sélectionner une catégorie" : ""}
       />
     </>

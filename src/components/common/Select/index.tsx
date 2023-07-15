@@ -10,9 +10,10 @@ export type Option = {
 type SelectProps = {
   label: string;
   options: Option[];
-  value: string;
-  onUpdate: (_value: string) => void;
+  value?: string | string[];
+  onUpdate: (_value: string | string[]) => void;
   isDisabled?: boolean;
+  isMultiple?: boolean;
   infoMessage?: string;
 };
 
@@ -22,6 +23,7 @@ const Select = ({
   value,
   onUpdate,
   isDisabled,
+  isMultiple,
   infoMessage,
 }: SelectProps) => {
   const [hasError, setHasError] = useState(false);
@@ -44,14 +46,43 @@ const Select = ({
   const handleOnSelect = (_value: string, _isDisabled?: boolean) => {
     if (isDisabled) return;
 
-    onUpdate(_value);
-    setIsOpen(false);
+    if (isMultiple && typeof value !== "string") {
+      if (value?.includes(_value)) {
+        onUpdate([...value].filter((v) => v !== _value));
+      } else {
+        onUpdate([...(value ?? []), _value]);
+      }
+    } else {
+      onUpdate(_value);
+    }
+
+    if (!isMultiple) {
+      setIsOpen(false);
+    }
     setHasError(false);
   };
 
   const getLabelFromValue = () => {
-    const currentOption = options.find(({ value: _value }) => _value === value);
-    return currentOption?.label;
+    if (typeof value === "string") {
+      const currentOption = options.find(
+        ({ value: _value }) => _value === value
+      );
+      return currentOption?.label;
+    }
+
+    const currentLabels = value?.map((v) => {
+      const currentOption = options.find(({ value: _value }) => _value === v);
+      return currentOption?.label;
+    });
+    return currentLabels?.toString();
+  };
+
+  const getIsActive = (currentValue: string): boolean => {
+    if (typeof value === "string") {
+      return value === currentValue;
+    }
+
+    return Boolean(value?.includes(currentValue));
   };
 
   return (
@@ -69,21 +100,27 @@ const Select = ({
             <div className="message">{infoMessage}</div>
           </div>
         ) : null}
-        <div className={`dropdown-input ${isOpen || value ? "focus" : ""}`} >
+        <div
+          className={`dropdown-input ${
+            isOpen || (typeof value === "string" ? !!value : !!value?.length)
+              ? "focus"
+              : ""
+          }`}
+        >
           <span className="dropdown-arrow">&#8964;</span>
         </div>
         <label>
           <span>{label}</span>
-          <span className="label-value">{getLabelFromValue()}</span>
+          <div className="label-value">{getLabelFromValue()}</div>
         </label>
       </div>
       <div className={`dropdown-content ${isOpen ? "focus" : ""}`}>
         {options.map(({ label, value: _value, isDisabled: _isDisabled }) => (
           <div
             key={_value}
-            className={`dropdown-option ${value === _value ? "active" : ""} ${
-              _isDisabled ? "disabled" : ""
-            }`}
+            className={`dropdown-option ${
+              getIsActive(_value) ? "active" : ""
+            } ${_isDisabled ? "disabled" : ""}`}
             onClick={() => handleOnSelect(_value, _isDisabled)}
           >
             {label}

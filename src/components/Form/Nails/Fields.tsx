@@ -48,13 +48,18 @@ const NailsFields = ({ fields, updateNailsFields }: NailsFieldsProps) => {
     <>
       <Select
         label="Service"
-        value={fields.service}
+        isMultiple
+        value={fields.services}
         options={nailsServiceOptions}
-        onUpdate={(value: string) =>
-          updateNailsFields({ service: value, schedule: "" })
-        }
+        onUpdate={(value) => {
+          if (typeof value !== "string") {
+            updateNailsFields({ services: value, schedule: "" });
+          }
+        }}
         infoMessage={
-          fields.service ? `Durée de: ${categoryDuration.current} min` : ""
+          fields.services.length
+            ? `Durée de: ${categoryDuration.current} min`
+            : ""
         }
       />
       <Textbox
@@ -63,7 +68,11 @@ const NailsFields = ({ fields, updateNailsFields }: NailsFieldsProps) => {
         value={fields.notes}
         onUpdate={(value: string) => updateNailsFields({ notes: value })}
       />
-      <PhotoInput label="Show examples" value="" onUpdate={() => console.log('update')} />
+      <PhotoInput
+        label="Show examples"
+        value=""
+        onUpdate={() => console.log("update")}
+      />
     </>
   );
 };
