@@ -54,7 +54,6 @@ const Select = ({
     return currentOption?.label;
   };
 
-  /* TODO: add down arrow */
   return (
     <div
       className={`dropdown-form-field ${isDisabled ? "disabled" : ""}`}
@@ -70,7 +69,9 @@ const Select = ({
             <div className="message">{infoMessage}</div>
           </div>
         ) : null}
-        <div className={`dropdown-input ${isOpen || value ? "focus" : ""}`} />
+        <div className={`dropdown-input ${isOpen || value ? "focus" : ""}`} >
+          <span className="dropdown-arrow">&#8964;</span>
+        </div>
         <label>
           <span>{label}</span>
           <span className="label-value">{getLabelFromValue()}</span>
