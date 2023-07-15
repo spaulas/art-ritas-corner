@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { ReactElement, useContext, useEffect, useState } from "react";
 import Button from "components/common/Button";
 import blobBlue03 from "assets/Blobs/blob_blue_03.png";
 import blobCream09 from "assets/Blobs/blob_cream_09.png";
@@ -8,22 +8,74 @@ import { FormContext } from "context/FormProvider";
 import "./styles.scss";
 import NailsPrices from "./NailsPrices";
 import NailsTC from "./NailsTC";
+import NailsDisclaimerCheckbox from "./Nails/DisclaimerCheckbox";
+import { DisclaimersContext } from "context/DisclaimersProvider";
+
+type FormElements = {
+  form: ReactElement;
+  checkbox?: ReactElement;
+  buttonTitle?: string;
+  onSubmit?: () => void;
+};
 
 const ContactForm = () => {
-  const { basicFields } = useContext(FormContext);
+  const { basicFields, updateBasicFields, updateNailsFields } = useContext(FormContext);
+  const { hasAcceptedNailsTCOnce, setHasAcceptedNailsTCOnce } =
+    useContext(DisclaimersContext);
+  const [formElements, setFormElements] = useState<FormElements>();
 
-  const renderView = () => {
-    switch (basicFields.type) {
-      case "nailsPrices":
-        return <NailsPrices />;
-      case "nailsTC":
-        return <NailsTC />;
-      case "paintings":
-      case "nails":
-      default:
-        return <BasicForm />;
+  const onAgreeNailsDisclaimer = () => {
+    if (!hasAcceptedNailsTCOnce) {
+      setHasAcceptedNailsTCOnce(true);
+      updateNailsFields({disclaimer: true})
     }
+    updateBasicFields({ type: "nails" });
   };
+
+  const onSubmitPaintingMessage = () => {};
+
+  const onSubmitNailAppointmentRequest = () => {};
+
+  useEffect(
+    function getFormElements() {
+      switch (basicFields.type) {
+        case "nailsPrices":
+          setFormElements({
+            form: <NailsPrices />,
+          });
+          break;
+        case "nailsTC":
+          setFormElements({
+            form: <NailsTC />,
+            buttonTitle: "Je suis d'accord",
+            onSubmit: onAgreeNailsDisclaimer,
+          });
+          break;
+        case "nails":
+          setFormElements({
+            form: <BasicForm />,
+            buttonTitle: "Reservez-le",
+            onSubmit: onSubmitNailAppointmentRequest,
+            checkbox: <NailsDisclaimerCheckbox />,
+          });
+          break;
+        case "paintings":
+        default:
+          setFormElements({
+            form: <BasicForm />,
+            buttonTitle: "Envoyer le message",
+            onSubmit: onSubmitPaintingMessage,
+          });
+          break;
+      }
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [basicFields.type]
+  );
+
+  if (!formElements) {
+    return null;
+  }
 
   return (
     <div className="form-page" id="form-page">
@@ -38,11 +90,14 @@ const ContactForm = () => {
       <div className="form-box">
         <div className="form-title">Contactez moi</div>
         <Selector />
-        {renderView()}
-        <Button
-          title="Reservez-le"
-          onClick={() => console.log("send form info")}
-        />
+        {formElements.form}
+        {formElements.checkbox ?? null}
+        {formElements.buttonTitle && formElements.onSubmit ? (
+          <Button
+            title={formElements.buttonTitle}
+            onClick={formElements.onSubmit}
+          />
+        ) : null}
       </div>
     </div>
   );

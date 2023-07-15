@@ -5,26 +5,37 @@
   width: 100%;
   height: 100%;
   max-width: 50vw;
-  max-height: 50vh;
+  max-height: 60vh;
   z-index: 999;
   position: absolute;
-  background-color: $pink;
-  top: calc((100vh - 50vh) / 2);
-  left: calc((100vw - 50vw) / 2);
+  background-color: $white;
+  top: calc((100vh - 70vh) / 2);
+  left: calc((100vw - 60vw) / 2);
   border-radius: 32px;
   padding: 32px;
   display: flex;
   flex-direction: column;
   gap: 32px;
+  border: 20px solid $blue;
 
-  & > div {
-    color: $white;
-    font-family: Saudagar;
-    font-size: 20px;
-  }
+  .welcome-modal-border {
+    width: 100%;
+    height: 100%;
+    border: 20px solid $pink;
+    border-radius: 32px;
+    padding: 32px;
+    box-sizing: border-box;
+    overflow-y: scroll;
 
-  & > button {
-    width: fit-content;
-    margin: auto;
+    .welcome-paragraph {
+      color: $black;
+      font-family: Saudagar;
+      font-size: 20px;
+    }
+
+    button {
+      width: fit-content;
+      margin: auto;
+    }
   }
 }

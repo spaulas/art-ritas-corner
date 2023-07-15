@@ -1,0 +1,12 @@
+@import "styles/imports.scss";
+
+.checkbox-form-field {
+  color: $white;
+  font-family: Saudagar;
+  font-size: 14px;
+
+  input[type="checkbox"] {
+    accent-color: $blue;
+    color: $white;
+  }
+}

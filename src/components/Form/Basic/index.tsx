@@ -51,7 +51,7 @@ const BasicForm = () => {
       default:
         return (
           <NailsCalendar
-            fieldDate={nailsFields.date}
+            fields={nailsFields}
             updateNailsFields={updateNailsFields}
           />
         );

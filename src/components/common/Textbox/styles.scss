@@ -19,6 +19,8 @@
       border-radius: 12px;
       padding: 16px;
       resize: none;
+      transition: all 0.2s ease;
+      -webkit-transition: all 0.2s ease;
 
       &:focus {
         outline: none;
@@ -49,6 +51,29 @@
         bottom: 0px;
         left: 0px;
         transition: all 0.3s ease;
+      }
+    }
+  }
+
+  &.textarea-small {
+    height: 40px;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+
+    .textarea-container {
+      height: 40px;
+    }
+
+    textarea:not(:focus) {
+      height: 40px;
+    }
+
+    &.textarea-small---focused {
+      height: 344px;
+      margin-top: -304px;
+
+      .textarea-container {
+        height: 344px;
       }
     }
   }

@@ -1,0 +1,98 @@
+@import "styles/imports.scss";
+
+.photo-form-field {
+  position: relative;
+  margin-top: 12px;
+
+  .photo-container {
+    position: relative;
+    height: 60px;
+
+    input {
+      width: 100%;
+      max-width: calc(336px - 32px);
+      border: none;
+      padding: 0 16px;
+      outline: none;
+
+      &[type="file"] {
+        color: transparent;
+
+        &::file-selector-button {
+          cursor: pointer;
+          padding: 4px 16px;
+          background: none;
+          border: 1px solid $white;
+          border-radius: 16px;
+          color: $white;
+          font-family: Saudagar;
+          margin-top: 8px;
+          transition: all 0.2s ease;
+          -webkit-transition: all 0.2s ease;
+
+          &:hover {
+            background-color: $white;
+            color: rgba(22, 22, 22, 0.6);
+          }
+        }
+
+        &::after {
+          display: none;
+        }
+
+        &.disabled {
+          &::file-selector-button {
+            cursor: not-allowed;
+            background-color: rgba($white, 0.2);
+            border-color: rgba(22, 22, 22, 0.4);
+            color: rgba(22, 22, 22, 0.4);
+          }
+        }
+      }
+    }
+
+    label {
+      padding-left: 16px;
+      pointer-events: none;
+      font-family: Saudagar;
+      color: $white;
+      font-size: 14px;
+      width: 100%;
+    }
+  }
+
+  .photos-preview {
+    width: 100%;
+    height: 100%;
+    max-width: calc(336px - 32px);
+    padding: 0 16px;
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+
+    .photo-preview-image {
+      position: relative;
+
+      button {
+        position: absolute;
+        padding: 4px 8px;
+        font-size: 10px;
+        top: -8px;
+        right: -8px;
+        margin: 0;
+        background-color: $white;
+        color: rgba(22, 22, 22, 0.6);
+
+        &:hover {
+          padding: 5px 9px;
+        }
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 4px;
+      }
+    }
+  }
+}

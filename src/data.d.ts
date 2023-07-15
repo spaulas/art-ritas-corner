@@ -10,6 +10,7 @@ export type ImageType = {
   price?: number;
   duration?: number;
   src: string;
+  link?: string;
 };
 
 export type BlobType = {
@@ -67,12 +68,12 @@ export type TCCategory = {
 
 export type NailsTC = {
   paragraphs: Text[];
-  categories: TCCategory[]
+  categories: TCCategory[];
 };
 
 export type Welcome = {
   paragraphs: Text[];
-}
+};
 
 export type DataType = {
   categories: CategoryType[];
@@ -82,5 +83,5 @@ export type DataType = {
   welcome: Welcome;
   calendar: CalendarType;
   nailsPrices: NailsPrices[];
-  nailsTC: NailsTC
+  nailsTC: NailsTC;
 };

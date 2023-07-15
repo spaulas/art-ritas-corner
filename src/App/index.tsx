@@ -4,20 +4,23 @@ import Main from "../pages/Main";
 import LanguageProvider from "context/LanguageProvider";
 import FormProvider from "context/FormProvider";
 import BackdropProvider from "context/BackdropProvider";
+import DisclaimersProvider from "context/DisclaimersProvider";
 
 const App = (): React.ReactElement => {
   return (
-    <BackdropProvider>
-      <LanguageProvider>
-        <FormProvider>
-          <Router>
-            <Routes>
-              <Route path="/" element={<Main />} />
-            </Routes>
-          </Router>
-        </FormProvider>
-      </LanguageProvider>
-    </BackdropProvider>
+    <DisclaimersProvider>
+      <BackdropProvider>
+        <LanguageProvider>
+          <FormProvider>
+            <Router>
+              <Routes>
+                <Route path="/" element={<Main />} />
+              </Routes>
+            </Router>
+          </FormProvider>
+        </LanguageProvider>
+      </BackdropProvider>
+    </DisclaimersProvider>
   );
 };
 

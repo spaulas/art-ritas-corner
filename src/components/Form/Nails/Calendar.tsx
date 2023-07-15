@@ -1,26 +1,50 @@
-import React, { useContext, useEffect, useState } from "react";
-import "../styles.scss";
+import React, { useContext, useEffect, useState, useRef } from "react";
+import Select, { type Option } from "components/common/Select";
 import type {
   NailsFormFields,
   UpdateNailsFieldsFunction,
 } from "context/FormProvider";
 import { LanguageContext } from "context/LanguageProvider";
 import Calendar from "react-calendar";
+import type { CategoryType, DataType } from "data";
+import data from "data.json";
+import "../styles.scss";
 
 type NailsFormProps = {
-  fieldDate: NailsFormFields["date"];
+  fields: NailsFormFields;
   updateNailsFields: UpdateNailsFieldsFunction;
 };
+
+type WeekDay =
+  | "monday"
+  | "tuesday"
+  | "wednesday"
+  | "thursday"
+  | "friday"
+  | "saturday"
+  | "sunday";
+
+type ScheduleTimes = { start: number; end: number };
+
+const nailsCategory: CategoryType | undefined = (
+  data as DataType
+).categories.find(({ id }) => id === "nailArt");
 
 const NailsCalendar = (props: NailsFormProps) => {
   const today = new Date();
   const DISABLED_DAYS = 2;
   const MAX_MONTHS = 3;
+  const SCHEDULES_INTERVAL = 0.5;
 
-  const { fieldDate, updateNailsFields } = props;
+  const { fields, updateNailsFields } = props;
   const { language } = useContext(LanguageContext);
   const [selectedDate, setSelectedDate] = useState<Date>();
   const [currentMonth, setCurrentMonth] = useState<number>(-1);
+  const [nailsScheduleOptions, setNailsScheduleOptions] = useState<Option[]>(
+    []
+  );
+  const busyTimesForSelectedDate = useRef<ScheduleTimes[]>([]);
+  const categoryDuration = useRef<number>(1);
 
   const leftMonthButton = document.getElementsByClassName(
     "react-calendar__navigation__arrow react-calendar__navigation__prev-button"
@@ -41,6 +65,53 @@ const NailsCalendar = (props: NailsFormProps) => {
     }
   });
 
+  useEffect(() => {
+    setCurrentMonth(today.getMonth());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(
+    function getNailsSchedules() {
+      if (!fields.services.length) return;
+
+      const weekDay = fields.date.toLocaleString("default", {
+        weekday: "long",
+      });
+      const availableTimesForWeekDay =
+        data.calendar.schedules[weekDay?.toLowerCase() as WeekDay];
+
+      getBusyTimesForSelectedDate();
+      getSelectedServicesTotalDuration();
+
+      const morningSchedules = getSchedulesFromAvailableHours(
+        availableTimesForWeekDay.morning.start,
+        availableTimesForWeekDay.morning.end
+      );
+
+      const afternoonSchedules = getSchedulesFromAvailableHours(
+        availableTimesForWeekDay.afternoon.start,
+        availableTimesForWeekDay.afternoon.end
+      );
+
+      setNailsScheduleOptions([...morningSchedules, ...afternoonSchedules]);
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [fields.services, fields.date]
+  );
+
+  const getSelectedServicesTotalDuration = () => {
+    let sum = 0;
+
+    fields.services.forEach((service) => {
+      const serviceData = nailsCategory?.images.find(
+        (image) => image.id === service
+      );
+      sum += serviceData?.duration ?? 0;
+    });
+
+    categoryDuration.current = sum;
+  };
+
   const getMonthDays = (date: Date) => {
     switch (date.getMonth()) {
       case 0:
@@ -52,7 +123,8 @@ const NailsCalendar = (props: NailsFormProps) => {
       case 11:
         return 31;
       case 1:
-        return 28; // TODO: checky year!
+        const year = date.getFullYear();
+        return (year % 4 === 0 && year % 100) || year % 400 === 0 ? 29 : 28;
       default:
         return 30;
     }
@@ -91,30 +163,131 @@ const NailsCalendar = (props: NailsFormProps) => {
     return `calendar-disabled-days-${finalDisabledDays} ${selectedDayClassName} ${disabledMonthArrowsClassName}`;
   };
 
-  useEffect(() => {
-    setCurrentMonth(today.getMonth());
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const getBusyTimesForSelectedDate = () => {
+    busyTimesForSelectedDate.current = data.calendar.busy.reduce(
+      (acc: ScheduleTimes[], { start: busyStart, end: busyEnd }) => {
+        const busyStartDate = new Date(busyStart);
+        const busyEndDate = new Date(busyEnd);
+        const day = 24 * 60 * 60 * 1000;
+
+        const isOnTheSelectedDay =
+          busyStartDate.getDate() === fields.date.getDate() &&
+          Math.abs(busyStartDate.getTime() - fields.date.getTime()) < day;
+
+        if (!isOnTheSelectedDay) {
+          return acc;
+        }
+
+        return [
+          ...acc,
+          {
+            start: busyStartDate.getHours() + busyStartDate.getMinutes() / 60,
+            end: busyEndDate.getHours() + busyEndDate.getMinutes() / 60,
+          },
+        ];
+      },
+      []
+    );
+  };
+
+  const getSchedulesFromAvailableHours = (
+    start: number,
+    end: number
+  ): Option[] => {
+    const hours = end - start;
+
+    return Array(hours * 2)
+      .fill(1)
+      .reduce((acc, _value, index) => {
+        const startInt = start + index * SCHEDULES_INTERVAL;
+        const endInt = startInt + categoryDuration.current / 60;
+
+        if (endInt > end) return acc;
+
+        const finalValue = `${convertIntToHourString(
+          startInt
+        )} - ${convertIntToHourString(endInt)}`;
+
+        const isDisabled = isTimeScheduleDisabled(startInt, endInt);
+
+        return [
+          ...acc,
+          {
+            label: finalValue,
+            value: finalValue,
+            isDisabled,
+          },
+        ];
+      }, []);
+  };
+
+  const convertIntToHourString = (hour: number): string => {
+    const minutes = (hour % 1) * 60;
+    return `${Math.floor(hour)}h${minutes === 0 ? "00" : minutes}`;
+  };
+
+  const isTimeScheduleDisabled = (start: number, end: number) => {
+    let isDisabled = false;
+
+    busyTimesForSelectedDate.current = busyTimesForSelectedDate.current.reduce(
+      (acc: ScheduleTimes[], busy) => {
+        if (
+          (start >= busy.start && start < busy.end) ||
+          (end > busy.start && end <= busy.end) ||
+          (start < busy.end && start + (busy.end - busy.start) < end)
+        ) {
+          isDisabled = true;
+
+          if (start >= busy.end + SCHEDULES_INTERVAL) {
+            return acc;
+          }
+        }
+        return [...acc, busy];
+      },
+      []
+    );
+
+    return isDisabled;
+  };
 
   return (
-    <Calendar
-      onChange={(value) => {
-        if (value instanceof Date) {
-          setSelectedDate(value);
-          updateNailsFields({ date: value });
+    <>
+      <Calendar
+        onChange={(value) => {
+          if (value instanceof Date) {
+            setSelectedDate(value);
+            updateNailsFields({ date: value });
+          }
+        }}
+        value={fields.date}
+        locale={language}
+        showNeighboringMonth={false}
+        maxDetail="month"
+        minDate={today}
+        maxDate={
+          new Date(new Date(today).setMonth(today.getMonth() + MAX_MONTHS))
         }
-      }}
-      value={fieldDate}
-      locale={language}
-      showNeighboringMonth={false}
-      maxDetail="month"
-      minDate={today}
-      maxDate={
-        new Date(new Date(today).setMonth(today.getMonth() + MAX_MONTHS))
-      }
-      className={getCalendarClassName()}
-      onViewChange={(e) => console.log("on view change e = ", e)}
-    />
+        className={getCalendarClassName()}
+      />
+      <Select
+        label="Calendrier"
+        value={fields.schedule}
+        options={nailsScheduleOptions}
+        isDisabled={
+          !fields.services.length ||
+          fields.date.getTime() === new Date(0).getTime()
+        }
+        onUpdate={(value) => updateNailsFields({ schedule: value.toString() })}
+        infoMessage={
+          !fields.services.length ||
+          fields.date.getTime() === new Date(0).getTime()
+            ? "Sélectionner une service et une date"
+            : `Durée totale de toutes les prestations: ${Math.floor(
+                categoryDuration.current / 60
+              )}h${categoryDuration.current % 60}`
+        }
+      />
+    </>
   );
 };
 

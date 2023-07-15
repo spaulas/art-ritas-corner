@@ -23,12 +23,23 @@
       border-radius: 12px;
       padding: 0 16px;
       cursor: pointer;
+      position: relative;
+
+      .dropdown-arrow {
+        color: $grey--dark;
+        position: absolute;
+        right: 16px;
+      }
 
       &.focus {
         outline: none;
 
         & + label .label-value {
           display: block;
+        }
+
+        .dropdown-arrow {
+          color: $black !important;
         }
       }
 
@@ -60,6 +71,11 @@
 
       .label-value {
         color: $black;
+        word-break: keep-all;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 286px;
       }
     }
   }
@@ -129,6 +145,10 @@
     .dropdown-input {
       cursor: not-allowed;
       background-color: $grey;
+    }
+
+    .dropdown-arrow {
+      color: $grey--dark !important;
     }
   }
 

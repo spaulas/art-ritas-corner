@@ -4,14 +4,30 @@ button {
   cursor: pointer;
   padding: 4px 16px;
   background: none;
-  border: 1px solid $white;
   border-radius: 16px;
   color: $white;
   font-family: Saudagar;
   margin-top: 16px;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  border: 1px solid $white;
 
   &:hover {
     background-color: $white;
     color: rgba(22, 22, 22, 0.6);
+  }
+
+  &.dark {
+    border: 1px solid $black;
+    color: $black;
+
+    &:hover {
+      background-color: rgba($black, 0.2);
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    background-color: rgba(22, 22, 22, 0.6);
   }
 }
