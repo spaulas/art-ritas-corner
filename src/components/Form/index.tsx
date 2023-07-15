@@ -8,18 +8,29 @@ import { FormContext } from "context/FormProvider";
 import "./styles.scss";
 import NailsPrices from "./NailsPrices";
 import NailsTC from "./NailsTC";
+import NailsDisclaimerCheckbox from "./Nails/DisclaimerCheckbox";
+import { DisclaimersContext } from "context/DisclaimersProvider";
 
 type FormElements = {
-  formComponent: ReactElement;
+  form: ReactElement;
+  checkbox?: ReactElement;
   buttonTitle?: string;
   onSubmit?: () => void;
 };
 
 const ContactForm = () => {
-  const { basicFields } = useContext(FormContext);
+  const { basicFields, updateBasicFields, updateNailsFields } = useContext(FormContext);
+  const { hasAcceptedNailsTCOnce, setHasAcceptedNailsTCOnce } =
+    useContext(DisclaimersContext);
   const [formElements, setFormElements] = useState<FormElements>();
 
-  const onAgreeNailsDisclaimer = () => {};
+  const onAgreeNailsDisclaimer = () => {
+    if (!hasAcceptedNailsTCOnce) {
+      setHasAcceptedNailsTCOnce(true);
+      updateNailsFields({disclaimer: true})
+    }
+    updateBasicFields({ type: "nails" });
+  };
 
   const onSubmitPaintingMessage = () => {};
 
@@ -30,33 +41,35 @@ const ContactForm = () => {
       switch (basicFields.type) {
         case "nailsPrices":
           setFormElements({
-            formComponent: <NailsPrices />,
+            form: <NailsPrices />,
           });
           break;
         case "nailsTC":
           setFormElements({
-            formComponent: <NailsTC />,
+            form: <NailsTC />,
             buttonTitle: "Je suis d'accord",
             onSubmit: onAgreeNailsDisclaimer,
           });
           break;
         case "nails":
           setFormElements({
-            formComponent: <BasicForm />,
+            form: <BasicForm />,
             buttonTitle: "Reservez-le",
             onSubmit: onSubmitNailAppointmentRequest,
+            checkbox: <NailsDisclaimerCheckbox />,
           });
           break;
         case "paintings":
         default:
           setFormElements({
-            formComponent: <BasicForm />,
+            form: <BasicForm />,
             buttonTitle: "Envoyer le message",
             onSubmit: onSubmitPaintingMessage,
           });
           break;
       }
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [basicFields.type]
   );
 
@@ -77,7 +90,8 @@ const ContactForm = () => {
       <div className="form-box">
         <div className="form-title">Contactez moi</div>
         <Selector />
-        {formElements.formComponent}
+        {formElements.form}
+        {formElements.checkbox ?? null}
         {formElements.buttonTitle && formElements.onSubmit ? (
           <Button
             title={formElements.buttonTitle}

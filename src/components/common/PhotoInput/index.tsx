@@ -49,7 +49,6 @@ const Input = ({ label, value, onUpdate }: InputProps) => {
 
   const onFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const choosenFiles = Array.prototype.slice.call(e.target.files);
-    console.log("choosen files = ", choosenFiles);
     handleFileUpload(choosenFiles);
   };
 

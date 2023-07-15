@@ -6,22 +6,31 @@ import { LanguageContext } from "context/LanguageProvider";
 import "./styles.scss";
 import Button from "components/common/Button";
 import { BackdropContext } from "context/BackdropProvider";
+import { DisclaimersContext } from "context/DisclaimersProvider";
 
 const WelcomeModal = () => {
   const { language } = useContext(LanguageContext);
   const { isWelcomeVisible, setWelcomeModalVisibility } =
     useContext(BackdropContext);
+  const { hasViewedWelcomeMessageOnce, setHasViewedWelcomeMessageOnce } =
+    useContext(DisclaimersContext);
 
   const renderParagraph = () => {
     return Object.values((data as DataType).welcome.paragraphs).map(
       (paragraph, index) => (
-        <div className="welcome-paragraph" key={`welcome-paragraph-${index}`}>{paragraph[language]}</div>
+        <div className="welcome-paragraph" key={`welcome-paragraph-${index}`}>
+          {paragraph[language]}
+        </div>
       )
     );
   };
 
   const handleOnClick = () => {
     setWelcomeModalVisibility(false);
+    
+    if (!hasViewedWelcomeMessageOnce) {
+      setHasViewedWelcomeMessageOnce();
+    }
   };
 
   if (!isWelcomeVisible) {
