@@ -11,6 +11,7 @@ import data from "data.json";
 import { LanguageContext } from "context/LanguageProvider";
 import type { CategoryType, DataType } from "data";
 import Textbox from "components/common/Textbox";
+import PhotoInput from "components/common/PhotoInput";
 
 type NailsFieldsProps = {
   fields: BasicFormFields & NailsFormFields;
@@ -62,6 +63,7 @@ const NailsFields = ({ fields, updateNailsFields }: NailsFieldsProps) => {
         value={fields.notes}
         onUpdate={(value: string) => updateNailsFields({ notes: value })}
       />
+      <PhotoInput label="Show examples" value="" onUpdate={() => console.log('update')} />
     </>
   );
 };

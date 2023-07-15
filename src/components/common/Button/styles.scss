@@ -9,9 +9,16 @@ button {
   color: $white;
   font-family: Saudagar;
   margin-top: 16px;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
 
   &:hover {
     background-color: $white;
     color: rgba(22, 22, 22, 0.6);
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    background-color: rgba(22, 22, 22, 0.6);
   }
 }

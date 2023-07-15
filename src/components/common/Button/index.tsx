@@ -4,13 +4,14 @@ import "./styles.scss";
 type ButtonProps = {
   title: string;
   id?: string;
+  isDisabled?: boolean;
   onClick: () => void;
   onMouseEnter?: () => void
 };
 
-const Button = ({ title, id, onClick, onMouseEnter }: ButtonProps) => {
+const Button = ({ title, id, isDisabled, onClick, onMouseEnter }: ButtonProps) => {
   return (
-    <button id={id} onClick={onClick} onMouseEnter={onMouseEnter}>
+    <button className={isDisabled ? "disabled" : ""} disabled={isDisabled} id={id} onClick={onClick} onMouseEnter={onMouseEnter}>
       {title}
     </button>
   );
