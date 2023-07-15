@@ -42,6 +42,8 @@ const Input = ({ label, value, onUpdate }: InputProps) => {
           setUploadedFiles([...uploadedFiles, { ...file, src: imageSrc }]);
         };
       }
+
+      return true;
     });
   };
 
