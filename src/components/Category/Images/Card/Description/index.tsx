@@ -4,7 +4,6 @@ import "./styles.scss";
 import Button from "components/common/Button";
 import { BasicFormFields, FormContext } from "context/FormProvider";
 import { ImageType } from "data";
-import { useNavigate } from "react-router-dom";
 
 type DescriptionProps = {
   categoryID: string;
@@ -17,6 +16,7 @@ const Description = ({
   id,
   title,
   description,
+  link,
   price,
   hasOpenButton,
   formName,
@@ -24,10 +24,9 @@ const Description = ({
   const { language } = useContext(LanguageContext);
   const { updateBasicFields, updateNailsFields, updatePaintingsFields } =
     useContext(FormContext);
-  const navigate = useNavigate();
 
   const onOpen = () => {
-    navigate(`/${categoryID}/${id}`);
+    window.open(link);
   };
 
   const onScheduleClick = () => {
@@ -57,7 +56,7 @@ const Description = ({
       {price && (
         <div className="price" id="image-description__price">{`${price}€`}</div>
       )}
-      {hasOpenButton && (
+      {hasOpenButton && link && (
         <Button id="image-description__open" title="Ouvrir" onClick={onOpen} />
       )}
       {formName === "nails" && (

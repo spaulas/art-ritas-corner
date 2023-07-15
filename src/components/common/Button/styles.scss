@@ -10,6 +10,7 @@ button {
   margin-top: 16px;
   transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
+  border: 1px solid $white;
 
   &:hover {
     background-color: $white;

@@ -38,7 +38,8 @@
             "fr": "Décrivez ici en petit détail en quoi il consiste",
             "en": "Describe here in small detail what it consists of"
           },
-          "available": true
+          "available": true,
+          "link": "https://www.instagram.com/p/ClgHkW0M3_T/?img_index=1"
         }
       ]
     },
@@ -79,7 +80,8 @@
             "fr": "Décrivez ici en petit détail en quoi il consiste",
             "en": "Describe here in small detail what it consists of"
           },
-          "available": true
+          "available": true,
+          "link": "https://www.instagram.com/p/CU9yhixsqS8/?img_index=1"
         }
       ]
     },
@@ -124,7 +126,8 @@
             "fr": "Décrivez ici en petit détail en quoi il consiste",
             "en": "Describe here in small detail what it consists of"
           },
-          "available": true
+          "available": true,
+          "link": "https://www.instagram.com/p/CTWzpRYMztR/?img_index=1"
         },
         {
           "id": "body02",
@@ -137,7 +140,8 @@
             "fr": "Décrivez ici en petit détail en quoi il consiste",
             "en": "Describe here in small detail what it consists of"
           },
-          "available": true
+          "available": true,
+          "link": "https://www.instagram.com/p/Cb9-fpNMu9C/?img_index=1"
         },
         {
           "id": "body03",
@@ -150,7 +154,8 @@
             "fr": "Décrivez ici en petit détail en quoi il consiste",
             "en": "Describe here in small detail what it consists of"
           },
-          "available": false
+          "available": false,
+          "link": "https://www.instagram.com/p/CW2iKKtsqR8/?img_index=1"
         },
         {
           "id": "body04",
@@ -163,7 +168,8 @@
             "fr": "Décrivez ici en petit détail en quoi il consiste",
             "en": "Describe here in small detail what it consists of"
           },
-          "available": true
+          "available": true,
+          "link": "https://www.instagram.com/p/CUpQFBvsCQX/?img_index=1"
         }
       ]
     },
