@@ -1,0 +1,20 @@
+@import "styles/imports.scss";
+
+.nails-summary {
+    padding: 16px;
+    color: $white;
+    font-family: Saudagar;
+    text-align: center;
+    font-size: 14px;
+    user-select: none;
+    
+    &__line:first-child {
+        margin-bottom: 4px;
+    }
+
+    &__title {
+        font-size: 16px;
+    }
+
+    
+}

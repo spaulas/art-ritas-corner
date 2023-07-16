@@ -6,9 +6,9 @@ import type {
 } from "context/FormProvider";
 import { LanguageContext } from "context/LanguageProvider";
 import Calendar from "react-calendar";
-import type { CategoryType, DataType } from "data";
 import data from "data.json";
-import "../styles.scss";
+import "../../styles.scss";
+import { getServicesTotalDuration } from "utils/getSums";
 
 type NailsFormProps = {
   fields: NailsFormFields;
@@ -25,10 +25,6 @@ type WeekDay =
   | "sunday";
 
 type ScheduleTimes = { start: number; end: number };
-
-const nailsCategory: CategoryType | undefined = (
-  data as DataType
-).categories.find(({ id }) => id === "nailArt");
 
 const NailsCalendar = (props: NailsFormProps) => {
   const today = new Date();
@@ -81,7 +77,7 @@ const NailsCalendar = (props: NailsFormProps) => {
         data.calendar.schedules[weekDay?.toLowerCase() as WeekDay];
 
       getBusyTimesForSelectedDate();
-      getSelectedServicesTotalDuration();
+      categoryDuration.current = getServicesTotalDuration(fields.services);
 
       const morningSchedules = getSchedulesFromAvailableHours(
         availableTimesForWeekDay.morning.start,
@@ -98,19 +94,6 @@ const NailsCalendar = (props: NailsFormProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [fields.services, fields.date]
   );
-
-  const getSelectedServicesTotalDuration = () => {
-    let sum = 0;
-
-    fields.services.forEach((service) => {
-      const serviceData = nailsCategory?.images.find(
-        (image) => image.id === service
-      );
-      sum += serviceData?.duration ?? 0;
-    });
-
-    categoryDuration.current = sum;
-  };
 
   const getMonthDays = (date: Date) => {
     switch (date.getMonth()) {
@@ -282,9 +265,7 @@ const NailsCalendar = (props: NailsFormProps) => {
           !fields.services.length ||
           fields.date.getTime() === new Date(0).getTime()
             ? "Sélectionner une service et une date"
-            : `Durée totale de toutes les prestations: ${Math.floor(
-                categoryDuration.current / 60
-              )}h${categoryDuration.current % 60}`
+            : ""
         }
       />
     </>

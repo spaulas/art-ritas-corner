@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import Select, { type Option } from "components/common/Select";
-import "../styles.scss";
+import "../../styles.scss";
 import type {
   BasicFormFields,
   NailsFormFields,
@@ -60,12 +60,12 @@ const NailsFields = ({ fields, updateNailsFields }: NailsFieldsProps) => {
         isSmall
         label="Remarques"
         value={fields.notes}
-        onUpdate={(value: string) => updateNailsFields({ notes: value })}
+        onUpdate={(value) => updateNailsFields({ notes: value })}
       />
       <PhotoInput
         label="Show examples"
-        value=""
-        onUpdate={() => console.log("update")}
+        value={fields.photos}
+        onUpdate={(value) => updateNailsFields({ photos: value })}
       />
     </>
   );

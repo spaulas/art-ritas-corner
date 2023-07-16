@@ -75,6 +75,8 @@ export type Welcome = {
   paragraphs: Text[];
 };
 
+export type UploadedFiles = File & { src: string | ArrayBuffer | null };
+
 export type DataType = {
   categories: CategoryType[];
   profile: {

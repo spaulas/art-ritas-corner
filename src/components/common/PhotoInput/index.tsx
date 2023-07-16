@@ -1,31 +1,30 @@
 import React, { useState } from "react";
 import "./styles.scss";
 import Button from "../Button";
+import { UploadedFiles } from "data";
 
 type InputProps = {
   label: string;
-  value: string;
+  value: UploadedFiles[];
   isSmall?: boolean;
-  onUpdate: (value: string) => void;
+  onUpdate: (value: UploadedFiles[]) => void;
 };
 
-type UploadedFiles = File & { src: string | ArrayBuffer | null };
-
 const Input = ({ label, value, onUpdate }: InputProps) => {
-  const [uploadedFiles, setUploadedFiles] = useState<UploadedFiles[]>([]);
   const [hasExceededLimit, setHasExceededLimit] = useState(false);
   const MAX_COUNT = 5;
 
+  console.log("VALUE = ", value);
   const handleFileUpload = (files: File[]) => {
     let limitExceeded = false;
 
     files.some((file) => {
-      if (uploadedFiles.findIndex((f) => f.name === file.name) === -1) {
-        if (uploadedFiles.length === MAX_COUNT - 1) {
+      if (value.findIndex((f) => f.name === file.name) === -1) {
+        if (value.length === MAX_COUNT - 1) {
           setHasExceededLimit(true);
         }
 
-        if (uploadedFiles.length > MAX_COUNT - 1) {
+        if (value.length > MAX_COUNT - 1) {
           alert(`You can only add a maximum of ${MAX_COUNT} files`);
           setHasExceededLimit(false);
           limitExceeded = true;
@@ -39,7 +38,12 @@ const Input = ({ label, value, onUpdate }: InputProps) => {
         reader.onload = () => {
           const imageSrc = reader.result;
 
-          setUploadedFiles([...uploadedFiles, { ...file, src: imageSrc }]);
+          console.log("ADDING PICTURES!!!!!! = > ", [
+            ...value,
+            { ...file, src: imageSrc },
+          ]);
+
+          onUpdate([...value, { ...file, src: imageSrc }]);
         };
       }
 
@@ -53,9 +57,9 @@ const Input = ({ label, value, onUpdate }: InputProps) => {
   };
 
   const removeImage = (index: number) => {
-    const _uploadedFiles = [...uploadedFiles]
-    _uploadedFiles.splice(index, 1)
-    setUploadedFiles(_uploadedFiles)
+    const _value = [...value];
+    _value.splice(index, 1);
+    onUpdate(_value);
   };
 
   return (
@@ -70,11 +74,11 @@ const Input = ({ label, value, onUpdate }: InputProps) => {
           accept="application/png application/jpg application/jpeg"
           onChange={onFileUpload}
           disabled={hasExceededLimit}
-          className={uploadedFiles.length === MAX_COUNT ? "disabled" :  ""}
+          className={value.length === MAX_COUNT ? "disabled" : ""}
         />
 
         <div className="photos-preview">
-          {uploadedFiles.map((file, index) => {
+          {value.map((file, index) => {
             if (file.src) {
               return (
                 <div className="photo-preview-image">
