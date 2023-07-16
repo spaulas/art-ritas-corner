@@ -1,4 +1,4 @@
-import { NailsFormFields } from "context/FormProvider";
+import { NailsFormFields, PaintingsFormFields } from "context/FormProvider";
 import data from "data.json";
 import type { CategoryType, DataType } from "data";
 
@@ -37,3 +37,27 @@ export const getServicesListToString = (
   return servicesToString.slice(0, -2);
 };
 
+export const getCategoryToString = (
+  category: PaintingsFormFields["category"]
+): string => {
+  const categoryData: CategoryType | undefined = (
+    data as DataType
+  ).categories.find(({ id }) => id === category);
+
+  return categoryData?.title.fr ?? "";
+};
+
+export const getPaintingToString = (
+  category: PaintingsFormFields["category"],
+  painting: PaintingsFormFields["painting"]
+): string => {
+  const categoryData: CategoryType | undefined = (
+    data as DataType
+  ).categories.find(({ id }) => id === category);
+
+  const paintingData = categoryData?.images.find(
+    (image) => image.id === painting
+  );
+
+  return paintingData?.title.fr ?? "";
+};

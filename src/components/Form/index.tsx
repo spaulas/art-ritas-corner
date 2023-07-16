@@ -15,7 +15,9 @@ import NailsSummary from "./Nails/Summary";
 import { getServicesTotalDuration, getServicesTotalPrice } from "utils/getSums";
 import {
   convertDurationToString,
+  getCategoryToString,
   getDateToString,
+  getPaintingToString,
   getServicesListToString,
 } from "utils/getString";
 import ConfirmationMessage from "./Messages/Confirmation";
@@ -34,17 +36,18 @@ const ContactForm = () => {
     useState(false);
   const [isErrorMessageVisible, setIsErrorMessageVisible] = useState(false);
   const [isSending, setIsSending] = useState(false);
+  const [formElements, setFormElements] = useState<FormElements>();
 
   const {
     basicFields,
     nailsFields,
+    paintingsFields,
     updateBasicFields,
     updateNailsFields,
     cleanAllFields,
   } = useContext(FormContext);
   const { hasAcceptedNailsTCOnce, setHasAcceptedNailsTCOnce } =
     useContext(DisclaimersContext);
-  const [formElements, setFormElements] = useState<FormElements>();
 
   const onAgreeNailsDisclaimer = () => {
     if (!hasAcceptedNailsTCOnce) {
@@ -54,31 +57,63 @@ const ContactForm = () => {
     updateBasicFields({ type: "nails" });
   };
 
-  const onSubmitPaintingMessage = () => {};
+  const onSubmitPaintingMessage = () => {
+    setIsSending(true);
+
+    emailjs
+      .send(
+        "art-rita-corner--test",
+        "ritasartcorner_paintings",
+        {
+          name: basicFields.name,
+          email: basicFields.email,
+          phoneNumber: basicFields.phone,
+          category: getCategoryToString(paintingsFields.category),
+          painting: getPaintingToString(
+            paintingsFields.category,
+            paintingsFields.painting
+          ),
+          notes: paintingsFields.notes,
+        },
+        "QdGvtgrmrTek7hpRv"
+      )
+      .then(
+        () => {
+          setIsSending(false);
+          setIsConfirmationMessageVisible(true);
+        },
+        () => {
+          setIsSending(false);
+          setIsErrorMessageVisible(true);
+        }
+      );
+  };
 
   const onSubmitNailAppointmentRequest = () => {
     setIsSending(true);
-    const object = {
-      name: basicFields.name,
-      email: basicFields.email,
-      phoneNumber: basicFields.phone,
-      services: getServicesListToString(nailsFields.services),
-      duration: convertDurationToString(
-        getServicesTotalDuration(nailsFields.services)
-      ),
-      price: getServicesTotalPrice(nailsFields.services),
-      date: getDateToString(nailsFields.date),
-      schedule: nailsFields.schedule,
-      notes: nailsFields.notes,
-      images: nailsFields.photos,
-      image1: nailsFields.photos[0],
-    };
 
     emailjs
       .send(
         "art-rita-corner--test",
         "ritasartcorner_nails",
-        object,
+        {
+          name: basicFields.name,
+          email: basicFields.email,
+          phoneNumber: basicFields.phone,
+          services: getServicesListToString(nailsFields.services),
+          duration: convertDurationToString(
+            getServicesTotalDuration(nailsFields.services)
+          ),
+          price: getServicesTotalPrice(nailsFields.services),
+          date: getDateToString(nailsFields.date),
+          schedule: nailsFields.schedule,
+          notes: nailsFields.notes,
+          image1: nailsFields.photos[0],
+          image2: nailsFields.photos[1],
+          image3: nailsFields.photos[2],
+          image4: nailsFields.photos[3],
+          image5: nailsFields.photos[4],
+        },
         "QdGvtgrmrTek7hpRv"
       )
       .then(
@@ -142,7 +177,7 @@ const ContactForm = () => {
   const renderView = () => {
     switch (true) {
       case isSending:
-        return <Spinner title="Envoi en cours..." />
+        return <Spinner title="Envoi en cours..." />;
       case isConfirmationMessageVisible:
         return (
           <ConfirmationMessage
