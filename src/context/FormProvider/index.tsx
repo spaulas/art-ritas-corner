@@ -105,7 +105,7 @@ function FormProvider({ children }: PropsWithChildren<unknown>) {
   };
 
   const cleanAllFields = () => {
-    setBasicFields(initialBasicFields);
+    setBasicFields({...initialBasicFields, type: basicFields.type});
     setNailsFields(initialNailsFields);
     setPaintingsFields(initialPaintingFields);
   };

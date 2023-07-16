@@ -52,8 +52,8 @@ const ContactForm = () => {
   const onAgreeNailsDisclaimer = () => {
     if (!hasAcceptedNailsTCOnce) {
       setHasAcceptedNailsTCOnce(true);
-      updateNailsFields({ disclaimer: true });
     }
+    updateNailsFields({ disclaimer: true });
     updateBasicFields({ type: "nails" });
   };
 
@@ -65,6 +65,7 @@ const ContactForm = () => {
         "art-rita-corner--test",
         "ritasartcorner_paintings",
         {
+          admin: "psantosdeveloper@gmail.com",
           name: basicFields.name,
           email: basicFields.email,
           phoneNumber: basicFields.phone,
@@ -97,6 +98,7 @@ const ContactForm = () => {
         "art-rita-corner--test",
         "ritasartcorner_nails",
         {
+          admin: "psantosdeveloper@gmail.com",
           name: basicFields.name,
           email: basicFields.email,
           phoneNumber: basicFields.phone,

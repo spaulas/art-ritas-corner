@@ -22,7 +22,7 @@ const ConfirmationMessage = ({
   return (
     <div className="confirmation-message">
       <div className="confirmation-message__title">{title}</div>
-      <div className="confirmation-message__email">{`A copy of your request was sent to ${email}.`}</div>
+      <div className="confirmation-message__email">{`Une copie de votre demande a été envoyée à ${email}.`}</div>
       <div className="confirmation-message__thanks">
         Merci, <span>RitasArtCorner</span>.
       </div>
