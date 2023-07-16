@@ -12,9 +12,9 @@ export type NailsFormFields = {
   services: string[];
   schedule: string;
   address: string;
-  notes: string,
-  photos: string
-  disclaimer: boolean
+  notes: string;
+  photos: string[];
+  disclaimer: boolean;
 };
 
 export type PaintingsFormFields = {
@@ -39,6 +39,7 @@ export const FormContext = createContext({
   updateBasicFields: (_newValues: Partial<BasicFormFields>) => {},
   updateNailsFields: (_newValues: Partial<NailsFormFields>) => {},
   updatePaintingsFields: (_newValues: Partial<PaintingsFormFields>) => {},
+  cleanAllFields: () => {},
   basicFields: {
     name: "",
     email: "",
@@ -51,8 +52,8 @@ export const FormContext = createContext({
     schedule: "",
     address: "",
     notes: "",
-    photos: "",
-    disclaimer: false
+    photos: [] as string[],
+    disclaimer: false,
   },
   paintingsFields: {
     category: "",
@@ -62,28 +63,34 @@ export const FormContext = createContext({
 });
 
 function FormProvider({ children }: PropsWithChildren<unknown>) {
-  const [basicFields, setBasicFields] = useState<BasicFormFields>({
+  const initialBasicFields = {
     name: "",
     email: "",
     phone: "",
     type: "paintings" as BasicFormFields["type"],
-  });
-
-  const [nailsFields, setNailsFields] = useState<NailsFormFields>({
+  };
+  const initialNailsFields = {
     date: new Date(0),
     services: [],
     schedule: "",
     address: "",
     notes: "",
-    photos: "",
-    disclaimer: false
-  });
-
-  const [paintingsFields, setPaintingsFields] = useState<PaintingsFormFields>({
+    photos: [] as string[],
+    disclaimer: false,
+  };
+  const initialPaintingFields = {
     category: "",
     painting: "",
     notes: "",
-  });
+  };
+
+  const [basicFields, setBasicFields] =
+    useState<BasicFormFields>(initialBasicFields);
+  const [nailsFields, setNailsFields] =
+    useState<NailsFormFields>(initialNailsFields);
+  const [paintingsFields, setPaintingsFields] = useState<PaintingsFormFields>(
+    initialPaintingFields
+  );
 
   const updateBasicFields = (newValues: Partial<BasicFormFields>) => {
     setBasicFields({ ...basicFields, ...newValues });
@@ -97,6 +104,12 @@ function FormProvider({ children }: PropsWithChildren<unknown>) {
     setPaintingsFields({ ...paintingsFields, ...newValues });
   };
 
+  const cleanAllFields = () => {
+    setBasicFields(initialBasicFields);
+    setNailsFields(initialNailsFields);
+    setPaintingsFields(initialPaintingFields);
+  };
+
   return (
     <FormContext.Provider
       value={{
@@ -106,6 +119,7 @@ function FormProvider({ children }: PropsWithChildren<unknown>) {
         updateBasicFields,
         updateNailsFields,
         updatePaintingsFields,
+        cleanAllFields,
       }}
     >
       {children}

@@ -1,0 +1,44 @@
+@import "styles/imports.scss";
+
+.spinner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 200px;
+
+  &__animation {
+    width: 24px;
+    height: 24px;
+    border: 8px solid rgba($white, 0.6);
+    border-radius: 50%;
+    border-top: 8px solid $blue;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+
+  &__title {
+    color: $white;
+    font-size: 16px;
+    font-family: Saudagar;
+  }
+
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
