@@ -14,7 +14,6 @@ const NailsSummary = ({ services }: SummaryProps) => {
 
   useEffect(
     function getSummary() {
-      console.log("GET SUMMARY");
       if (!services.length) {
         return;
       }

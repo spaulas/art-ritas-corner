@@ -16,11 +16,11 @@ import { getServicesTotalDuration, getServicesTotalPrice } from "utils/getSums";
 import {
   convertDurationToString,
   getDateToString,
-  getPhotosToString,
   getServicesListToString,
 } from "utils/getString";
 import ConfirmationMessage from "./Messages/Confirmation";
 import ErrorMessage from "./Messages/Error";
+import Spinner from "components/common/Spinner";
 
 type FormElements = {
   form: ReactElement;
@@ -33,6 +33,7 @@ const ContactForm = () => {
   const [isConfirmationMessageVisible, setIsConfirmationMessageVisible] =
     useState(false);
   const [isErrorMessageVisible, setIsErrorMessageVisible] = useState(false);
+  const [isSending, setIsSending] = useState(false);
 
   const {
     basicFields,
@@ -56,8 +57,7 @@ const ContactForm = () => {
   const onSubmitPaintingMessage = () => {};
 
   const onSubmitNailAppointmentRequest = () => {
-    console.log('=========================')
-    console.log("nailsFields = ", nailsFields);
+    setIsSending(true);
     const object = {
       name: basicFields.name,
       email: basicFields.email,
@@ -70,10 +70,9 @@ const ContactForm = () => {
       date: getDateToString(nailsFields.date),
       schedule: nailsFields.schedule,
       notes: nailsFields.notes,
-      images: getPhotosToString(nailsFields.photos),
+      images: nailsFields.photos,
+      image1: nailsFields.photos[0],
     };
-    console.log("object = ", object);
-    console.log('=========================')
 
     emailjs
       .send(
@@ -84,9 +83,11 @@ const ContactForm = () => {
       )
       .then(
         () => {
+          setIsSending(false);
           setIsConfirmationMessageVisible(true);
         },
         () => {
+          setIsSending(false);
           setIsErrorMessageVisible(true);
         }
       );
@@ -138,11 +139,10 @@ const ContactForm = () => {
     return null;
   }
 
-  console.log("nailsFields = ", nailsFields);
-
-
   const renderView = () => {
     switch (true) {
+      case isSending:
+        return <Spinner title="Envoi en cours..." />
       case isConfirmationMessageVisible:
         return (
           <ConfirmationMessage

@@ -1,4 +1,3 @@
-import { UploadedFiles } from "data";
 import React, { PropsWithChildren, createContext, useState } from "react";
 
 export type BasicFormFields = {
@@ -14,7 +13,7 @@ export type NailsFormFields = {
   schedule: string;
   address: string;
   notes: string;
-  photos: UploadedFiles[];
+  photos: string[];
   disclaimer: boolean;
 };
 
@@ -53,7 +52,7 @@ export const FormContext = createContext({
     schedule: "",
     address: "",
     notes: "",
-    photos: [] as UploadedFiles[],
+    photos: [] as string[],
     disclaimer: false,
   },
   paintingsFields: {
@@ -76,7 +75,7 @@ function FormProvider({ children }: PropsWithChildren<unknown>) {
     schedule: "",
     address: "",
     notes: "",
-    photos: [] as UploadedFiles[],
+    photos: [] as string[],
     disclaimer: false,
   };
   const initialPaintingFields = {
@@ -98,7 +97,6 @@ function FormProvider({ children }: PropsWithChildren<unknown>) {
   };
 
   const updateNailsFields = (newValues: Partial<NailsFormFields>) => {
-    console.log("UPDATING NAILS FIELDS = ", newValues);
     setNailsFields({ ...nailsFields, ...newValues });
   };
 
@@ -107,7 +105,6 @@ function FormProvider({ children }: PropsWithChildren<unknown>) {
   };
 
   const cleanAllFields = () => {
-    console.log('CLARN ALL FIELDS')
     setBasicFields(initialBasicFields);
     setNailsFields(initialNailsFields);
     setPaintingsFields(initialPaintingFields);

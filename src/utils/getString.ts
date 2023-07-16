@@ -1,6 +1,6 @@
 import { NailsFormFields } from "context/FormProvider";
 import data from "data.json";
-import type { CategoryType, DataType, UploadedFiles } from "data";
+import type { CategoryType, DataType } from "data";
 
 const nailsCategory: CategoryType | undefined = (
   data as DataType
@@ -37,9 +37,3 @@ export const getServicesListToString = (
   return servicesToString.slice(0, -2);
 };
 
-export const getPhotosToString = (photos: UploadedFiles[]): string[] => {
-  console.log("GET PHOTOS STRING photos = ", photos);
-  const result = photos.map((photo) => photo.src?.toString() ?? "");
-  console.log("GET PHOTOS STRING result = ", result);
-  return result;
-};

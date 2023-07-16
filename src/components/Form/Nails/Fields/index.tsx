@@ -11,7 +11,7 @@ import data from "data.json";
 import { LanguageContext } from "context/LanguageProvider";
 import type { CategoryType, DataType } from "data";
 import Textbox from "components/common/Textbox";
-import PhotoInput from "components/common/PhotoInput";
+import PhotoInput from "components/common/PhotoInput/index";
 
 type NailsFieldsProps = {
   fields: BasicFormFields & NailsFormFields;
