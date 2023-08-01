@@ -7,6 +7,7 @@
   flex-direction: column;
   width: 372px;
   height: 664px;
+  user-select: none;
 
   @media only screen and (max-width: $desktop-width),
     screen and (max-height: $ipad-vertical-height) {
