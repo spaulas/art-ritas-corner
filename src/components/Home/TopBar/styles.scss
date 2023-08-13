@@ -10,15 +10,28 @@
   z-index: 20;
   position: relative;
 
-  @media only screen and (max-width: $ipad-vertical-width) {
+  @media only screen and (max-width: $ipad-horizontal-width),
+    screen and (max-height: $ipad-vertical-height) {
     gap: 32px;
   }
 
-  @media only screen and (max-width: 560px) {
+  @media only screen and (max-width: $mobile-horizontal-width),
+    screen and (max-height: $desktop-height) {
     gap: 24px;
   }
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: $ipad-vertical-width),
+    screen and (max-height: $ipad-horizontal-height) {
     gap: 14px;
+  }
+
+  @media only screen and (max-width: $mobile-vertical-width),
+    screen and (max-height: 700px) {
+    gap: 12px;
+  }
+
+  @media only screen and (max-width: $sm-mobile-vertical-width),
+    screen and (max-height: $sm-mobile-vertical-height) {
+    gap: 10px;
   }
 }

@@ -3,13 +3,15 @@ $big-desktop-height: 1080px;
 $desktop-width: 1267px;
 $desktop-height: 900px;
 $ipad-horizontal-width: 1023px;
-$ipad-horizontal-height: 768px;
+$ipad-horizontal-height: 718px;
 $ipad-vertical-width: 767px;
 $ipad-vertical-height: 1024px;
 $mobile-horizontal-width: 895px;
 $mobile-horizontal-height: 414px;
-$mobile-vertical-width: 620px;
+$mobile-vertical-width: 600px;
 $mobile-vertical-height: 760px;
+$sm-mobile-vertical-width: 400px;
+$sm-mobile-vertical-height: 600px;
 
 @mixin page-layout {
   max-width: 1140px;

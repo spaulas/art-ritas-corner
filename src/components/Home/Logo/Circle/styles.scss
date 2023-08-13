@@ -23,13 +23,19 @@
     }
 
     @media only screen and (max-width: $ipad-vertical-width),
-      screen and (max-height: 700px) {
+      screen and (max-height: $ipad-horizontal-height) {
       animation-name: showCircleFading4;
     }
 
     @media only screen and (max-width: $mobile-vertical-width),
-      screen and (max-height: $ipad-horizontal-height) {
+      screen and (max-height: 700px) {
       animation-name: showCircleFading5;
+    }
+
+    @media only screen and (max-width: $sm-mobile-vertical-width),
+      screen and (max-height: $sm-mobile-vertical-height) {
+      animation-duration: 3s;
+      animation-name: showCircleFading6;
     }
   }
 
@@ -48,13 +54,19 @@
     }
 
     @media only screen and (max-width: $ipad-vertical-width),
-      screen and (max-height: 700px) {
+      screen and (max-height: $ipad-horizontal-height) {
       animation-name: showCircleFixed4;
     }
 
     @media only screen and (max-width: $mobile-vertical-width),
-      screen and (max-height: $ipad-horizontal-height) {
+      screen and (max-height: 700px) {
       animation-name: showCircleFixed5;
+    }
+
+    @media only screen and (max-width: $sm-mobile-vertical-width),
+      screen and (max-height: $sm-mobile-vertical-height) {
+      animation-duration: 1.8s;
+      animation-name: showCircleFixed6;
     }
   }
 
@@ -82,15 +94,21 @@
     }
 
     @media only screen and (max-width: $ipad-vertical-width),
-      screen and (max-height: 700px) {
+      screen and (max-height: $ipad-horizontal-height) {
       height: 356px;
       width: 356px;
     }
 
     @media only screen and (max-width: $mobile-vertical-width),
-      screen and (max-height: $ipad-horizontal-height) {
+      screen and (max-height: 700px) {
       height: 248px;
       width: 248px;
+    }
+
+    @media only screen and (max-width: $sm-mobile-vertical-width),
+      screen and (max-height: $sm-mobile-vertical-height) {
+      height: 166px;
+      width: 166px;
     }
   }
 
@@ -118,15 +136,21 @@
     }
 
     @media only screen and (max-width: $ipad-vertical-width),
-      screen and (max-height: 700px) {
+      screen and (max-height: $ipad-horizontal-height) {
       height: 432px;
       width: 432px;
     }
 
     @media only screen and (max-width: $mobile-vertical-width),
-      screen and (max-height: $ipad-horizontal-height) {
+      screen and (max-height: 700px) {
       height: 304px;
       width: 304px;
+    }
+
+    @media only screen and (max-width: $sm-mobile-vertical-width),
+      screen and (max-height: $sm-mobile-vertical-height) {
+      height: 204px;
+      width: 204px;
     }
   }
 }

@@ -56,23 +56,29 @@ const Description = ({
       {price && (
         <div className="price" id="image-description__price">{`${price}€`}</div>
       )}
-      {hasOpenButton && link && (
-        <Button id="image-description__open" title="Ouvrir" onClick={onOpen} />
-      )}
-      {formName === "nails" && (
-        <Button
-          id="image-description__schedule"
-          title="Calendrier"
-          onClick={onScheduleClick}
-        />
-      )}
-      {formName === "paintings" && (
-        <Button
-          id="image-description__contact"
-          title="Contact"
-          onClick={onContactClick}
-        />
-      )}
+      <div className="actions">
+        {hasOpenButton && link && (
+          <Button
+            id="image-description__open"
+            title="Ouvrir"
+            onClick={onOpen}
+          />
+        )}
+        {formName === "nails" && (
+          <Button
+            id="image-description__schedule"
+            title="Calendrier"
+            onClick={onScheduleClick}
+          />
+        )}
+        {formName === "paintings" && (
+          <Button
+            id="image-description__contact"
+            title="Contact"
+            onClick={onContactClick}
+          />
+        )}
+      </div>
     </div>
   );
 };

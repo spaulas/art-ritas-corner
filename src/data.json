@@ -1,14 +1,18 @@
 {
   "categories": [
     {
-      "id": "mandala",
+      "id": "aquarella-flower",
       "title": {
-        "fr": "Mandalas",
-        "en": "Mandalas"
+        "fr": "Fleurs",
+        "en": "Fleurs"
+      },
+      "subCategory": {
+        "fr": "Peinture aquarelle",
+        "en": "Peinture aquarelle"
       },
       "description": {
-        "fr": "”Des mandalas colorés et variés, réalisés en numérique ou sur toile”",
-        "en": "”Colorful and varied mandalas, made digitally or on canvas”"
+        "fr": "Peinture minimalises, jeu de couleurs et fines lignes",
+        "en": "Peinture minimalises, jeu de couleurs et fines lignes"
       },
       "titlePosition": "top-left",
       "flower": {
@@ -44,14 +48,18 @@
       ]
     },
     {
-      "id": "abstract",
+      "id": "aquarella-body",
       "title": {
-        "fr": "Peintures abstraites",
-        "en": "Abstract paitings"
+        "fr": "Les corps",
+        "en": "Les corps"
+      },
+      "subCategory": {
+        "fr": "Peinture aquarelle",
+        "en": "Peinture aquarelle"
       },
       "description": {
-        "fr": "Peintures réalisées avec une technique qui pourrait être accentuée",
-        "en": "Paintings made with a technique that could be accentuated"
+        "fr": "Sériés de peintures qu’embrasse les différents corps, femme et homme, grosse et mince, sensuel et brute, amour propre et pour le prochain",
+        "en": "Sériés de peintures qu’embrasse les différents corps, femme et homme, grosse et mince, sensuel et brute, amour propre et pour le prochain"
       },
       "titlePosition": "bottom-right",
       "flower": {
@@ -86,20 +94,20 @@
       ]
     },
     {
-      "id": "bodyAquarela",
+      "id": "acrillic-abstract",
       "title": {
-        "fr": "Corporelles",
-        "en": "Body"
+        "fr": "Abstraite",
+        "en": "Abstraite"
+      },
+      "subCategory": {
+        "fr": "Peinture acrylique",
+        "en": "Peinture acrylique"
       },
       "description": {
-        "fr": "Peintures sensuelles du corps de la femme, par là, je veux dire mon corps, oui, je suis sexy comme de la merde.",
-        "en": "Sensual female body paintings, by that I mean my body, yes I'm sexy as fuck."
+        "fr": "La magie des couleurs, toute une série de peintures dédiées à la couleur, des peintures faites à partir d’une palette unique pour chaque toile",
+        "en": "La magie des couleurs, toute une série de peintures dédiées à la couleur, des peintures faites à partir d’une palette unique pour chaque toile"
       },
       "titlePosition": "top-left",
-      "subCategory": {
-        "fr": "Aquarela",
-        "en": "Aquarella"
-      },
       "flower": {
         "id": 5,
         "position": "bottom-left"
@@ -174,116 +182,440 @@
       ]
     },
     {
-      "id": "nailArt",
+      "id": "acrillic-silhouette",
       "title": {
-        "fr": "Artiste d'ongles",
-        "en": "Nail art"
+        "fr": "Silhouette",
+        "en": "Silhouette"
+      },
+      "subCategory": {
+        "fr": "Peinture acrylique",
+        "en": "Peinture acrylique"
       },
       "description": {
-        "fr": "Divers services de mannucure effectués à domicile",
-        "en": "Various manicure services performed at home"
+        "fr": "Lumières et ombres, un jeu de contrastes abstraites et dégradées",
+        "en": "Lumières et ombres, un jeu de contrastes abstraites et dégradées"
       },
-      "titlePosition": "top-right",
+      "titlePosition": "top-left",
       "flower": {
         "id": 1,
-        "position": "bottom-right"
+        "position": "bottom-left"
       },
       "blobs": [
         {
-          "color": "pink",
-          "id": 1,
-          "angle": 75
+          "color": "blue",
+          "id": 7
         },
         {
-          "color": "blue",
-          "id": 5,
-          "size": "small"
+          "color": "cream",
+          "id": 4
         }
       ],
       "images": [
         {
-          "id": "nails01",
-          "src": "nails01",
+          "id": "body01",
+          "src": "body01",
           "title": {
-            "fr": "Ongles 01",
-            "en": "Nails 01"
+            "fr": "Body 01",
+            "en": "Body 01"
           },
           "description": {
             "fr": "Décrivez ici en petit détail en quoi il consiste",
             "en": "Describe here in small detail what it consists of"
           },
-          "price": 10,
-          "duration": 60
+          "available": true,
+          "link": "https://www.instagram.com/p/CTWzpRYMztR/?img_index=1"
         },
         {
-          "id": "nails02",
-          "src": "nails02",
+          "id": "body02",
+          "src": "body02",
           "title": {
-            "fr": "Ongles 02",
-            "en": "Nails 02"
+            "fr": "Body 02",
+            "en": "Body 02"
           },
           "description": {
             "fr": "Décrivez ici en petit détail en quoi il consiste",
             "en": "Describe here in small detail what it consists of"
           },
-          "price": 20,
-          "duration": 120
+          "available": true,
+          "link": "https://www.instagram.com/p/Cb9-fpNMu9C/?img_index=1"
         },
         {
-          "id": "nails03",
-          "src": "nails03",
+          "id": "body03",
+          "src": "body03",
           "title": {
-            "fr": "Ongles 03",
-            "en": "Nails 03"
+            "fr": "Body 03",
+            "en": "Body 03"
           },
           "description": {
             "fr": "Décrivez ici en petit détail en quoi il consiste",
             "en": "Describe here in small detail what it consists of"
           },
-          "price": 30,
-          "duration": 150
+          "available": false,
+          "link": "https://www.instagram.com/p/CW2iKKtsqR8/?img_index=1"
         },
         {
-          "id": "nails04",
-          "src": "nails01",
+          "id": "body04",
+          "src": "body04",
           "title": {
-            "fr": "Ongles 04",
-            "en": "Nails 04"
+            "fr": "Body 04",
+            "en": "Body 04"
           },
           "description": {
             "fr": "Décrivez ici en petit détail en quoi il consiste",
             "en": "Describe here in small detail what it consists of"
           },
-          "price": 40,
-          "duration": 60
+          "available": true,
+          "link": "https://www.instagram.com/p/CUpQFBvsCQX/?img_index=1"
+        }
+      ]
+    },
+    {
+      "id": "acrillic-mural",
+      "title": {
+        "fr": "Murales",
+        "en": "Murales"
+      },
+      "subCategory": {
+        "fr": "Peinture acrylique",
+        "en": "Peinture acrylique"
+      },
+      "description": {
+        "fr": "Transforme ton espace dans une pièce unique, donne vie a ton environnement",
+        "en": "Transforme ton espace dans une pièce unique, donne vie a ton environnement"
+      },
+      "titlePosition": "top-left",
+      "flower": {
+        "id": 2,
+        "position": "bottom-left"
+      },
+      "blobs": [
+        {
+          "color": "blue",
+          "id": 7
         },
         {
-          "id": "nails05",
-          "src": "nails02",
+          "color": "cream",
+          "id": 4
+        }
+      ],
+      "images": [
+        {
+          "id": "body01",
+          "src": "body01",
           "title": {
-            "fr": "Ongles 05",
-            "en": "Nails 05"
+            "fr": "Body 01",
+            "en": "Body 01"
           },
           "description": {
             "fr": "Décrivez ici en petit détail en quoi il consiste",
             "en": "Describe here in small detail what it consists of"
           },
-          "price": 50,
-          "duration": 60
+          "available": true,
+          "link": "https://www.instagram.com/p/CTWzpRYMztR/?img_index=1"
         },
         {
-          "id": "nails06",
-          "src": "nails03",
+          "id": "body02",
+          "src": "body02",
           "title": {
-            "fr": "Ongles 06",
-            "en": "Nails 06"
+            "fr": "Body 02",
+            "en": "Body 02"
           },
           "description": {
             "fr": "Décrivez ici en petit détail en quoi il consiste",
             "en": "Describe here in small detail what it consists of"
           },
-          "price": 60,
-          "duration": 60
+          "available": true,
+          "link": "https://www.instagram.com/p/Cb9-fpNMu9C/?img_index=1"
+        },
+        {
+          "id": "body03",
+          "src": "body03",
+          "title": {
+            "fr": "Body 03",
+            "en": "Body 03"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "available": false,
+          "link": "https://www.instagram.com/p/CW2iKKtsqR8/?img_index=1"
+        },
+        {
+          "id": "body04",
+          "src": "body04",
+          "title": {
+            "fr": "Body 04",
+            "en": "Body 04"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "available": true,
+          "link": "https://www.instagram.com/p/CUpQFBvsCQX/?img_index=1"
+        }
+      ]
+    },
+    {
+      "id": "acrillic-wood",
+      "title": {
+        "fr": "En bois",
+        "en": "En bois"
+      },
+      "subCategory": {
+        "fr": "Peinture acrylique",
+        "en": "Peinture acrylique"
+      },
+      "description": {
+        "fr": "Projets personnalisés en bois",
+        "en": "Projets personnalisés en bois"
+      },
+      "titlePosition": "top-left",
+      "flower": {
+        "id": 6,
+        "position": "bottom-left"
+      },
+      "blobs": [
+        {
+          "color": "blue",
+          "id": 7
+        },
+        {
+          "color": "cream",
+          "id": 4
+        }
+      ],
+      "images": [
+        {
+          "id": "body01",
+          "src": "body01",
+          "title": {
+            "fr": "Body 01",
+            "en": "Body 01"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "available": true,
+          "link": "https://www.instagram.com/p/CTWzpRYMztR/?img_index=1"
+        },
+        {
+          "id": "body02",
+          "src": "body02",
+          "title": {
+            "fr": "Body 02",
+            "en": "Body 02"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "available": true,
+          "link": "https://www.instagram.com/p/Cb9-fpNMu9C/?img_index=1"
+        },
+        {
+          "id": "body03",
+          "src": "body03",
+          "title": {
+            "fr": "Body 03",
+            "en": "Body 03"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "available": false,
+          "link": "https://www.instagram.com/p/CW2iKKtsqR8/?img_index=1"
+        },
+        {
+          "id": "body04",
+          "src": "body04",
+          "title": {
+            "fr": "Body 04",
+            "en": "Body 04"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "available": true,
+          "link": "https://www.instagram.com/p/CUpQFBvsCQX/?img_index=1"
+        }
+      ]
+    },{
+      "id": "mandala-original",
+      "title": {
+        "fr": "Originales",
+        "en": "Originales"
+      },
+      "subCategory": {
+        "fr": "Mandalas",
+        "en": "Mandalas"
+      },
+      "description": {
+        "fr": "“Most mandalas have an intuitive, irrational character and, through their symbolical content, exert a retroactive influence on the unconscious. They therefore possess a “magical” significance (…)” Carl Yung, mandala Symbolism",
+        "en": "“Most mandalas have an intuitive, irrational character and, through their symbolical content, exert a retroactive influence on the unconscious. They therefore possess a “magical” significance (…)” Carl Yung, mandala Symbolism"
+      },
+      "titlePosition": "top-left",
+      "flower": {
+        "id": 5,
+        "position": "bottom-left"
+      },
+      "blobs": [
+        {
+          "color": "blue",
+          "id": 7
+        },
+        {
+          "color": "cream",
+          "id": 4
+        }
+      ],
+      "images": [
+        {
+          "id": "body01",
+          "src": "body01",
+          "title": {
+            "fr": "Body 01",
+            "en": "Body 01"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "available": true,
+          "link": "https://www.instagram.com/p/CTWzpRYMztR/?img_index=1"
+        },
+        {
+          "id": "body02",
+          "src": "body02",
+          "title": {
+            "fr": "Body 02",
+            "en": "Body 02"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "available": true,
+          "link": "https://www.instagram.com/p/Cb9-fpNMu9C/?img_index=1"
+        },
+        {
+          "id": "body03",
+          "src": "body03",
+          "title": {
+            "fr": "Body 03",
+            "en": "Body 03"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "available": false,
+          "link": "https://www.instagram.com/p/CW2iKKtsqR8/?img_index=1"
+        },
+        {
+          "id": "body04",
+          "src": "body04",
+          "title": {
+            "fr": "Body 04",
+            "en": "Body 04"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "available": true,
+          "link": "https://www.instagram.com/p/CUpQFBvsCQX/?img_index=1"
+        }
+      ]
+    },{
+      "id": "mandala-digital",
+      "title": {
+        "fr": "Digitale",
+        "en": "Digitale"
+      },
+      "subCategory": {
+        "fr": "Mandalas",
+        "en": "Mandalas"
+      },
+      "description": {
+        "fr": "Mandalas numériques, crée avec une symétrie parfaite, trouve l’équilibre dans un tableau unique",
+        "en": "Mandalas numériques, crée avec une symétrie parfaite, trouve l’équilibre dans un tableau unique"
+      },
+      "titlePosition": "top-left",
+      "flower": {
+        "id": 5,
+        "position": "bottom-left"
+      },
+      "blobs": [
+        {
+          "color": "blue",
+          "id": 7
+        },
+        {
+          "color": "cream",
+          "id": 4
+        }
+      ],
+      "images": [
+        {
+          "id": "body01",
+          "src": "body01",
+          "title": {
+            "fr": "Body 01",
+            "en": "Body 01"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "available": true,
+          "link": "https://www.instagram.com/p/CTWzpRYMztR/?img_index=1"
+        },
+        {
+          "id": "body02",
+          "src": "body02",
+          "title": {
+            "fr": "Body 02",
+            "en": "Body 02"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "available": true,
+          "link": "https://www.instagram.com/p/Cb9-fpNMu9C/?img_index=1"
+        },
+        {
+          "id": "body03",
+          "src": "body03",
+          "title": {
+            "fr": "Body 03",
+            "en": "Body 03"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "available": false,
+          "link": "https://www.instagram.com/p/CW2iKKtsqR8/?img_index=1"
+        },
+        {
+          "id": "body04",
+          "src": "body04",
+          "title": {
+            "fr": "Body 04",
+            "en": "Body 04"
+          },
+          "description": {
+            "fr": "Décrivez ici en petit détail en quoi il consiste",
+            "en": "Describe here in small detail what it consists of"
+          },
+          "available": true,
+          "link": "https://www.instagram.com/p/CUpQFBvsCQX/?img_index=1"
         }
       ]
     }

@@ -6,13 +6,59 @@
     width: 100%;
     max-width: 404px;
 
-    @media only screen and (max-width: 1080px) {
-      max-width: 340px;
+    @media only screen and (max-width: $ipad-horizontal-width),
+      screen and (max-height: $ipad-vertical-height) {
+      max-width: 400px;
+    }
+
+    @media only screen and (max-width: $mobile-horizontal-width),
+      screen and (max-height: $desktop-height) {
+      max-width: 380px;
     }
 
     @media only screen and (max-width: $ipad-vertical-width),
       screen and (max-height: $ipad-horizontal-height) {
-        max-width: 292px;
+      max-width: 340px;
+    }
+
+    @media only screen and (max-width: $mobile-vertical-width),
+      screen and (max-height: 700px) {
+      max-width: 280px;
+      min-width: 150px;
+    }
+
+    @media only screen and (max-width: $sm-mobile-vertical-width),
+      screen and (max-height: $sm-mobile-vertical-height) {
+      max-width: 200px;
+    }
+  }
+
+  h1 {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  p {
+    font-size: 40px;
+
+    @media only screen and (max-width: $ipad-horizontal-width),
+      screen and (max-height: $desktop-height) {
+      font-size: 32px;
+    }
+
+    @media only screen and (max-width: $ipad-vertical-width),
+      screen and (max-height: $ipad-horizontal-height) {
+      font-size: 24px;
+    }
+
+    @media only screen and (max-width: $mobile-vertical-width),
+      screen and (max-height: 700px) {
+      font-size: 20px;
+    }
+
+    @media only screen and (max-width: $sm-mobile-vertical-width),
+      screen and (max-height: $sm-mobile-vertical-height) {
+      font-size: 16px;
     }
   }
 
@@ -34,15 +80,34 @@
     margin-right: 132px;
     user-select: none;
 
-    @media only screen and (max-width: 1080px) {
+    @media only screen and (max-width: $ipad-horizontal-width),
+      screen and (max-height: $ipad-vertical-height) {
       margin-top: 92px;
       margin-right: 48px;
     }
 
+    @media only screen and (max-width: $mobile-horizontal-width),
+      screen and (max-height: $desktop-height) {
+      margin-top: 108px;
+      margin-right: 108px;
+    }
+
     @media only screen and (max-width: $ipad-vertical-width),
       screen and (max-height: $ipad-horizontal-height) {
-        margin-top: 0;
-        margin-left: 0;
+      margin-top: 90px;
+      margin-left: 20px;
+    }
+
+    @media only screen and (max-width: $mobile-vertical-width),
+      screen and (max-height: 700px) {
+      margin-top: 48px;
+      margin-left: 48px;
+    }
+
+    @media only screen and (max-width: $sm-mobile-vertical-width),
+      screen and (max-height: $sm-mobile-vertical-height) {
+      margin-top: 60px;
+      margin-left: 16px;
     }
   }
 
@@ -52,15 +117,34 @@
     margin-right: 132px;
     user-select: none;
 
-    @media only screen and (max-width: 1080px) {
+    @media only screen and (max-width: $ipad-horizontal-width),
+      screen and (max-height: $ipad-vertical-height) {
       margin-bottom: 92px;
       margin-right: 48px;
     }
 
+    @media only screen and (max-width: $mobile-horizontal-width),
+      screen and (max-height: $desktop-height) {
+      margin-bottom: 0;
+      margin-left: 58px;
+    }
+
     @media only screen and (max-width: $ipad-vertical-width),
       screen and (max-height: $ipad-horizontal-height) {
-      margin-bottom: 0;
-      margin-left: 0;
+      margin-bottom: 90px;
+      margin-left: 20px;
+    }
+
+    @media only screen and (max-width: $mobile-vertical-width),
+      screen and (max-height: 700px) {
+      margin-bottom: 48px;
+      margin-left: 48px;
+    }
+
+    @media only screen and (max-width: $sm-mobile-vertical-width),
+      screen and (max-height: $sm-mobile-vertical-height) {
+      margin-bottom: 60px;
+      margin-left: 16px;
     }
   }
 
@@ -70,15 +154,34 @@
     margin-left: 132px;
     user-select: none;
 
-    @media only screen and (max-width: 1080px) {
+    @media only screen and (max-width: $ipad-horizontal-width),
+      screen and (max-height: $ipad-vertical-height) {
       margin-bottom: 92px;
       margin-left: 48px;
     }
 
+    @media only screen and (max-width: $mobile-horizontal-width),
+      screen and (max-height: $desktop-height) {
+      margin-bottom: 0;
+      margin-left: 58px;
+    }
+
     @media only screen and (max-width: $ipad-vertical-width),
       screen and (max-height: $ipad-horizontal-height) {
-        margin-bottom: 0;
-        margin-left: 0;
+      margin-bottom: 90px;
+      margin-left: 20px;
+    }
+
+    @media only screen and (max-width: $mobile-vertical-width),
+      screen and (max-height: 700px) {
+      margin-bottom: 48px;
+      margin-left: 48px;
+    }
+
+    @media only screen and (max-width: $sm-mobile-vertical-width),
+      screen and (max-height: $sm-mobile-vertical-height) {
+      margin-bottom: 60px;
+      margin-left: 16px;
     }
   }
 
@@ -87,15 +190,34 @@
     margin-left: 132px;
     user-select: none;
 
-    @media only screen and (max-width: 1080px) {
+    @media only screen and (max-width: $ipad-horizontal-width),
+      screen and (max-height: $ipad-vertical-height) {
       margin-top: 92px;
       margin-left: 48px;
     }
 
+    @media only screen and (max-width: $mobile-horizontal-width),
+      screen and (max-height: $desktop-height) {
+      margin-top: 108px;
+      margin-left: 58px;
+    }
+
     @media only screen and (max-width: $ipad-vertical-width),
       screen and (max-height: $ipad-horizontal-height) {
-      margin-top: 0;
-      margin-left: 0;
+      margin-top: 90px;
+      margin-left: 20px;
+    }
+
+    @media only screen and (max-width: $mobile-vertical-width),
+      screen and (max-height: 700px) {
+      margin-top: 48px;
+      margin-left: 48px;
+    }
+
+    @media only screen and (max-width: $sm-mobile-vertical-width),
+      screen and (max-height: $sm-mobile-vertical-height) {
+      margin-top: 60px;
+      margin-left: 16px;
     }
   }
 }

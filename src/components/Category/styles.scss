@@ -9,48 +9,84 @@
   display: flex;
   justify-content: space-between;
 
-  @media only screen and (max-width: $mobile-vertical-width) {
-    overflow: hidden;
-  }
-
-  @media only screen and (max-width: $desktop-width),
-    screen and (max-height: $big-desktop-height) {
+  @media only screen and (max-width: $ipad-horizontal-width),
+    screen and (max-height: $ipad-vertical-height) {
     padding: 104px 0;
   }
 
+  @media only screen and (max-width: $mobile-horizontal-width),
+    screen and (max-height: $desktop-height) {
+    padding: 32px 0;
+  }
+
+  // tODO: CHECK THESE 3
+  @media only screen and (max-width: $ipad-vertical-width),
+    screen and (max-height: $ipad-horizontal-height) {
+    padding: 32px 0;
+  }
 
   @media only screen and (max-width: $mobile-vertical-width),
-  screen and (max-height: $mobile-horizontal-height) {
+    screen and (max-height: 700px) {
     padding: 32px 0;
-}
+  }
+
+  @media only screen and (max-width: $sm-mobile-vertical-width),
+    screen and (max-height: $sm-mobile-vertical-height) {
+    padding: 32px 0;
+  }
 
   &.invert {
     flex-direction: row-reverse;
   }
 
   .images-with-blobs {
-    @media only screen and (max-width: $desktop-width),
+    @media only screen and (max-width: $ipad-horizontal-width),
       screen and (max-height: $ipad-vertical-height) {
       margin: auto;
     }
 
-    @media only screen and (max-width: $ipad-vertical-width),
-      screen and (max-height: $ipad-horizontal-height) {
-      margin-bottom: 64px;
+    @media only screen and (max-width: $mobile-horizontal-width),
+      screen and (max-height: $desktop-height) {
+      margin-bottom: 108px;
+      margin-right: 38px;
 
       &.bottom {
-        margin-top: 64px;
+        margin-top: 108px;
         margin-bottom: auto;
+      }
+
+      &.left {
+        margin-left: 108px;
+      }
+    }
+
+    @media only screen and (max-width: $ipad-vertical-width),
+      screen and (max-height: $ipad-horizontal-height) {
+      margin-bottom: 108px;
+      margin-right: 60px;
+
+      &.bottom {
+        margin-top: 30px;
+        margin-bottom: auto;
+      }
+      &.left {
+        margin-left: 26px;
+        margin-right: 0;
       }
     }
 
     @media only screen and (max-width: $mobile-vertical-width),
-      screen and (max-height: $mobile-horizontal-height) {
-      margin-bottom: 0;
+      screen and (max-height: 700px) {
+      margin-bottom: 100px;
+      margin-right: 80px;
 
       &.bottom {
-        margin-top: 0;
+        margin-top: 70px;
         margin-bottom: auto;
+      }
+      &.left {
+        margin-left: 26px;
+        margin-right: -32px;
       }
     }
   }

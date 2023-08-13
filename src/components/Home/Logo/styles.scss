@@ -20,12 +20,11 @@
 
 .logo-container {
   overflow: hidden;
-  width: 900px;
-  height: 900px;
+  max-width: 900px;
+  max-height: 900px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -60,13 +59,19 @@
       }
 
       @media only screen and (max-width: $ipad-vertical-width),
-        screen and (max-height: 700px) {
+        screen and (max-height: $ipad-horizontal-height) {
         width: 240px;
       }
 
       @media only screen and (max-width: $mobile-vertical-width),
-        screen and (max-height: $ipad-horizontal-height) {
+        screen and (max-height: 700px) {
         width: 168px;
+      }
+
+      @media only screen and (max-width: $sm-mobile-vertical-width),
+        screen and (max-height: $sm-mobile-vertical-height) {
+        width: 112px;
+        animation-delay: 1.1s;
       }
     }
 
@@ -89,13 +94,18 @@
       }
 
       @media only screen and (max-width: $ipad-vertical-width),
-        screen and (max-height: 700px) {
+        screen and (max-height: $ipad-horizontal-height) {
         width: 504px;
       }
 
       @media only screen and (max-width: $mobile-vertical-width),
-        screen and (max-height: $ipad-horizontal-height) {
+        screen and (max-height: 700px) {
         width: 352px;
+      }
+
+      @media only screen and (max-width: $sm-mobile-vertical-width),
+        screen and (max-height: $sm-mobile-vertical-height) {
+        width: 234px;
       }
     }
   }
@@ -124,15 +134,21 @@
     }
 
     @media only screen and (max-width: $ipad-vertical-width),
-      screen and (max-height: 700px) {
+      screen and (max-height: $ipad-horizontal-height) {
       width: 504px;
       height: 459px;
     }
 
     @media only screen and (max-width: $mobile-vertical-width),
-      screen and (max-height: $ipad-horizontal-height) {
+      screen and (max-height: 700px) {
       width: 352px;
       height: 321px;
+    }
+
+    @media only screen and (max-width: $sm-mobile-vertical-width),
+      screen and (max-height: $sm-mobile-vertical-height) {
+      width: 234px;
+      height: 212px;
     }
   }
 
@@ -143,5 +159,10 @@
     background-color: $white;
     margin-left: auto;
     animation: showBranch 1s linear 2.1s 1 forwards;
+
+    @media only screen and (max-width: $sm-mobile-vertical-width),
+      screen and (max-height: $sm-mobile-vertical-height) {
+      animation-delay: 1s;
+    }
   }
 }
