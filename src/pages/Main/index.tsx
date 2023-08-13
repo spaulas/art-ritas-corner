@@ -27,12 +27,12 @@ const Main = () => {
       <div className="main-page">
         <Home />
         {renderCategories()}
-        <Form />
+        {/* <Form />
         <About profileText={data.profile.text} />
-        <LinesColumns />
+        <LinesColumns /> */}
       </div>
-      <Backdrop />
-      <WelcomeModal />
+      {/* <Backdrop />
+      <WelcomeModal /> */}
     </>
   );
 };

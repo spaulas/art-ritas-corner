@@ -17,14 +17,14 @@
   user-select: none;
 
   .title {
-    font-size: 24px;
+    font-size: 32px;
     line-height: 36px;
   }
 
   .description {
-    font-size: 16px;
-    line-height: 16px;
-    margin-top: 8px;
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 16px;
   }
 
   .price {
@@ -38,5 +38,118 @@
     display: flex;
     gap: 16px;
     justify-content: center;
+
+    button {
+      font-size: 20px;
+    }
   }
+
+  @media only screen and (max-width: $ipad-horizontal-width),
+    screen and (max-height: $ipad-vertical-height) {
+    .title {
+      font-size: 28px;
+      line-height: 32px;
+    }
+
+    .description {
+      font-size: 16px;
+      line-height: 16px;
+      margin-top: 12px;
+    }
+
+    .price {
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    .actions {
+      gap: 14px;
+
+      button {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $mobile-horizontal-width),
+  screen and (max-height: $desktop-height) {
+    .title {
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    .description {
+      font-size: 12px;
+      line-height: 12px;
+      margin-top: 10px;
+    }
+
+    .price {
+      font-size: 12px;
+      line-height: 12px;
+    }
+
+    .actions {
+      gap: 12px;
+
+      button {
+        font-size: 12px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $ipad-vertical-width),
+    screen and (max-height: $ipad-horizontal-height) {
+    .title {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    .description {
+      font-size: 10px;
+      line-height: 10px;
+      margin-top: 8px;
+    }
+
+    .price {
+      font-size: 10px;
+      line-height: 10px;
+    }
+
+    .actions {
+      gap: 10px;
+
+      button {
+        font-size: 10px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $mobile-vertical-width),
+    screen and (max-height: 700px) {
+  .title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .description {
+    font-size: 8px;
+    line-height: 8px;
+    margin-top: 8px;
+  }
+
+  .price {
+    font-size: 8px;
+    line-height: 8px;
+  }
+
+  .actions {
+    gap: 8px;
+
+    button {
+      font-size: 8px;
+      padding: 2px 8px;
+    }
+  }
+}
 }

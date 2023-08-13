@@ -9,13 +9,13 @@
   height: 664px;
   user-select: none;
 
-  @media only screen and (max-width: $desktop-width),
+  @media only screen and (max-width: $ipad-horizontal-width),
     screen and (max-height: $ipad-vertical-height) {
     width: 304px;
     height: 544px;
   }
 
-  @media only screen and (max-width: $ipad-horizontal-width),
+  @media only screen and (max-width: $mobile-horizontal-width),
     screen and (max-height: $desktop-height) {
     width: 247px;
     height: 442px;
@@ -27,15 +27,21 @@
     height: 332px;
   }
 
+  @media only screen and (max-width: $mobile-vertical-width),
+    screen and (max-height: 700px) {
+    width: 124px;
+    height: 222px;
+  }
+
   img {
     position: absolute;
 
-    @media only screen and (max-width: $desktop-width),
+    @media only screen and (max-width: $ipad-horizontal-width),
       screen and (max-height: $ipad-vertical-height) {
       height: 66%;
     }
 
-    @media only screen and (max-width: $ipad-horizontal-width),
+    @media only screen and (max-width: $mobile-horizontal-width),
       screen and (max-height: $desktop-height) {
       height: 60%;
     }
@@ -45,16 +51,43 @@
       height: 54%;
     }
 
+    // TODO: CHECK THESE 2
+    @media only screen and (max-width: $mobile-vertical-width),
+      screen and (max-height: 700px) {
+      height: 54%;
+    }
+
+    @media only screen and (max-width: $sm-mobile-vertical-width),
+      screen and (max-height: $sm-mobile-vertical-height) {
+      height: 54%;
+    }
+
     &:first-child {
       left: -400px;
 
       @media only screen and (max-width: $ipad-horizontal-width),
-        screen and (max-height: $desktop-height) {
+        screen and (max-height: $ipad-vertical-height) {
         left: -280px;
       }
 
+      @media only screen and (max-width: $mobile-horizontal-width),
+        screen and (max-height: $desktop-height) {
+        left: -130px;
+      }
+
+      // TODO: CHECK THESE 3
       @media only screen and (max-width: $ipad-vertical-width),
         screen and (max-height: $ipad-horizontal-height) {
+        left: -130px;
+      }
+
+      @media only screen and (max-width: $mobile-vertical-width),
+        screen and (max-height: 700px) {
+        left: -130px;
+      }
+
+      @media only screen and (max-width: $sm-mobile-vertical-width),
+        screen and (max-height: $sm-mobile-vertical-height) {
         left: -130px;
       }
 
@@ -63,15 +96,21 @@
         left: -200px;
 
         @media only screen and (max-width: $ipad-horizontal-width),
-          screen and (max-height: $desktop-height) {
+          screen and (max-height: $ipad-vertical-height) {
           top: -100px;
           left: -100px;
         }
 
-        @media only screen and (max-width: $ipad-vertical-width),
-          screen and (max-height: $ipad-horizontal-height) {
+        @media only screen and (max-width: $mobile-horizontal-width),
+          screen and (max-height: $desktop-height) {
           top: -80px;
           left: -80px;
+        }
+
+        @media only screen and (max-width: $mobile-vertical-width),
+          screen and (max-height: 700px) {
+          top: -50px;
+          left: -50px;
         }
       }
     }
@@ -81,8 +120,14 @@
       right: -100px;
 
       @media only screen and (max-width: $ipad-horizontal-width),
-        screen and (max-height: $desktop-height) {
+        screen and (max-height: $ipad-vertical-height) {
         bottom: -130px;
+        right: -72px;
+      }
+
+      @media only screen and (max-width: $mobile-horizontal-width),
+        screen and (max-height: $desktop-height) {
+        bottom: -72px;
         right: -72px;
       }
 
@@ -90,6 +135,18 @@
         screen and (max-height: $ipad-horizontal-height) {
         bottom: -72px;
         right: -72px;
+      }
+
+      @media only screen and (max-width: $mobile-vertical-width),
+        screen and (max-height: 700px) {
+        bottom: -72px;
+        right: -72px;
+      }
+
+      @media only screen and (max-width: $sm-mobile-vertical-width),
+        screen and (max-height: $sm-mobile-vertical-height) {
+        bottom: -60px;
+        right: -34px;
       }
     }
 

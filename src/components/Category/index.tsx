@@ -25,7 +25,7 @@ const Category = ({
   formName,
 }: CategoryProps) => {
   const isTitleRight = titlePosition.includes("right");
-  
+
   return (
     <div className={`category ${isTitleRight ? "invert" : ""}`}>
       <Title
@@ -37,7 +37,7 @@ const Category = ({
       <div
         className={`images-with-blobs ${
           titlePosition.includes("bottom") ? "bottom" : ""
-        } `}
+        } ${isTitleRight ? "left" : ""} `}
       >
         <Blobs blobs={blobs} />
         <Images

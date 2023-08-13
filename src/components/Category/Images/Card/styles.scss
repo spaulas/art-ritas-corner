@@ -8,13 +8,13 @@
   -webkit-transition: all 0.2s ease;
   margin: 0;
 
-  @media only screen and (max-width: $desktop-width),
+  @media only screen and (max-width: $ipad-horizontal-width),
     screen and (max-height: $ipad-vertical-height) {
     width: 304px;
     height: 544px;
   }
 
-  @media only screen and (max-width: $ipad-horizontal-width),
+  @media only screen and (max-width: $mobile-horizontal-width),
     screen and (max-height: $desktop-height) {
     width: 247px;
     height: 442px;
@@ -25,6 +25,13 @@
     width: 186px;
     height: 332px;
   }
+
+  @media only screen and (max-width: $mobile-vertical-width),
+    screen and (max-height: 700px) {
+    width: 124px;
+    height: 222px;
+  }
+
 
   img {
     @include shadow-gray-medium;

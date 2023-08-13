@@ -24,9 +24,17 @@ $imageCardsGap2-small: 48px;
 $imageCardsGap3-small: 72px;
 $slidingOffset-small: 180px;
 
+$leftDistance-xsmall: 700px;
+$imageCardWidth-xsmall: 186px;
+$imageCardHeight-xsmall: 332px;
+$imageCardsGap-xsmall: 20px;
+$imageCardsGap2-xsmall: 40px;
+$imageCardsGap3-xsmall: 60px;
+$slidingOffset-xsmall: 180px;
+
 $leftDistance-tiny: 700px;
-$imageCardWidth-tiny: 186px;
-$imageCardHeight-tiny: 332px;
+$imageCardWidth-tiny: 124px;
+$imageCardHeight-tiny: 222px;
 $imageCardsGap-tiny: 20px;
 $imageCardsGap2-tiny: 40px;
 $imageCardsGap3-tiny: 60px;
@@ -36,13 +44,13 @@ $slidingOffset-tiny: 180px;
   width: $imageCardWidth-big;
   height: $imageCardHeigh-big;
 
-  @media only screen and (max-width: $desktop-width),
+  @media only screen and (max-width: $ipad-horizontal-width),
     screen and (max-height: $ipad-vertical-height) {
     width: $imageCardWidth-medium;
     height: $imageCardHeight-medium;
   }
 
-  @media only screen and (max-width: $ipad-horizontal-width),
+  @media only screen and (max-width: $mobile-horizontal-width),
     screen and (max-height: $desktop-height) {
     width: $imageCardWidth-small;
     height: $imageCardHeight-small;
@@ -50,6 +58,12 @@ $slidingOffset-tiny: 180px;
 
   @media only screen and (max-width: $ipad-vertical-width),
     screen and (max-height: $ipad-horizontal-height) {
+    width: $imageCardWidth-xsmall;
+    height: $imageCardHeight-xsmall;
+  }
+
+  @media only screen and (max-width: $mobile-vertical-width),
+    screen and (max-height: 700px) {
     width: $imageCardWidth-tiny;
     height: $imageCardHeight-tiny;
   }
@@ -67,57 +81,90 @@ $slidingOffset-tiny: 180px;
         &:nth-child(2) {
           margin-left: $imageCardsGap-big;
 
-          @media only screen and (max-width: $desktop-width),
+          @media only screen and (max-width: $ipad-horizontal-width),
             screen and (max-height: $ipad-vertical-height) {
             margin-left: $imageCardsGap-medium;
           }
 
-          @media only screen and (max-width: $ipad-horizontal-width),
+          @media only screen and (max-width: $mobile-horizontal-width),
             screen and (max-height: $desktop-height) {
             margin-left: $imageCardsGap-small;
           }
 
           @media only screen and (max-width: $ipad-vertical-width),
             screen and (max-height: $ipad-horizontal-height) {
-            margin-left: $imageCardsGap-tiny;
+            margin-left: $imageCardsGap-xsmall;
+          }
+
+          // TODO check these 2
+          @media only screen and (max-width: $mobile-vertical-width),
+            screen and (max-height: 700px) {
+            margin-left: $imageCardsGap-xsmall;
+          }
+
+          @media only screen and (max-width: $sm-mobile-vertical-width),
+            screen and (max-height: $sm-mobile-vertical-height) {
+            margin-left: $imageCardsGap-xsmall;
           }
         }
 
         &:nth-child(3) {
           margin-left: $imageCardsGap2-big;
 
-          @media only screen and (max-width: $desktop-width),
+          @media only screen and (max-width: $ipad-horizontal-width),
             screen and (max-height: $ipad-vertical-height) {
             margin-left: $imageCardsGap2-medium;
           }
 
-          @media only screen and (max-width: $ipad-horizontal-width),
+          @media only screen and (max-width: $mobile-horizontal-width),
             screen and (max-height: $desktop-height) {
             margin-left: $imageCardsGap2-small;
           }
 
           @media only screen and (max-width: $ipad-vertical-width),
             screen and (max-height: $ipad-horizontal-height) {
-            margin-left: $imageCardsGap2-tiny;
+            margin-left: $imageCardsGap2-xsmall;
+          }
+
+          // TODO check these 2
+          @media only screen and (max-width: $mobile-vertical-width),
+            screen and (max-height: 700px) {
+            margin-left: $imageCardsGap2-xsmall;
+          }
+
+          @media only screen and (max-width: $sm-mobile-vertical-width),
+            screen and (max-height: $sm-mobile-vertical-height) {
+            margin-left: $imageCardsGap2-xsmall;
           }
         }
 
         &:nth-child(4) {
           margin-left: $imageCardsGap3-big;
 
-          @media only screen and (max-width: $desktop-width),
+          @media only screen and (max-width: $ipad-horizontal-width),
             screen and (max-height: $ipad-vertical-height) {
             margin-left: $imageCardsGap3-medium;
           }
 
-          @media only screen and (max-width: $ipad-horizontal-width),
+          @media only screen and (max-width: $mobile-horizontal-width),
             screen and (max-height: $desktop-height) {
             margin-left: $imageCardsGap3-small;
           }
 
           @media only screen and (max-width: $ipad-vertical-width),
             screen and (max-height: $ipad-horizontal-height) {
-            margin-left: $imageCardsGap3-tiny;
+            margin-left: $imageCardsGap3-xsmall;
+          }
+
+          // TODO check these 2
+          @media only screen and (max-width: $mobile-vertical-width),
+            screen and (max-height: 700px) {
+            margin-left: $imageCardsGap3-xsmall;
+          }
+
+          @media only screen and (max-width: $sm-mobile-vertical-width),
+            screen and (max-height: $sm-mobile-vertical-height) {
+            margin-left: $imageCardsGap3-xsmall;
           }
         }
       }
@@ -132,57 +179,91 @@ $slidingOffset-tiny: 180px;
         &:nth-child(1) {
           margin-left: -$imageCardsGap3-big;
 
-          @media only screen and (max-width: $desktop-width),
+          @media only screen and (max-width: $ipad-horizontal-width),
             screen and (max-height: $ipad-vertical-height) {
             margin-left: -$imageCardsGap3-medium;
           }
 
-          @media only screen and (max-width: $ipad-horizontal-width),
+          @media only screen and (max-width: $mobile-horizontal-width),
             screen and (max-height: $desktop-height) {
             margin-left: -$imageCardsGap3-small;
           }
 
           @media only screen and (max-width: $ipad-vertical-width),
             screen and (max-height: $ipad-horizontal-height) {
-            margin-left: -$imageCardsGap3-tiny;
+            margin-left: -$imageCardsGap3-xsmall;
+          }
+
+          // TODO: check these 2
+          @media only screen and (max-width: $mobile-vertical-width),
+            screen and (max-height: 700px) {
+            margin-left: -$imageCardsGap3-xsmall;
+          }
+
+          @media only screen and (max-width: $sm-mobile-vertical-width),
+            screen and (max-height: $sm-mobile-vertical-height) {
+            margin-left: -$imageCardsGap3-xsmall;
           }
         }
 
         &:nth-child(2) {
           margin-left: -$imageCardsGap2-big;
 
-          @media only screen and (max-width: $desktop-width),
+          @media only screen and (max-width: $ipad-horizontal-width),
             screen and (max-height: $ipad-vertical-height) {
             margin-left: -$imageCardsGap2-medium;
           }
 
-          @media only screen and (max-width: $ipad-horizontal-width),
+          @media only screen and (max-width: $mobile-horizontal-width),
             screen and (max-height: $desktop-height) {
             margin-left: -$imageCardsGap2-small;
           }
 
           @media only screen and (max-width: $ipad-vertical-width),
             screen and (max-height: $ipad-horizontal-height) {
-            margin-left: -$imageCardsGap2-tiny;
+            margin-left: -$imageCardsGap2-xsmall;
+          }
+
+          // TODO: CHECK THESE 2
+          @media only screen and (max-width: $mobile-vertical-width),
+            screen and (max-height: 700px) {
+            margin-left: -$imageCardsGap2-xsmall;
+          }
+
+          @media only screen and (max-width: $sm-mobile-vertical-width),
+            screen and (max-height: $sm-mobile-vertical-height) {
+            margin-left: -$imageCardsGap2-xsmall;
           }
         }
 
         &:nth-child(3) {
           margin-left: -$imageCardsGap-big;
 
-          @media only screen and (max-width: $desktop-width),
+          @media only screen and (max-width: $ipad-horizontal-width),
             screen and (max-height: $ipad-vertical-height) {
             margin-left: -$imageCardsGap-medium;
           }
 
-          @media only screen and (max-width: $ipad-horizontal-width),
+          @media only screen and (max-width: $mobile-horizontal-width),
             screen and (max-height: $desktop-height) {
             margin-left: -$imageCardsGap-small;
           }
 
           @media only screen and (max-width: $ipad-vertical-width),
             screen and (max-height: $ipad-horizontal-height) {
-            margin-left: -$imageCardsGap-tiny;
+            margin-left: -$imageCardsGap-xsmall;
+          }
+
+          // TODO: CHECK THESE 2
+
+          @media only screen and (max-width: $mobile-vertical-width),
+            screen and (max-height: 700px) {
+            margin-left: -$imageCardsGap-xsmall;
+          }
+
+          @media only screen and (max-width: $sm-mobile-vertical-width),
+            screen and (max-height: $sm-mobile-vertical-height) {
+            margin-left: -$imageCardsGap-xsmall;
           }
         }
       }
@@ -196,7 +277,7 @@ $slidingOffset-tiny: 180px;
           left: -$leftDistance-big;
         }
 
-        @media only screen and (max-width: $desktop-width),
+        @media only screen and (max-width: $ipad-horizontal-width),
           screen and (max-height: $ipad-vertical-height) {
           width: calc(($imageCardWidth-medium + $imageCardsGap-medium) * ($i));
 
@@ -205,7 +286,7 @@ $slidingOffset-tiny: 180px;
           }
         }
 
-        @media only screen and (max-width: $ipad-horizontal-width),
+        @media only screen and (max-width: $mobile-horizontal-width),
           screen and (max-height: $desktop-height) {
           width: calc(($imageCardWidth-small + $imageCardsGap-small) * ($i));
 
@@ -216,10 +297,29 @@ $slidingOffset-tiny: 180px;
 
         @media only screen and (max-width: $ipad-vertical-width),
           screen and (max-height: $ipad-horizontal-height) {
-          width: calc(($imageCardWidth-tiny + $imageCardsGap-tiny) * ($i));
+          width: calc(($imageCardWidth-xsmall + $imageCardsGap-xsmall) * ($i));
 
           &.open-left {
-            left: -$leftDistance-tiny;
+            left: -$leftDistance-xsmall;
+          }
+        }
+
+        // TODO: CHECK THESE 2
+        @media only screen and (max-width: $mobile-vertical-width),
+          screen and (max-height: 700px) {
+          width: calc(($imageCardWidth-xsmall + $imageCardsGap-xsmall) * ($i));
+
+          &.open-left {
+            left: -$leftDistance-xsmall;
+          }
+        }
+
+        @media only screen and (max-width: $sm-mobile-vertical-width),
+          screen and (max-height: $sm-mobile-vertical-height) {
+          width: calc(($imageCardWidth-xsmall + $imageCardsGap-xsmall) * ($i));
+
+          &.open-left {
+            left: -$leftDistance-xsmall;
           }
         }
       }
@@ -233,19 +333,30 @@ $slidingOffset-tiny: 180px;
       &:nth-child(1) {
         margin-left: -$slidingOffset-big;
 
-        @media only screen and (max-width: $desktop-width),
+        @media only screen and (max-width: $ipad-horizontal-width),
           screen and (max-height: $ipad-vertical-height) {
           margin-left: -$slidingOffset-medium;
         }
 
-        @media only screen and (max-width: $ipad-horizontal-width),
+        @media only screen and (max-width: $mobile-horizontal-width),
           screen and (max-height: $desktop-height) {
           margin-left: -$slidingOffset-small;
         }
 
         @media only screen and (max-width: $ipad-vertical-width),
           screen and (max-height: $ipad-horizontal-height) {
-          margin-left: -$slidingOffset-tiny;
+          margin-left: -$slidingOffset-xsmall;
+        }
+
+        // TODO: CHECK THESE 2
+        @media only screen and (max-width: $mobile-vertical-width),
+          screen and (max-height: 700px) {
+          margin-left: -$slidingOffset-xsmall;
+        }
+
+        @media only screen and (max-width: $sm-mobile-vertical-width),
+          screen and (max-height: $sm-mobile-vertical-height) {
+          margin-left: -$slidingOffset-xsmall;
         }
       }
 
@@ -257,7 +368,7 @@ $slidingOffset-tiny: 180px;
               $slidingOffset-big
           );
 
-          @media only screen and (max-width: $desktop-width),
+          @media only screen and (max-width: $ipad-horizontal-width),
             screen and (max-height: $ipad-vertical-height) {
             margin-left: calc(
               ($imageCardWidth-medium + $imageCardsGap-medium) * ($i - 1) -
@@ -265,7 +376,7 @@ $slidingOffset-tiny: 180px;
             );
           }
 
-          @media only screen and (max-width: $ipad-horizontal-width),
+          @media only screen and (max-width: $mobile-horizontal-width),
             screen and (max-height: $desktop-height) {
             margin-left: calc(
               ($imageCardWidth-small + $imageCardsGap-small) * ($i - 1) -
@@ -276,8 +387,26 @@ $slidingOffset-tiny: 180px;
           @media only screen and (max-width: $ipad-vertical-width),
             screen and (max-height: $ipad-horizontal-height) {
             margin-left: calc(
-              ($imageCardWidth-tiny + $imageCardsGap-tiny) * ($i - 1) -
-                $slidingOffset-tiny
+              ($imageCardWidth-xsmall + $imageCardsGap-xsmall) * ($i - 1) -
+                $slidingOffset-xsmall
+            );
+          }
+
+          // TODO: CHECK THESE 2
+
+          @media only screen and (max-width: $mobile-vertical-width),
+            screen and (max-height: 700px) {
+            margin-left: calc(
+              ($imageCardWidth-xsmall + $imageCardsGap-xsmall) * ($i - 1) -
+                $slidingOffset-xsmall
+            );
+          }
+
+          @media only screen and (max-width: $sm-mobile-vertical-width),
+            screen and (max-height: $sm-mobile-vertical-height) {
+            margin-left: calc(
+              ($imageCardWidth-xsmall + $imageCardsGap-xsmall) * ($i - 1) -
+                $slidingOffset-xsmall
             );
           }
         }
@@ -292,19 +421,31 @@ $slidingOffset-tiny: 180px;
       &:nth-last-child(1) {
         margin-left: calc($slidingOffset-big + $leftDistance-big);
 
-        @media only screen and (max-width: $desktop-width),
+        @media only screen and (max-width: $ipad-horizontal-width),
           screen and (max-height: $ipad-vertical-height) {
           margin-left: calc($slidingOffset-medium + $leftDistance-medium);
         }
 
-        @media only screen and (max-width: $ipad-horizontal-width),
+        @media only screen and (max-width: $mobile-horizontal-width),
           screen and (max-height: $desktop-height) {
           margin-left: calc($slidingOffset-small + $leftDistance-small);
         }
 
         @media only screen and (max-width: $ipad-vertical-width),
           screen and (max-height: $ipad-horizontal-height) {
-          margin-left: calc($slidingOffset-tiny + $leftDistance-tiny);
+          margin-left: calc($slidingOffset-xsmall + $leftDistance-xsmall);
+        }
+
+        // TODO: CHECK THESE 2
+
+        @media only screen and (max-width: $mobile-vertical-width),
+          screen and (max-height: 700px) {
+          margin-left: calc($slidingOffset-xsmall + $leftDistance-xsmall);
+        }
+
+        @media only screen and (max-width: $sm-mobile-vertical-width),
+          screen and (max-height: $sm-mobile-vertical-height) {
+          margin-left: calc($slidingOffset-xsmall + $leftDistance-xsmall);
         }
       }
 
@@ -318,7 +459,7 @@ $slidingOffset-tiny: 180px;
               $leftDistance-big
           );
 
-          @media only screen and (max-width: $desktop-width),
+          @media only screen and (max-width: $ipad-horizontal-width),
             screen and (max-height: $ipad-vertical-height) {
             margin-left: calc(
               ($imageCardWidth-medium + $imageCardsGap-medium) * ($i - 1) * -1 +
@@ -326,7 +467,7 @@ $slidingOffset-tiny: 180px;
             );
           }
 
-          @media only screen and (max-width: $ipad-horizontal-width),
+          @media only screen and (max-width: $mobile-horizontal-width),
             screen and (max-height: $desktop-height) {
             margin-left: calc(
               ($imageCardWidth-small + $imageCardsGap-small) * ($i - 1) * -1 +
@@ -337,8 +478,25 @@ $slidingOffset-tiny: 180px;
           @media only screen and (max-width: $ipad-vertical-width),
             screen and (max-height: $ipad-horizontal-height) {
             margin-left: calc(
-              ($imageCardWidth-tiny + $imageCardsGap-tiny) * ($i - 1) * -1 +
-                $slidingOffset-tiny + $leftDistance-tiny
+              ($imageCardWidth-xsmall + $imageCardsGap-xsmall) * ($i - 1) * -1 +
+                $slidingOffset-xsmall + $leftDistance-xsmall
+            );
+          }
+
+          // TODO: CHECK THESE 2
+          @media only screen and (max-width: $mobile-vertical-width),
+            screen and (max-height: 700px) {
+            margin-left: calc(
+              ($imageCardWidth-xsmall + $imageCardsGap-xsmall) * ($i - 1) * -1 +
+                $slidingOffset-xsmall + $leftDistance-xsmall
+            );
+          }
+
+          @media only screen and (max-width: $sm-mobile-vertical-width),
+            screen and (max-height: $sm-mobile-vertical-height) {
+            margin-left: calc(
+              ($imageCardWidth-xsmall + $imageCardsGap-xsmall) * ($i - 1) * -1 +
+                $slidingOffset-xsmall + $leftDistance-xsmall
             );
           }
         }
