@@ -6,9 +6,9 @@ import "./styles.scss";
 
 const NailsPrices = () => {
   const renderNailsPrices = () => {
-    return Object.values((data as DataType).nailsPrices)?.map((nailsPrice) => (
-      <NailsPriceItem key={nailsPrice.id} {...nailsPrice} />
-    ));
+    return Object.values((data as unknown as DataType).nailsPrices)?.map(
+      (nailsPrice) => <NailsPriceItem key={nailsPrice.id} {...nailsPrice} />
+    );
   };
 
   return <div className="nails-prices-container">{renderNailsPrices()}</div>;

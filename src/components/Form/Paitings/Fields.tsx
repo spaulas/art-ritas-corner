@@ -14,8 +14,8 @@ type PaintingsFieldsProps = {
 };
 
 const paintingsCategory: CategoryType[] | undefined = (
-  data as DataType
-).categories.filter(({ id }) => id !== "nailArt");
+  data as unknown as DataType
+).categories.paintings;
 
 const PaintingsFields = ({
   fields,
@@ -45,7 +45,7 @@ const PaintingsFields = ({
     function getPaintingsNames() {
       const namesOptions = paintingsCategory
         ?.find(({ id }) => id === fields.category)
-        ?.images.reduce(
+        ?.images?.reduce(
           (acc: Option[], painting) => [
             ...acc,
             {

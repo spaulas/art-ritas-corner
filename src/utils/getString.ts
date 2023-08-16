@@ -2,9 +2,8 @@ import { NailsFormFields, PaintingsFormFields } from "context/FormProvider";
 import data from "data.json";
 import type { CategoryType, DataType } from "data";
 
-const nailsCategory: CategoryType | undefined = (
-  data as DataType
-).categories.find(({ id }) => id === "nailArt");
+const nailsCategory: CategoryType | undefined = (data as unknown as DataType)
+  .categories.nails[1];
 
 export const convertDurationToString = (duration: number): string => {
   const hours = Math.floor(duration / 60);
@@ -28,7 +27,7 @@ export const getServicesListToString = (
 ): string => {
   let servicesToString = "";
   services.forEach((service) => {
-    const serviceData = nailsCategory?.images.find(
+    const serviceData = nailsCategory?.images?.find(
       (image) => image.id === service
     );
     servicesToString = `${servicesToString}${serviceData?.title?.fr}, `;
@@ -37,12 +36,12 @@ export const getServicesListToString = (
   return servicesToString.slice(0, -2);
 };
 
-export const getCategoryToString = (
+export const getPaintingCategoryToString = (
   category: PaintingsFormFields["category"]
 ): string => {
   const categoryData: CategoryType | undefined = (
-    data as DataType
-  ).categories.find(({ id }) => id === category);
+    data as unknown as DataType
+  ).categories.paintings.find(({ id }) => id === category);
 
   return categoryData?.title.fr ?? "";
 };
@@ -52,10 +51,10 @@ export const getPaintingToString = (
   painting: PaintingsFormFields["painting"]
 ): string => {
   const categoryData: CategoryType | undefined = (
-    data as DataType
-  ).categories.find(({ id }) => id === category);
+    data as unknown as DataType
+  ).categories.paintings.find(({ id }) => id === category);
 
-  const paintingData = categoryData?.images.find(
+  const paintingData = categoryData?.images?.find(
     (image) => image.id === painting
   );
 

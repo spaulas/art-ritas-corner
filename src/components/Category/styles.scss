@@ -39,6 +39,12 @@
     flex-direction: row-reverse;
   }
 
+  &.column {
+    flex-direction: column;
+    justify-content: unset;
+
+  }
+
   .images-with-blobs {
     @media only screen and (max-width: $ipad-horizontal-width),
       screen and (max-height: $ipad-vertical-height) {

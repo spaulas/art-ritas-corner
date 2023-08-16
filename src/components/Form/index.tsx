@@ -15,7 +15,7 @@ import NailsSummary from "./Nails/Summary";
 import { getServicesTotalDuration, getServicesTotalPrice } from "utils/getSums";
 import {
   convertDurationToString,
-  getCategoryToString,
+  getPaintingCategoryToString,
   getDateToString,
   getPaintingToString,
   getServicesListToString,
@@ -69,7 +69,7 @@ const ContactForm = () => {
           name: basicFields.name,
           email: basicFields.email,
           phoneNumber: basicFields.phone,
-          category: getCategoryToString(paintingsFields.category),
+          category: getPaintingCategoryToString(paintingsFields.category),
           painting: getPaintingToString(
             paintingsFields.category,
             paintingsFields.painting

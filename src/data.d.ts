@@ -27,8 +27,9 @@ export type CategoryType = {
   subCategory?: Text;
   titlePosition: "top-right" | "top-left" | "bottom-right" | "bottom-left";
   flower: { id: number; position: string };
-  images: ImageType[];
-  blobs: BlobType[];
+  images?: ImageType[];
+  blobs?: BlobType[];
+  paragraphs?: Text[];
 };
 
 export type ScheduleType = {
@@ -67,7 +68,6 @@ export type TCCategory = {
 };
 
 export type NailsTC = {
-  paragraphs: Text[];
   categories: TCCategory[];
 };
 
@@ -78,7 +78,7 @@ export type Welcome = {
 export type UploadedFiles = File & { src: string | ArrayBuffer | null };
 
 export type DataType = {
-  categories: CategoryType[];
+  categories: { paintings: CategoryType[]; nails: CategoryType[] };
   profile: {
     text?: Text;
   };

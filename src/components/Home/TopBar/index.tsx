@@ -5,7 +5,7 @@ import "./styles.scss";
 import { BackdropContext } from "context/BackdropProvider";
 
 const TopBar = () => {
-  const { updateBasicFields } = useContext(FormContext);
+  const { basicFields, updateBasicFields } = useContext(FormContext);
   const { setWelcomeModalVisibility } = useContext(BackdropContext);
 
   const handleWelcomeClick = () => {
@@ -22,7 +22,12 @@ const TopBar = () => {
   };
 
   const handleInstagramClick = () => {
-    window.open("https://www.instagram.com/art_ritascorner/");
+    if (basicFields.type === "paintings") {
+      window.open("https://www.instagram.com/art_ritascorner/");
+      return;
+    }
+
+    window.open("https://www.instagram.com/ritanails_corner/");
   };
 
   const handleTikTokClick = () => {
