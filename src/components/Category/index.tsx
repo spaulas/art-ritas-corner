@@ -27,7 +27,9 @@ const Category = ({
   const isTitleRight = titlePosition.includes("right");
 
   return (
-    <div className={`category ${isTitleRight ? "invert" : ""}`}>
+    <div
+      className={`category ${isTitleRight ? "invert" : ""}`}
+    >
       <Title
         title={title}
         description={description}

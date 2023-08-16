@@ -49,7 +49,7 @@ const PaintingsFields = ({
           (acc: Option[], painting) => [
             ...acc,
             {
-              label: painting.title[language],
+              label: painting.title?.[language] ?? "",
               value: painting.id,
             },
           ],

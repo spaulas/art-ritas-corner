@@ -9,6 +9,7 @@ import Calendar from "react-calendar";
 import data from "data.json";
 import "../../styles.scss";
 import { getServicesTotalDuration } from "utils/getSums";
+import { DayScheduleType } from "data";
 
 type NailsFormProps = {
   fields: NailsFormFields;
@@ -73,20 +74,20 @@ const NailsCalendar = (props: NailsFormProps) => {
       const weekDay = fields.date.toLocaleString("default", {
         weekday: "long",
       });
-      const availableTimesForWeekDay =
+      const availableTimesForWeekDay: DayScheduleType =
         data.calendar.schedules[weekDay?.toLowerCase() as WeekDay];
 
       getBusyTimesForSelectedDate();
       categoryDuration.current = getServicesTotalDuration(fields.services);
 
       const morningSchedules = getSchedulesFromAvailableHours(
-        availableTimesForWeekDay.morning.start,
-        availableTimesForWeekDay.morning.end
+        availableTimesForWeekDay.morning?.start,
+        availableTimesForWeekDay.morning?.end
       );
 
       const afternoonSchedules = getSchedulesFromAvailableHours(
-        availableTimesForWeekDay.afternoon.start,
-        availableTimesForWeekDay.afternoon.end
+        availableTimesForWeekDay.afternoon?.start,
+        availableTimesForWeekDay.afternoon?.end
       );
 
       setNailsScheduleOptions([...morningSchedules, ...afternoonSchedules]);
@@ -174,9 +175,11 @@ const NailsCalendar = (props: NailsFormProps) => {
   };
 
   const getSchedulesFromAvailableHours = (
-    start: number,
-    end: number
+    start?: number,
+    end?: number
   ): Option[] => {
+    if (!start || !end) return [];
+
     const hours = end - start;
 
     return Array(hours * 2)
