@@ -50,13 +50,15 @@ const Description = ({
       <div className="title" id="image-description__title">
         {title?.[language]}
       </div>
-      <div className="description" id="image-description__description">
-        {description?.[language]}
-      </div>
+      {description ? (
+        <div className="description" id="image-description__description">
+          {description?.[language]}
+        </div>
+      ) : null}
       {price && (
         <div className="price" id="image-description__price">{`${price}€`}</div>
       )}
-      <div className="actions">
+      <div className={`actions ${!title && !description ? "lonely" : ""}`}>
         {hasOpenButton && link && (
           <Button
             id="image-description__open"
