@@ -10,21 +10,6 @@
   display: flex;
   flex-direction: column;
 
-  .nails-tc-paragraphs {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-
-    &::after {
-        content: "";
-        width: 50%;
-        height: 1px;
-        background: $white;
-        align-self: center;
-        margin: 16px 0;
-    }
-  }
-
   .nails-tc-categories {
     margin-top: 16px;
     display: flex;

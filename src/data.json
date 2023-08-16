@@ -1,491 +1,637 @@
 {
-  "categories": [
-    {
-      "id": "aquarella-flower",
-      "title": {
-        "fr": "Fleurs",
-        "en": "Fleurs"
-      },
-      "subCategory": {
-        "fr": "Peinture aquarelle",
-        "en": "Peinture aquarelle"
-      },
-      "description": {
-        "fr": "Peinture minimalises, jeu de couleurs et fines lignes",
-        "en": "Peinture minimalises, jeu de couleurs et fines lignes"
-      },
-      "titlePosition": "top-right",
-      "flower": {
-        "id": 5,
-        "position": "bottom-right"
-      },
-      "blobs": [
-        {
-          "color": "pink",
-          "id": 1,
-          "size": "small"
+  "categories": {
+    "paintings": [
+      {
+        "id": "aquarella-flower",
+        "title": {
+          "fr": "Fleurs",
+          "en": "Fleurs"
         },
-        {
-          "color": "blue",
+        "subCategory": {
+          "fr": "Peinture aquarelle",
+          "en": "Peinture aquarelle"
+        },
+        "description": {
+          "fr": "Peinture minimalises, jeu de couleurs et fines lignes",
+          "en": "Peinture minimalises, jeu de couleurs et fines lignes"
+        },
+        "titlePosition": "top-right",
+        "flower": {
           "id": 5,
-          "size": "small"
+          "position": "bottom-right"
+        },
+        "blobs": [
+          {
+            "color": "pink",
+            "id": 1,
+            "size": "small"
+          },
+          {
+            "color": "blue",
+            "id": 5,
+            "size": "small"
+          }
+        ],
+        "images": [
+          {
+            "id": "flower01",
+            "src": "flower01",
+            "available": true,
+            "link": "https://www.instagram.com/p/CjpcB8wsNTK/?img_index=1"
+          },
+          {
+            "id": "flower02",
+            "src": "flower02",
+            "available": true,
+            "link": "https://www.instagram.com/p/CjX4TWXsY8Y/?img_index=1"
+          },
+          {
+            "id": "flower03",
+            "src": "flower03",
+            "available": true
+          }
+        ]
+      },
+      {
+        "id": "aquarella-body",
+        "title": {
+          "fr": "Les corps",
+          "en": "Les corps"
+        },
+        "subCategory": {
+          "fr": "Peinture aquarelle",
+          "en": "Peinture aquarelle"
+        },
+        "description": {
+          "fr": "Sériés de peintures qu’embrasse les différents corps, femme et homme, grosse et mince, sensuel et brute, amour propre et pour le prochain",
+          "en": "Sériés de peintures qu’embrasse les différents corps, femme et homme, grosse et mince, sensuel et brute, amour propre et pour le prochain"
+        },
+        "titlePosition": "top-left",
+        "flower": {
+          "id": 4,
+          "position": "bottom-left"
+        },
+        "blobs": [
+          {
+            "color": "cream",
+            "id": 9
+          },
+          {
+            "color": "blue",
+            "id": 7,
+            "angle": 75
+          }
+        ],
+        "images": [
+          {
+            "id": "aquarelaBody01",
+            "src": "aquarelaBody01",
+            "available": true,
+            "link": "https://www.instagram.com/p/CTWzpRYMztR/?img_index=1"
+          },
+          {
+            "id": "aquarelaBody02",
+            "src": "aquarelaBody02",
+            "available": true,
+            "link": "https://www.instagram.com/p/Cb9-fpNMu9C/?img_index=1"
+          },
+          {
+            "id": "aquarelaBody03",
+            "src": "aquarelaBody03",
+            "available": true,
+            "link": "https://www.instagram.com/p/CW2iKKtsqR8/?img_index=1"
+          },
+          {
+            "id": "aquarelaBody04",
+            "src": "aquarelaBody04",
+            "available": true,
+            "link": "https://www.instagram.com/p/CUpQFBvsCQX/?img_index=1"
+          },
+          {
+            "id": "aquarelaBody05",
+            "src": "aquarelaBody05",
+            "available": true,
+            "link": "https://www.instagram.com/p/CPTL_oPMIHO/?img_index=1"
+          },
+          {
+            "id": "aquarelaBody06",
+            "src": "aquarelaBody06",
+            "available": true,
+            "link": "https://www.instagram.com/p/CmeO2Aos60u/?img_index=1"
+          },
+          {
+            "id": "aquarelaBody07",
+            "src": "aquarelaBody07",
+            "available": true,
+            "link": "https://www.instagram.com/p/CYv_GvpM20-/?img_index=1"
+          },
+          {
+            "id": "aquarelaBody08",
+            "src": "aquarelaBody08",
+            "available": true,
+            "link": "https://www.instagram.com/p/CiR0opUshXG/?img_index=1"
+          }
+        ]
+      },
+      {
+        "id": "acrillic-abstract",
+        "title": {
+          "fr": "Abstraite",
+          "en": "Abstraite"
+        },
+        "subCategory": {
+          "fr": "Peinture acrylique",
+          "en": "Peinture acrylique"
+        },
+        "description": {
+          "fr": "La magie des couleurs, toute une série de peintures dédiées à la couleur, des peintures faites à partir d’une palette unique pour chaque toile",
+          "en": "La magie des couleurs, toute une série de peintures dédiées à la couleur, des peintures faites à partir d’une palette unique pour chaque toile"
+        },
+        "titlePosition": "bottom-right",
+        "flower": {
+          "id": 3,
+          "position": "top-right"
+        },
+        "blobs": [
+          {
+            "color": "cream",
+            "id": 6
+          },
+          {
+            "color": "pink",
+            "id": 11
+          }
+        ],
+        "images": [
+          {
+            "id": "acrylicAbstract01",
+            "src": "acrylicAbstract01",
+            "available": true,
+            "link": "https://www.instagram.com/p/CTWzpRYMztR/?img_index=1"
+          },
+          {
+            "id": "acrylicAbstract02",
+            "src": "acrylicAbstract02",
+            "available": true,
+            "link": "https://www.instagram.com/p/CbSPC7YMrJB/?img_index=1"
+          },
+          {
+            "id": "acrylicAbstract03",
+            "src": "acrylicAbstract03",
+            "available": true,
+            "link": "https://www.instagram.com/p/CXnovdKMrFe/?img_index=1"
+          },
+          {
+            "id": "acrylicAbstract04",
+            "src": "acrylicAbstract04",
+            "available": true,
+            "link": "https://www.instagram.com/p/CU9yhixsqS8/?img_index=1"
+          },
+          {
+            "id": "acrylicAbstract05",
+            "src": "acrylicAbstract05",
+            "available": true
+          },
+          {
+            "id": "acrylicAbstract06",
+            "src": "acrylicAbstract06",
+            "available": true,
+            "link": "https://www.instagram.com/p/CVNWt5_sSJ8/?img_index=1"
+          },
+          {
+            "id": "acrylicAbstract07",
+            "src": "acrylicAbstract07",
+            "available": true,
+            "link": "https://www.instagram.com/p/CXf0JQIMT2w/?img_index=1"
+          },
+          {
+            "id": "acrylicAbstract08",
+            "src": "acrylicAbstract08",
+            "available": true,
+            "link": "https://www.instagram.com/p/COLPHXgsfuC/?img_index=1"
+          }
+        ]
+      },
+      {
+        "id": "acrillic-silhouette",
+        "title": {
+          "fr": "Silhouette",
+          "en": "Silhouette"
+        },
+        "subCategory": {
+          "fr": "Peinture acrylique",
+          "en": "Peinture acrylique"
+        },
+        "description": {
+          "fr": "Lumières et ombres, un jeu de contrastes abstraites et dégradées",
+          "en": "Lumières et ombres, un jeu de contrastes abstraites et dégradées"
+        },
+        "titlePosition": "top-left",
+        "flower": {
+          "id": 5,
+          "position": "bottom-left"
+        },
+        "blobs": [
+          {
+            "color": "blue",
+            "id": 11,
+            "size": "small"
+          },
+          {
+            "color": "pink",
+            "id": 2
+          }
+        ],
+        "images": [
+          {
+            "id": "acrylicAbstract01",
+            "src": "acrylicAbstract01",
+            "available": true,
+            "link": "https://www.instagram.com/p/CTWzpRYMztR/?img_index=1"
+          },
+          {
+            "id": "acrylicAbstract02",
+            "src": "acrylicAbstract02",
+            "available": true,
+            "link": "https://www.instagram.com/p/CbSPC7YMrJB/?img_index=1"
+          },
+          {
+            "id": "acrylicAbstract03",
+            "src": "acrylicAbstract03",
+            "available": true,
+            "link": "https://www.instagram.com/p/CXnovdKMrFe/?img_index=1"
+          },
+          {
+            "id": "acrylicAbstract04",
+            "src": "acrylicAbstract04",
+            "available": true,
+            "link": "https://www.instagram.com/p/CU9yhixsqS8/?img_index=1"
+          },
+          {
+            "id": "acrylicAbstract05",
+            "src": "acrylicAbstract05",
+            "available": true
+          },
+          {
+            "id": "acrylicAbstract06",
+            "src": "acrylicAbstract06",
+            "available": true,
+            "link": "https://www.instagram.com/p/CVNWt5_sSJ8/?img_index=1"
+          },
+          {
+            "id": "acrylicAbstract07",
+            "src": "acrylicAbstract07",
+            "available": true,
+            "link": "https://www.instagram.com/p/CXf0JQIMT2w/?img_index=1"
+          },
+          {
+            "id": "acrylicAbstract08",
+            "src": "acrylicAbstract08",
+            "available": true,
+            "link": "https://www.instagram.com/p/COLPHXgsfuC/?img_index=1"
+          }
+        ]
+      },
+      {
+        "id": "acrillic-mural",
+        "title": {
+          "fr": "Murales",
+          "en": "Murales"
+        },
+        "subCategory": {
+          "fr": "Peinture acrylique",
+          "en": "Peinture acrylique"
+        },
+        "description": {
+          "fr": "Transforme ton espace dans une pièce unique, donne vie a ton environnement",
+          "en": "Transforme ton espace dans une pièce unique, donne vie a ton environnement"
+        },
+        "titlePosition": "bottom-right",
+        "flower": {
+          "id": 2,
+          "position": "top-right"
+        },
+        "blobs": [
+          {
+            "color": "cream",
+            "id": 7
+          },
+          {
+            "color": "pink",
+            "id": 4
+          }
+        ],
+        "images": [
+          {
+            "id": "acrylicAbstract01",
+            "src": "acrylicAbstract01",
+            "available": true,
+            "link": "https://www.instagram.com/p/CTWzpRYMztR/?img_index=1"
+          },
+          {
+            "id": "acrylicAbstract02",
+            "src": "acrylicAbstract02",
+            "available": true,
+            "link": "https://www.instagram.com/p/CbSPC7YMrJB/?img_index=1"
+          },
+          {
+            "id": "acrylicAbstract03",
+            "src": "acrylicAbstract03",
+            "available": true,
+            "link": "https://www.instagram.com/p/CXnovdKMrFe/?img_index=1"
+          },
+          {
+            "id": "acrylicAbstract04",
+            "src": "acrylicAbstract04",
+            "available": true,
+            "link": "https://www.instagram.com/p/CU9yhixsqS8/?img_index=1"
+          },
+          {
+            "id": "acrylicAbstract05",
+            "src": "acrylicAbstract05",
+            "available": true
+          },
+          {
+            "id": "acrylicAbstract06",
+            "src": "acrylicAbstract06",
+            "available": true,
+            "link": "https://www.instagram.com/p/CVNWt5_sSJ8/?img_index=1"
+          },
+          {
+            "id": "acrylicAbstract07",
+            "src": "acrylicAbstract07",
+            "available": true,
+            "link": "https://www.instagram.com/p/CXf0JQIMT2w/?img_index=1"
+          },
+          {
+            "id": "acrylicAbstract08",
+            "src": "acrylicAbstract08",
+            "available": true,
+            "link": "https://www.instagram.com/p/COLPHXgsfuC/?img_index=1"
+          }
+        ]
+      },
+      {
+        "id": "acrillic-wood",
+        "title": {
+          "fr": "En bois",
+          "en": "En bois"
+        },
+        "subCategory": {
+          "fr": "Peinture acrylique",
+          "en": "Peinture acrylique"
+        },
+        "description": {
+          "fr": "Projets personnalisés en bois",
+          "en": "Projets personnalisés en bois"
+        },
+        "titlePosition": "top-left",
+        "flower": {
+          "id": 6,
+          "position": "bottom-left"
+        },
+        "blobs": [
+          {
+            "color": "blue",
+            "id": 3
+          },
+          {
+            "color": "cream",
+            "id": 8
+          }
+        ],
+        "images": [
+          {
+            "id": "acrylicAbstract03",
+            "src": "acrylicAbstract03",
+            "available": true,
+            "link": "https://www.instagram.com/p/CXnovdKMrFe/?img_index=1"
+          }
+        ]
+      },
+      {
+        "id": "mandala-original",
+        "title": {
+          "fr": "Originales",
+          "en": "Originales"
+        },
+        "subCategory": {
+          "fr": "Mandalas",
+          "en": "Mandalas"
+        },
+        "description": {
+          "fr": "“Most mandalas have an intuitive, irrational character and, through their symbolical content, exert a retroactive influence on the unconscious. They therefore possess a “magical” significance (…)” Carl Yung, mandala Symbolism",
+          "en": "“Most mandalas have an intuitive, irrational character and, through their symbolical content, exert a retroactive influence on the unconscious. They therefore possess a “magical” significance (…)” Carl Yung, mandala Symbolism"
+        },
+        "titlePosition": "bottom-right",
+        "flower": {
+          "id": 3,
+          "position": "top-right"
+        },
+        "blobs": [
+          {
+            "color": "blue",
+            "id": 10
+          },
+          {
+            "color": "pink",
+            "id": 13,
+            "size": "small"
+          }
+        ],
+        "images": [
+          {
+            "id": "mandalaOriginal01",
+            "src": "mandalaOriginal01",
+            "available": true
+          }
+        ]
+      },
+      {
+        "id": "mandala-digital",
+        "title": {
+          "fr": "Digitale",
+          "en": "Digitale"
+        },
+        "subCategory": {
+          "fr": "Mandalas",
+          "en": "Mandalas"
+        },
+        "description": {
+          "fr": "Mandalas numériques, crée avec une symétrie parfaite, trouve l’équilibre dans un tableau unique",
+          "en": "Mandalas numériques, crée avec une symétrie parfaite, trouve l’équilibre dans un tableau unique"
+        },
+        "titlePosition": "bottom-left",
+        "flower": {
+          "id": 4,
+          "position": "top-left"
+        },
+        "blobs": [
+          {
+            "color": "blue",
+            "id": 2
+          },
+          {
+            "color": "cream",
+            "id": 1,
+            "size": "small"
+          }
+        ],
+        "images": [
+          {
+            "id": "mandalaDigital01",
+            "src": "mandalaDigital01",
+            "available": true,
+            "link": "https://www.instagram.com/p/ClgHkW0M3_T/?img_index=1"
+          }
+        ]
+      }
+    ],
+    "nails": [
+      {
+        "id": "nailsDescription",
+        "title": {
+          "fr": "Mes services",
+          "en": "My services"
+        },
+        "paragraphs": [
+          {
+            "fr": "Onglerie à domicile. Je vous propose un service d'onglerie a domicile, faite vous ongle dans le confort de chez vous.",
+            "en": "Nail salon at home. I offer you a nail service at home, do your nails in the comfort of your home."
+          },
+          {
+            "fr": "Tout le matériel est désinfecté ou jetable à chaque cliente, pour la pédicure je vous demande de lavée vous pieds juste avant le rdv, la désinfection sera effectuée pour moi avant la procédure.",
+            "en": "All the material is disinfected or disposable for each client, for the pedicure I ask you to wash your feet just before the appointment, the disinfection will be done for me before the procedure."
+          },
+          {
+            "fr": "RDV: Pour obtenir un rendez-vous, vous n'avez besoin que de 2 étapes. (Pour une question de securité, vous seras demandé d'effectuer un pré payement pour l'acquisition d'un rdv).",
+            "en": "RDV: To get an appointment, you only need 2 steps. (For a question of security, you will be asked to make a prepayment for the acquisition of an appointment)."
+          },
+          {
+            "fr": "Allez d'abord à « mon rendez-vous » et remplissez les informations (nom, adresse du rendez-vous, décrivez vos ongles à ce moment et dites-moi quel service vous souhaitez acheter et enfin ajoutez quelques photos).",
+            "en": "First go to « my appointment » and fill in the information (name, address of the appointment, describe your nails at this moment and tell me which service you want to buy and finally add some photos)."
+          },
+          {
+            "fr": "Après cette première étape, vous devez attendre l'e-mail de confirmation. Dans cet e-mail, vous allez maintenant finir de bloquer votre rendez-vous, pour cela, vous devez payer la moitié du prix final de l’achat et après votre rdv seras enregistré. ",
+            "en": "After this first step, you must wait for the confirmation email. In this e-mail, you will now finish blocking your appointment, for this you must pay half of the final purchase price and after that your appointment will be registered."
+          }
+        ],
+        "titlePosition": "top-left",
+        "flower": {
+          "id": 3,
+          "position": "top-right"
         }
-      ],
-      "images": [
-        {
-          "id": "flower01",
-          "src": "flower01",
-          "available": true,
-          "link": "https://www.instagram.com/p/CjpcB8wsNTK/?img_index=1"
-        },
-        {
-          "id": "flower02",
-          "src": "flower02",
-          "available": true,
-          "link": "https://www.instagram.com/p/CjX4TWXsY8Y/?img_index=1"
-        },
-        {
-          "id": "flower03",
-          "src": "flower03",
-          "available": true
-        }
-      ]
-    },
-    {
-      "id": "aquarella-body",
-      "title": {
-        "fr": "Les corps",
-        "en": "Les corps"
       },
-      "subCategory": {
-        "fr": "Peinture aquarelle",
-        "en": "Peinture aquarelle"
-      },
-      "description": {
-        "fr": "Sériés de peintures qu’embrasse les différents corps, femme et homme, grosse et mince, sensuel et brute, amour propre et pour le prochain",
-        "en": "Sériés de peintures qu’embrasse les différents corps, femme et homme, grosse et mince, sensuel et brute, amour propre et pour le prochain"
-      },
-      "titlePosition": "top-left",
-      "flower": {
-        "id": 4,
-        "position": "bottom-left"
-      },
-      "blobs": [
-        {
-          "color": "cream",
-          "id": 9
+      {
+        "id": "nailArt",
+        "title": {
+          "fr": "Artiste d'ongles",
+          "en": "Nail art"
         },
-        {
-          "color": "blue",
-          "id": 7,
-          "angle": 75
-        }
-      ],
-      "images": [
-        {
-          "id": "aquarelaBody01",
-          "src": "aquarelaBody01",
-          "available": true,
-          "link": "https://www.instagram.com/p/CTWzpRYMztR/?img_index=1"
+        "description": {
+          "fr": "Divers services de mannucure effectués à domicile",
+          "en": "Various manicure services performed at home"
         },
-        {
-          "id": "aquarelaBody02",
-          "src": "aquarelaBody02",
-          "available": true,
-          "link": "https://www.instagram.com/p/Cb9-fpNMu9C/?img_index=1"
-        },
-        {
-          "id": "aquarelaBody03",
-          "src": "aquarelaBody03",
-          "available": true,
-          "link": "https://www.instagram.com/p/CW2iKKtsqR8/?img_index=1"
-        },
-        {
-          "id": "aquarelaBody04",
-          "src": "aquarelaBody04",
-          "available": true,
-          "link": "https://www.instagram.com/p/CUpQFBvsCQX/?img_index=1"
-        },
-        {
-          "id": "aquarelaBody05",
-          "src": "aquarelaBody05",
-          "available": true,
-          "link": "https://www.instagram.com/p/CPTL_oPMIHO/?img_index=1"
-        },
-        {
-          "id": "aquarelaBody06",
-          "src": "aquarelaBody06",
-          "available": true,
-          "link": "https://www.instagram.com/p/CmeO2Aos60u/?img_index=1"
-        },
-        {
-          "id": "aquarelaBody07",
-          "src": "aquarelaBody07",
-          "available": true,
-          "link": "https://www.instagram.com/p/CYv_GvpM20-/?img_index=1"
-        },
-        {
-          "id": "aquarelaBody08",
-          "src": "aquarelaBody08",
-          "available": true,
-          "link": "https://www.instagram.com/p/CiR0opUshXG/?img_index=1"
-        }
-      ]
-    },
-    {
-      "id": "acrillic-abstract",
-      "title": {
-        "fr": "Abstraite",
-        "en": "Abstraite"
-      },
-      "subCategory": {
-        "fr": "Peinture acrylique",
-        "en": "Peinture acrylique"
-      },
-      "description": {
-        "fr": "La magie des couleurs, toute une série de peintures dédiées à la couleur, des peintures faites à partir d’une palette unique pour chaque toile",
-        "en": "La magie des couleurs, toute une série de peintures dédiées à la couleur, des peintures faites à partir d’une palette unique pour chaque toile"
-      },
-      "titlePosition": "bottom-right",
-      "flower": {
-        "id": 3,
-        "position": "top-right"
-      },
-      "blobs": [
-        {
-          "color": "cream",
-          "id": 6
-        },
-        {
-          "color": "pink",
-          "id": 11
-        }
-      ],
-      "images": [
-        {
-          "id": "acrylicAbstract01",
-          "src": "acrylicAbstract01",
-          "available": true,
-          "link": "https://www.instagram.com/p/CTWzpRYMztR/?img_index=1"
-        },
-        {
-          "id": "acrylicAbstract02",
-          "src": "acrylicAbstract02",
-          "available": true,
-          "link": "https://www.instagram.com/p/CbSPC7YMrJB/?img_index=1"
-        },
-        {
-          "id": "acrylicAbstract03",
-          "src": "acrylicAbstract03",
-          "available": true,
-          "link": "https://www.instagram.com/p/CXnovdKMrFe/?img_index=1"
-        },
-        {
-          "id": "acrylicAbstract04",
-          "src": "acrylicAbstract04",
-          "available": true,
-          "link": "https://www.instagram.com/p/CU9yhixsqS8/?img_index=1"
-        },
-        {
-          "id": "acrylicAbstract05",
-          "src": "acrylicAbstract05",
-          "available": true
-        },
-        {
-          "id": "acrylicAbstract06",
-          "src": "acrylicAbstract06",
-          "available": true,
-          "link": "https://www.instagram.com/p/CVNWt5_sSJ8/?img_index=1"
-        },
-        {
-          "id": "acrylicAbstract07",
-          "src": "acrylicAbstract07",
-          "available": true,
-          "link": "https://www.instagram.com/p/CXf0JQIMT2w/?img_index=1"
-        },
-        {
-          "id": "acrylicAbstract08",
-          "src": "acrylicAbstract08",
-          "available": true,
-          "link": "https://www.instagram.com/p/COLPHXgsfuC/?img_index=1"
-        }
-      ]
-    },
-    {
-      "id": "acrillic-silhouette",
-      "title": {
-        "fr": "Silhouette",
-        "en": "Silhouette"
-      },
-      "subCategory": {
-        "fr": "Peinture acrylique",
-        "en": "Peinture acrylique"
-      },
-      "description": {
-        "fr": "Lumières et ombres, un jeu de contrastes abstraites et dégradées",
-        "en": "Lumières et ombres, un jeu de contrastes abstraites et dégradées"
-      },
-      "titlePosition": "top-left",
-      "flower": {
-        "id": 5,
-        "position": "bottom-left"
-      },
-      "blobs": [
-        {
-          "color": "blue",
-          "id": 11,
-          "size": "small"
-        },
-        {
-          "color": "pink",
-          "id": 2
-        }
-      ],
-      "images": [
-        {
-          "id": "acrylicAbstract01",
-          "src": "acrylicAbstract01",
-          "available": true,
-          "link": "https://www.instagram.com/p/CTWzpRYMztR/?img_index=1"
-        },
-        {
-          "id": "acrylicAbstract02",
-          "src": "acrylicAbstract02",
-          "available": true,
-          "link": "https://www.instagram.com/p/CbSPC7YMrJB/?img_index=1"
-        },
-        {
-          "id": "acrylicAbstract03",
-          "src": "acrylicAbstract03",
-          "available": true,
-          "link": "https://www.instagram.com/p/CXnovdKMrFe/?img_index=1"
-        },
-        {
-          "id": "acrylicAbstract04",
-          "src": "acrylicAbstract04",
-          "available": true,
-          "link": "https://www.instagram.com/p/CU9yhixsqS8/?img_index=1"
-        },
-        {
-          "id": "acrylicAbstract05",
-          "src": "acrylicAbstract05",
-          "available": true
-        },
-        {
-          "id": "acrylicAbstract06",
-          "src": "acrylicAbstract06",
-          "available": true,
-          "link": "https://www.instagram.com/p/CVNWt5_sSJ8/?img_index=1"
-        },
-        {
-          "id": "acrylicAbstract07",
-          "src": "acrylicAbstract07",
-          "available": true,
-          "link": "https://www.instagram.com/p/CXf0JQIMT2w/?img_index=1"
-        },
-        {
-          "id": "acrylicAbstract08",
-          "src": "acrylicAbstract08",
-          "available": true,
-          "link": "https://www.instagram.com/p/COLPHXgsfuC/?img_index=1"
-        }
-      ]
-    },
-    {
-      "id": "acrillic-mural",
-      "title": {
-        "fr": "Murales",
-        "en": "Murales"
-      },
-      "subCategory": {
-        "fr": "Peinture acrylique",
-        "en": "Peinture acrylique"
-      },
-      "description": {
-        "fr": "Transforme ton espace dans une pièce unique, donne vie a ton environnement",
-        "en": "Transforme ton espace dans une pièce unique, donne vie a ton environnement"
-      },
-      "titlePosition": "bottom-right",
-      "flower": {
-        "id": 2,
-        "position": "top-right"
-      },
-      "blobs": [
-        {
-          "color": "cream",
-          "id": 7
-        },
-        {
-          "color": "pink",
-          "id": 4
-        }
-      ],
-      "images": [
-        {
-          "id": "acrylicAbstract01",
-          "src": "acrylicAbstract01",
-          "available": true,
-          "link": "https://www.instagram.com/p/CTWzpRYMztR/?img_index=1"
-        },
-        {
-          "id": "acrylicAbstract02",
-          "src": "acrylicAbstract02",
-          "available": true,
-          "link": "https://www.instagram.com/p/CbSPC7YMrJB/?img_index=1"
-        },
-        {
-          "id": "acrylicAbstract03",
-          "src": "acrylicAbstract03",
-          "available": true,
-          "link": "https://www.instagram.com/p/CXnovdKMrFe/?img_index=1"
-        },
-        {
-          "id": "acrylicAbstract04",
-          "src": "acrylicAbstract04",
-          "available": true,
-          "link": "https://www.instagram.com/p/CU9yhixsqS8/?img_index=1"
-        },
-        {
-          "id": "acrylicAbstract05",
-          "src": "acrylicAbstract05",
-          "available": true
-        },
-        {
-          "id": "acrylicAbstract06",
-          "src": "acrylicAbstract06",
-          "available": true,
-          "link": "https://www.instagram.com/p/CVNWt5_sSJ8/?img_index=1"
-        },
-        {
-          "id": "acrylicAbstract07",
-          "src": "acrylicAbstract07",
-          "available": true,
-          "link": "https://www.instagram.com/p/CXf0JQIMT2w/?img_index=1"
-        },
-        {
-          "id": "acrylicAbstract08",
-          "src": "acrylicAbstract08",
-          "available": true,
-          "link": "https://www.instagram.com/p/COLPHXgsfuC/?img_index=1"
-        }
-      ]
-    },
-    {
-      "id": "acrillic-wood",
-      "title": {
-        "fr": "En bois",
-        "en": "En bois"
-      },
-      "subCategory": {
-        "fr": "Peinture acrylique",
-        "en": "Peinture acrylique"
-      },
-      "description": {
-        "fr": "Projets personnalisés en bois",
-        "en": "Projets personnalisés en bois"
-      },
-      "titlePosition": "top-left",
-      "flower": {
-        "id": 6,
-        "position": "bottom-left"
-      },
-      "blobs": [
-        {
-          "color": "blue",
-          "id": 3
-        },
-        {
-          "color": "cream",
-          "id": 8
-        }
-      ],
-      "images": [
-        {
-          "id": "acrylicAbstract03",
-          "src": "acrylicAbstract03",
-          "available": true,
-          "link": "https://www.instagram.com/p/CXnovdKMrFe/?img_index=1"
-        }
-      ]
-    },
-    {
-      "id": "mandala-original",
-      "title": {
-        "fr": "Originales",
-        "en": "Originales"
-      },
-      "subCategory": {
-        "fr": "Mandalas",
-        "en": "Mandalas"
-      },
-      "description": {
-        "fr": "“Most mandalas have an intuitive, irrational character and, through their symbolical content, exert a retroactive influence on the unconscious. They therefore possess a “magical” significance (…)” Carl Yung, mandala Symbolism",
-        "en": "“Most mandalas have an intuitive, irrational character and, through their symbolical content, exert a retroactive influence on the unconscious. They therefore possess a “magical” significance (…)” Carl Yung, mandala Symbolism"
-      },
-      "titlePosition": "bottom-right",
-      "flower": {
-        "id": 3,
-        "position": "top-right"
-      },
-      "blobs": [
-        {
-          "color": "blue",
-          "id": 10
-        },
-        {
-          "color": "pink",
-          "id": 13,
-          "size": "small"
-        }
-      ],
-      "images": [
-        {
-          "id": "mandalaOriginal01",
-          "src": "mandalaOriginal01",
-          "available": true
-        }
-      ]
-    },
-    {
-      "id": "mandala-digital",
-      "title": {
-        "fr": "Digitale",
-        "en": "Digitale"
-      },
-      "subCategory": {
-        "fr": "Mandalas",
-        "en": "Mandalas"
-      },
-      "description": {
-        "fr": "Mandalas numériques, crée avec une symétrie parfaite, trouve l’équilibre dans un tableau unique",
-        "en": "Mandalas numériques, crée avec une symétrie parfaite, trouve l’équilibre dans un tableau unique"
-      },
-      "titlePosition": "bottom-left",
-      "flower": {
-        "id": 4,
-        "position": "top-left"
-      },
-      "blobs": [
-        {
-          "color": "blue",
-          "id": 2
-        },
-        {
-          "color": "cream",
+        "titlePosition": "top-right",
+        "flower": {
           "id": 1,
-          "size": "small"
-        }
-      ],
-      "images": [
-        {
-          "id": "mandalaDigital01",
-          "src": "mandalaDigital01",
-          "available": true,
-          "link": "https://www.instagram.com/p/ClgHkW0M3_T/?img_index=1"
-        }
-      ]
-    }
-  ],
+          "position": "bottom-right"
+        },
+        "blobs": [
+          {
+            "color": "pink",
+            "id": 1,
+            "angle": 75
+          },
+          {
+            "color": "blue",
+            "id": 5,
+            "size": "small"
+          }
+        ],
+        "images": [
+          {
+            "src": "nails01",
+            "title": {
+              "fr": "Ongles 01",
+              "en": "Nails 01"
+            },
+            "description": {
+              "fr": "Décrivez ici en petit détail en quoi il consiste",
+              "en": "Describe here in small detail what it consists of"
+            },
+            "price": 10,
+            "duration": 60
+          },
+          {
+            "src": "nails02",
+            "title": {
+              "fr": "Ongles 02",
+              "en": "Nails 02"
+            },
+            "description": {
+              "fr": "Décrivez ici en petit détail en quoi il consiste",
+              "en": "Describe here in small detail what it consists of"
+            },
+            "price": 20,
+            "duration": 120
+          },
+          {
+            "src": "nails03",
+            "title": {
+              "fr": "Ongles 03",
+              "en": "Nails 03"
+            },
+            "description": {
+              "fr": "Décrivez ici en petit détail en quoi il consiste",
+              "en": "Describe here in small detail what it consists of"
+            },
+            "price": 30,
+            "duration": 150
+          },
+          {
+            "src": "nails01",
+            "title": {
+              "fr": "Ongles 04",
+              "en": "Nails 04"
+            },
+            "description": {
+              "fr": "Décrivez ici en petit détail en quoi il consiste",
+              "en": "Describe here in small detail what it consists of"
+            },
+            "price": 40,
+            "duration": 60
+          },
+          {
+            "src": "nails02",
+            "title": {
+              "fr": "Ongles 05",
+              "en": "Nails 05"
+            },
+            "description": {
+              "fr": "Décrivez ici en petit détail en quoi il consiste",
+              "en": "Describe here in small detail what it consists of"
+            },
+            "price": 50,
+            "duration": 60
+          },
+          {
+            "src": "nails03",
+            "title": {
+              "fr": "Ongles 06",
+              "en": "Nails 06"
+            },
+            "description": {
+              "fr": "Décrivez ici en petit détail en quoi il consiste",
+              "en": "Describe here in small detail what it consists of"
+            },
+            "price": 60,
+            "duration": 60
+          }
+        ]
+      }
+    ]
+  },
   "profile": {},
   "welcome": {
     "paragraphs": [
@@ -698,28 +844,6 @@
     }
   ],
   "nailsTC": {
-    "paragraphs": [
-      {
-        "fr": "Onglerie à domicile. Je vous propose un service d'onglerie a domicile, faite vous ongle dans le confort de chez vous.",
-        "en": "Nail salon at home. I offer you a nail service at home, do your nails in the comfort of your home."
-      },
-      {
-        "fr": "Tout le matériel est désinfecté ou jetable à chaque cliente, pour la pédicure je vous demande de lavée vous pieds juste avant le rdv, la désinfection sera effectuée pour moi avant la procédure.",
-        "en": "All the material is disinfected or disposable for each client, for the pedicure I ask you to wash your feet just before the appointment, the disinfection will be done for me before the procedure."
-      },
-      {
-        "fr": "RDV: Pour obtenir un rendez-vous, vous n'avez besoin que de 2 étapes. (Pour une question de securité, vous seras demandé d'effectuer un pré payement pour l'acquisition d'un rdv).",
-        "en": "RDV: To get an appointment, you only need 2 steps. (For a question of security, you will be asked to make a prepayment for the acquisition of an appointment)."
-      },
-      {
-        "fr": "Allez d'abord à « mon rendez-vous » et remplissez les informations (nom, adresse du rendez-vous, décrivez vos ongles à ce moment et dites-moi quel service vous souhaitez acheter et enfin ajoutez quelques photos).",
-        "en": "First go to « my appointment » and fill in the information (name, address of the appointment, describe your nails at this moment and tell me which service you want to buy and finally add some photos)."
-      },
-      {
-        "fr": "Après cette première étape, vous devez attendre l'e-mail de confirmation. Dans cet e-mail, vous allez maintenant finir de bloquer votre rendez-vous, pour cela, vous devez payer la moitié du prix final de l’achat et après votre rdv seras enregistré. ",
-        "en": "After this first step, you must wait for the confirmation email. In this e-mail, you will now finish blocking your appointment, for this you must pay half of the final purchase price and after that your appointment will be registered."
-      }
-    ],
     "categories": [
       {
         "title": {

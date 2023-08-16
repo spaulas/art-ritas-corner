@@ -16,7 +16,7 @@ const WelcomeModal = () => {
     useContext(DisclaimersContext);
 
   const renderParagraph = () => {
-    return Object.values((data as DataType).welcome.paragraphs).map(
+    return Object.values((data as unknown as DataType).welcome.paragraphs).map(
       (paragraph, index) => (
         <div className="welcome-paragraph" key={`welcome-paragraph-${index}`}>
           {paragraph[language]}

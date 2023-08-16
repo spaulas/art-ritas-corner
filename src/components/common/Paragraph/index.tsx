@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import type { Text } from "data.d";
 import { LanguageContext } from "context/LanguageProvider";
+import "./styles.scss";
 
 type TCParagraphProps = {
   text: Text;
@@ -9,7 +10,7 @@ type TCParagraphProps = {
 const TCParagraph = ({ text }: TCParagraphProps) => {
   const { language } = useContext(LanguageContext);
 
-  return <div className="nails-tc-paragrapht">{text[language]}</div>;
+  return <div className="paragraph">{text[language]}</div>;
 };
 
 export default TCParagraph;

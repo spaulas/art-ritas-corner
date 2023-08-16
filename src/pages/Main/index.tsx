@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import Home from "components/Home";
 import data from "data.json";
@@ -11,13 +11,20 @@ import type { DataType } from "data.d";
 import Backdrop from "components/Backdrop";
 import WelcomeModal from "components/WelcomeModal";
 import TypeSelector from "components/TypeSelector";
+import { FormContext } from "context/FormProvider";
 
 const Main = () => {
+  const {
+    basicFields,
+  } = useContext(FormContext);
+
   const renderCategories = () => {
-    return Object.values((data as DataType).categories).map((category) => (
+    const currentType = basicFields.type === "paintings" ? "paintings" : "nails"
+
+    return Object.values((data as unknown as DataType).categories[currentType]).map((category) => (
       <Category
         key={category.id}
-        formName={category.id === "nailArt" ? "nails" : "paintings"}
+        formName={currentType}
         {...category}
       />
     ));

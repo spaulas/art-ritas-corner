@@ -8,6 +8,7 @@ import type { TitleProps } from "./Title";
 import type { CategoryType } from "data";
 import { BasicFormFields } from "context/FormProvider";
 import "./styles.scss";
+import Paragraphs from "./Paragraphs";
 
 type CategoryProps = {
   formName: BasicFormFields["type"];
@@ -22,13 +23,16 @@ const Category = ({
   flower,
   images,
   blobs,
+  paragraphs,
   formName,
 }: CategoryProps) => {
   const isTitleRight = titlePosition.includes("right");
 
   return (
     <div
-      className={`category ${isTitleRight ? "invert" : ""}`}
+      className={`category ${isTitleRight ? "invert" : ""} ${
+        !images && !blobs && paragraphs ? "column" : ""
+      }`}
     >
       <Title
         title={title}
@@ -36,19 +40,22 @@ const Category = ({
         subCategory={subCategory}
         position={titlePosition as TitleProps["position"]}
       />
-      <div
-        className={`images-with-blobs ${
-          titlePosition.includes("bottom") ? "bottom" : ""
-        } ${isTitleRight ? "left" : ""} `}
-      >
-        <Blobs blobs={blobs} />
-        <Images
-          categoryID={id}
-          images={images}
-          isHoverRight={isTitleRight}
-          formName={formName}
-        />
-      </div>
+      {paragraphs ? <Paragraphs paragraphs={paragraphs} /> : null}
+      {images ? (
+        <div
+          className={`images-with-blobs ${
+            titlePosition.includes("bottom") ? "bottom" : ""
+          } ${isTitleRight ? "left" : ""} `}
+        >
+          {blobs ? <Blobs blobs={blobs} /> : null}
+          <Images
+            categoryID={id}
+            images={images}
+            isHoverRight={isTitleRight}
+            formName={formName}
+          />
+        </div>
+      ) : null}
       <Flower
         id={flower.id}
         position={flower.position as FlowerProps["position"]}

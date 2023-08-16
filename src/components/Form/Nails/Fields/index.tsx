@@ -19,16 +19,15 @@ type NailsFieldsProps = {
   updateNailsFields: UpdateNailsFieldsFunction;
 };
 
-const nailsCategory: CategoryType | undefined = (
-  data as DataType
-).categories.find(({ id }) => id === "nailArt");
+const nailsCategory: CategoryType | undefined = (data as unknown as DataType)
+  .categories.nails[1];
 
 const NailsFields = ({ fields, updateNailsFields }: NailsFieldsProps) => {
   const { language } = useContext(LanguageContext);
   const [nailsServiceOptions, setNailsServiceOptions] = useState<Option[]>([]);
 
   useEffect(function getNailsServices() {
-    const nailsOptions = nailsCategory?.images.reduce(
+    const nailsOptions = nailsCategory?.images?.reduce(
       (acc: Option[], category) => [
         ...acc,
         {
