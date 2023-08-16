@@ -37,8 +37,8 @@ export type ScheduleType = {
 };
 
 export type DayScheduleType = {
-  morning: ScheduleType;
-  afternoon: ScheduleType;
+  morning?: ScheduleType;
+  afternoon?: ScheduleType;
 };
 
 export type CalendarType = {
@@ -80,7 +80,7 @@ export type UploadedFiles = File & { src: string | ArrayBuffer | null };
 export type DataType = {
   categories: CategoryType[];
   profile: {
-    text: Text;
+    text?: Text;
   };
   welcome: Welcome;
   calendar: CalendarType;

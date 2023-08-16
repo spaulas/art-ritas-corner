@@ -10,7 +10,7 @@ import { LanguageContext } from "context/LanguageProvider";
 import type { Text } from "data.d";
 
 type AboutProps = {
-  profileText: Text;
+  profileText?: Text;
 };
 
 const About = ({ profileText }: AboutProps) => {
@@ -30,7 +30,7 @@ const About = ({ profileText }: AboutProps) => {
           alt="about-blob-cream"
         />
       </div>
-      <Picture text={profileText[language]} />
+      <Picture text={profileText?.[language]} />
       <div className="about-flowers-container">
         <img className="about-flower" src={flower02} alt="flower02" />
         <img className="about-flower" src={flower06} alt="flower06" />

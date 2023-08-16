@@ -28,7 +28,7 @@ const Main = () => {
         <Home />
         {renderCategories()}
         <Form />
-        <About profileText={data.profile.text} />
+        <About profileText={(data.profile as DataType["profile"]).text} />
         <LinesColumns />
       </div>
       <Backdrop />

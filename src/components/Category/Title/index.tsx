@@ -20,8 +20,8 @@ const Title = ({ title, description, subCategory, position }: TitleProps) => {
   return (
     <div className={`title-container ${position}`}>
       {subCategory ? <p>{subCategory[language]}</p> : null}
-      <h1>{title[language]}</h1>
-      <h5>{description[language]}</h5>
+      <h1>{title?.[language]}</h1>
+      <h5>{description?.[language]}</h5>
     </div>
   );
 };

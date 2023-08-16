@@ -32,18 +32,21 @@
       ],
       "images": [
         {
-          "id": "mandala01",
-          "src": "mandala01",
-          "title": {
-            "fr": "Mandala 01",
-            "en": "Mandala 01"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
+          "id": "flower01",
+          "src": "flower01",
           "available": true,
-          "link": "https://www.instagram.com/p/ClgHkW0M3_T/?img_index=1"
+          "link": "https://www.instagram.com/p/CjpcB8wsNTK/?img_index=1"
+        },
+        {
+          "id": "flower02",
+          "src": "flower02",
+          "available": true,
+          "link": "https://www.instagram.com/p/CjX4TWXsY8Y/?img_index=1"
+        },
+        {
+          "id": "flower03",
+          "src": "flower03",
+          "available": true
         }
       ]
     },
@@ -78,18 +81,52 @@
       ],
       "images": [
         {
-          "id": "abstract01",
-          "src": "abstract01",
-          "title": {
-            "fr": "Abstract 01",
-            "en": "Abstract 01"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
+          "id": "aquarelaBody01",
+          "src": "aquarelaBody01",
           "available": true,
-          "link": "https://www.instagram.com/p/CU9yhixsqS8/?img_index=1"
+          "link": "https://www.instagram.com/p/CTWzpRYMztR/?img_index=1"
+        },
+        {
+          "id": "aquarelaBody02",
+          "src": "aquarelaBody02",
+          "available": true,
+          "link": "https://www.instagram.com/p/Cb9-fpNMu9C/?img_index=1"
+        },
+        {
+          "id": "aquarelaBody03",
+          "src": "aquarelaBody03",
+          "available": true,
+          "link": "https://www.instagram.com/p/CW2iKKtsqR8/?img_index=1"
+        },
+        {
+          "id": "aquarelaBody04",
+          "src": "aquarelaBody04",
+          "available": true,
+          "link": "https://www.instagram.com/p/CUpQFBvsCQX/?img_index=1"
+        },
+        {
+          "id": "aquarelaBody05",
+          "src": "aquarelaBody05",
+          "available": true,
+          "link": "https://www.instagram.com/p/CPTL_oPMIHO/?img_index=1"
+        },
+        {
+          "id": "aquarelaBody06",
+          "src": "aquarelaBody06",
+          "available": true,
+          "link": "https://www.instagram.com/p/CmeO2Aos60u/?img_index=1"
+        },
+        {
+          "id": "aquarelaBody07",
+          "src": "aquarelaBody07",
+          "available": true,
+          "link": "https://www.instagram.com/p/CYv_GvpM20-/?img_index=1"
+        },
+        {
+          "id": "aquarelaBody08",
+          "src": "aquarelaBody08",
+          "available": true,
+          "link": "https://www.instagram.com/p/CiR0opUshXG/?img_index=1"
         }
       ]
     },
@@ -124,60 +161,51 @@
       ],
       "images": [
         {
-          "id": "body01",
-          "src": "body01",
-          "title": {
-            "fr": "Body 01",
-            "en": "Body 01"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
+          "id": "acrylicAbstract01",
+          "src": "acrylicAbstract01",
           "available": true,
           "link": "https://www.instagram.com/p/CTWzpRYMztR/?img_index=1"
         },
         {
-          "id": "body02",
-          "src": "body02",
-          "title": {
-            "fr": "Body 02",
-            "en": "Body 02"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
+          "id": "acrylicAbstract02",
+          "src": "acrylicAbstract02",
           "available": true,
-          "link": "https://www.instagram.com/p/Cb9-fpNMu9C/?img_index=1"
+          "link": "https://www.instagram.com/p/CbSPC7YMrJB/?img_index=1"
         },
         {
-          "id": "body03",
-          "src": "body03",
-          "title": {
-            "fr": "Body 03",
-            "en": "Body 03"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
-          "available": false,
-          "link": "https://www.instagram.com/p/CW2iKKtsqR8/?img_index=1"
+          "id": "acrylicAbstract03",
+          "src": "acrylicAbstract03",
+          "available": true,
+          "link": "https://www.instagram.com/p/CXnovdKMrFe/?img_index=1"
         },
         {
-          "id": "body04",
-          "src": "body04",
-          "title": {
-            "fr": "Body 04",
-            "en": "Body 04"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
+          "id": "acrylicAbstract04",
+          "src": "acrylicAbstract04",
           "available": true,
-          "link": "https://www.instagram.com/p/CUpQFBvsCQX/?img_index=1"
+          "link": "https://www.instagram.com/p/CU9yhixsqS8/?img_index=1"
+        },
+        {
+          "id": "acrylicAbstract05",
+          "src": "acrylicAbstract05",
+          "available": true
+        },
+        {
+          "id": "acrylicAbstract06",
+          "src": "acrylicAbstract06",
+          "available": true,
+          "link": "https://www.instagram.com/p/CVNWt5_sSJ8/?img_index=1"
+        },
+        {
+          "id": "acrylicAbstract07",
+          "src": "acrylicAbstract07",
+          "available": true,
+          "link": "https://www.instagram.com/p/CXf0JQIMT2w/?img_index=1"
+        },
+        {
+          "id": "acrylicAbstract08",
+          "src": "acrylicAbstract08",
+          "available": true,
+          "link": "https://www.instagram.com/p/COLPHXgsfuC/?img_index=1"
         }
       ]
     },
@@ -212,60 +240,51 @@
       ],
       "images": [
         {
-          "id": "body01",
-          "src": "body01",
-          "title": {
-            "fr": "Body 01",
-            "en": "Body 01"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
+          "id": "acrylicAbstract01",
+          "src": "acrylicAbstract01",
           "available": true,
           "link": "https://www.instagram.com/p/CTWzpRYMztR/?img_index=1"
         },
         {
-          "id": "body02",
-          "src": "body02",
-          "title": {
-            "fr": "Body 02",
-            "en": "Body 02"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
+          "id": "acrylicAbstract02",
+          "src": "acrylicAbstract02",
           "available": true,
-          "link": "https://www.instagram.com/p/Cb9-fpNMu9C/?img_index=1"
+          "link": "https://www.instagram.com/p/CbSPC7YMrJB/?img_index=1"
         },
         {
-          "id": "body03",
-          "src": "body03",
-          "title": {
-            "fr": "Body 03",
-            "en": "Body 03"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
-          "available": false,
-          "link": "https://www.instagram.com/p/CW2iKKtsqR8/?img_index=1"
+          "id": "acrylicAbstract03",
+          "src": "acrylicAbstract03",
+          "available": true,
+          "link": "https://www.instagram.com/p/CXnovdKMrFe/?img_index=1"
         },
         {
-          "id": "body04",
-          "src": "body04",
-          "title": {
-            "fr": "Body 04",
-            "en": "Body 04"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
+          "id": "acrylicAbstract04",
+          "src": "acrylicAbstract04",
           "available": true,
-          "link": "https://www.instagram.com/p/CUpQFBvsCQX/?img_index=1"
+          "link": "https://www.instagram.com/p/CU9yhixsqS8/?img_index=1"
+        },
+        {
+          "id": "acrylicAbstract05",
+          "src": "acrylicAbstract05",
+          "available": true
+        },
+        {
+          "id": "acrylicAbstract06",
+          "src": "acrylicAbstract06",
+          "available": true,
+          "link": "https://www.instagram.com/p/CVNWt5_sSJ8/?img_index=1"
+        },
+        {
+          "id": "acrylicAbstract07",
+          "src": "acrylicAbstract07",
+          "available": true,
+          "link": "https://www.instagram.com/p/CXf0JQIMT2w/?img_index=1"
+        },
+        {
+          "id": "acrylicAbstract08",
+          "src": "acrylicAbstract08",
+          "available": true,
+          "link": "https://www.instagram.com/p/COLPHXgsfuC/?img_index=1"
         }
       ]
     },
@@ -312,48 +331,6 @@
           },
           "available": true,
           "link": "https://www.instagram.com/p/CTWzpRYMztR/?img_index=1"
-        },
-        {
-          "id": "body02",
-          "src": "body02",
-          "title": {
-            "fr": "Body 02",
-            "en": "Body 02"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
-          "available": true,
-          "link": "https://www.instagram.com/p/Cb9-fpNMu9C/?img_index=1"
-        },
-        {
-          "id": "body03",
-          "src": "body03",
-          "title": {
-            "fr": "Body 03",
-            "en": "Body 03"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
-          "available": false,
-          "link": "https://www.instagram.com/p/CW2iKKtsqR8/?img_index=1"
-        },
-        {
-          "id": "body04",
-          "src": "body04",
-          "title": {
-            "fr": "Body 04",
-            "en": "Body 04"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
-          "available": true,
-          "link": "https://www.instagram.com/p/CUpQFBvsCQX/?img_index=1"
         }
       ]
     },
@@ -400,51 +377,10 @@
           },
           "available": true,
           "link": "https://www.instagram.com/p/CTWzpRYMztR/?img_index=1"
-        },
-        {
-          "id": "body02",
-          "src": "body02",
-          "title": {
-            "fr": "Body 02",
-            "en": "Body 02"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
-          "available": true,
-          "link": "https://www.instagram.com/p/Cb9-fpNMu9C/?img_index=1"
-        },
-        {
-          "id": "body03",
-          "src": "body03",
-          "title": {
-            "fr": "Body 03",
-            "en": "Body 03"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
-          "available": false,
-          "link": "https://www.instagram.com/p/CW2iKKtsqR8/?img_index=1"
-        },
-        {
-          "id": "body04",
-          "src": "body04",
-          "title": {
-            "fr": "Body 04",
-            "en": "Body 04"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
-          "available": true,
-          "link": "https://www.instagram.com/p/CUpQFBvsCQX/?img_index=1"
         }
       ]
-    },{
+    },
+    {
       "id": "mandala-original",
       "title": {
         "fr": "Originales",
@@ -475,63 +411,13 @@
       ],
       "images": [
         {
-          "id": "body01",
-          "src": "body01",
-          "title": {
-            "fr": "Body 01",
-            "en": "Body 01"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
-          "available": true,
-          "link": "https://www.instagram.com/p/CTWzpRYMztR/?img_index=1"
-        },
-        {
-          "id": "body02",
-          "src": "body02",
-          "title": {
-            "fr": "Body 02",
-            "en": "Body 02"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
-          "available": true,
-          "link": "https://www.instagram.com/p/Cb9-fpNMu9C/?img_index=1"
-        },
-        {
-          "id": "body03",
-          "src": "body03",
-          "title": {
-            "fr": "Body 03",
-            "en": "Body 03"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
-          "available": false,
-          "link": "https://www.instagram.com/p/CW2iKKtsqR8/?img_index=1"
-        },
-        {
-          "id": "body04",
-          "src": "body04",
-          "title": {
-            "fr": "Body 04",
-            "en": "Body 04"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
-          "available": true,
-          "link": "https://www.instagram.com/p/CUpQFBvsCQX/?img_index=1"
+          "id": "mandalaOriginal01",
+          "src": "mandalaOriginal01",
+          "available": true
         }
       ]
-    },{
+    },
+    {
       "id": "mandala-digital",
       "title": {
         "fr": "Digitale",
@@ -562,70 +448,15 @@
       ],
       "images": [
         {
-          "id": "body01",
-          "src": "body01",
-          "title": {
-            "fr": "Body 01",
-            "en": "Body 01"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
+          "id": "mandalaDigital01",
+          "src": "mandalaDigital01",
           "available": true,
-          "link": "https://www.instagram.com/p/CTWzpRYMztR/?img_index=1"
-        },
-        {
-          "id": "body02",
-          "src": "body02",
-          "title": {
-            "fr": "Body 02",
-            "en": "Body 02"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
-          "available": true,
-          "link": "https://www.instagram.com/p/Cb9-fpNMu9C/?img_index=1"
-        },
-        {
-          "id": "body03",
-          "src": "body03",
-          "title": {
-            "fr": "Body 03",
-            "en": "Body 03"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
-          "available": false,
-          "link": "https://www.instagram.com/p/CW2iKKtsqR8/?img_index=1"
-        },
-        {
-          "id": "body04",
-          "src": "body04",
-          "title": {
-            "fr": "Body 04",
-            "en": "Body 04"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
-          "available": true,
-          "link": "https://www.instagram.com/p/CUpQFBvsCQX/?img_index=1"
+          "link": "https://www.instagram.com/p/ClgHkW0M3_T/?img_index=1"
         }
       ]
     }
   ],
-  "profile": {
-    "text": {
-      "en": "Introduce yourself, Rita! Write a short presentation on why you like to paint, what are your inspirations, what you like to do the most. Maybe talk a bit more about your nail work, I don't know!",
-      "fr": "Présente-toi, Rita! Rédigez une petite présentation sur pourquoi vous aimez peindre, quelles sont vos inspirations, ce que vous aimez le plus faire. Parlez peut-être un peu plus de votre travail d'ongles, je ne sais pas!"
-    }
-  },
+  "profile": {},
   "welcome": {
     "paragraphs": [
       {
@@ -704,16 +535,7 @@
           "end": 18
         }
       },
-      "sunday": {
-        "morning": {
-          "start": 9,
-          "end": 12
-        },
-        "afternoon": {
-          "start": 13,
-          "end": 18
-        }
-      }
+      "sunday": {}
     },
     "busy": [
       {
