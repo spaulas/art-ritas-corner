@@ -10,6 +10,7 @@ import { LinesColumns } from "components/LinesColumns";
 import type { DataType } from "data.d";
 import Backdrop from "components/Backdrop";
 import WelcomeModal from "components/WelcomeModal";
+import TypeSelector from "components/TypeSelector";
 
 const Main = () => {
   const renderCategories = () => {
@@ -32,6 +33,7 @@ const Main = () => {
         <LinesColumns />
       </div>
       <Backdrop />
+      <TypeSelector />
       <WelcomeModal />
     </>
   );
