@@ -5,7 +5,7 @@ import "./styles.scss";
 import { BackdropContext } from "context/BackdropProvider";
 
 const TopBar = () => {
-  const { basicFields, updateBasicFields } = useContext(FormContext);
+  const { basicFields } = useContext(FormContext);
   const { setWelcomeModalVisibility } = useContext(BackdropContext);
 
   const handleWelcomeClick = () => {
@@ -17,7 +17,6 @@ const TopBar = () => {
   };
 
   const handleContactMeClick = () => {
-    updateBasicFields({ type: "paintings" });
     document.getElementById("form-page")?.scrollIntoView();
   };
 
