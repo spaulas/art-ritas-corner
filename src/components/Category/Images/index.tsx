@@ -18,7 +18,7 @@ const Images = ({ images, isHoverRight, formName, categoryID }: ImageProps) => {
   const [isSliding, setIsSliding] = useState(false);
   const [marginLeft, setMarginLeft] = useState(0);
 
-  const { setIsBackdropVisible } = useContext(BackdropContext);
+  const { setIsBackdropVisible, checkHasClickedOutside } = useContext(BackdropContext);
 
   const startX = useRef(0);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -30,15 +30,31 @@ const Images = ({ images, isHoverRight, formName, categoryID }: ImageProps) => {
   const hoverImages = [...images].slice(0, IMAGES_VISIBLE_ON_HOVER);
   const currentImages = isOpen ? images : hoverImages;
 
+  const handleCloseSlider = () => {
+    setIsOpen(false);
+    setMarginLeft(0);
+  };
+
   useEffect(() => {
     const onScroll = () => {
-      setIsOpen(false);
-      setIsBackdropVisible(false)
-      setMarginLeft(0);
+      handleCloseSlider();
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    const onClickOutside = (e: any) => {
+      const hasClickedOutside = checkHasClickedOutside(e);
+      console.log('hasClickedOutside = ', hasClickedOutside)
+
+      if (!hasClickedOutside) return;
+      handleCloseSlider();
+    };
+    window.addEventListener("click", onClickOutside);
+    return () => window.removeEventListener("click", onClickOutside);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const calculateSlidingDistance = (e: any): number => {
@@ -95,7 +111,7 @@ const Images = ({ images, isHoverRight, formName, categoryID }: ImageProps) => {
   };
 
   const handleOnClick = () => {
-    setIsBackdropVisible(true)
+    setIsBackdropVisible(true);
     setIsOpen(true);
   };
 
@@ -120,6 +136,7 @@ const Images = ({ images, isHoverRight, formName, categoryID }: ImageProps) => {
       onMouseMove={handleOnMouseMove}
     >
       <div
+        id="category-image-slider"
         ref={containerRef}
         className={imagesClassName}
         onClick={handleOnClick}

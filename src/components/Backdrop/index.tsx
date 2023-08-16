@@ -7,7 +7,7 @@ const Backdrop = () => {
   const { isBackdropVisible } = useContext(BackdropContext);
 
   return (
-    <div
+    <div id="backdrop"
       className={`backdrop ${isBackdropVisible ? "backdrop--visible" : ""}`}
       style={{ minHeight: `calc(100vh * ${data.categories.length + 3})` }}
     />
