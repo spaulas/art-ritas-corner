@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/art-ritas-corner/static/css/main.6ae63bbf.css",
-    "main.js": "/art-ritas-corner/static/js/main.d925ddfd.js",
+    "main.css": "/art-ritas-corner/static/css/main.08718032.css",
+    "main.js": "/art-ritas-corner/static/js/main.063d46d3.js",
     "static/media/aquarelaBody05.png": "/art-ritas-corner/static/media/aquarelaBody05.fa5ed636a96795af7ed7.png",
     "static/media/acrylicAbstract06.png": "/art-ritas-corner/static/media/acrylicAbstract06.395ebdb6096d09b89b14.png",
     "static/media/acrylicAbstract05.png": "/art-ritas-corner/static/media/acrylicAbstract05.0c9f00679dfff9b85d59.png",
@@ -33,6 +33,8 @@
     "static/media/Saudagar.ttf": "/art-ritas-corner/static/media/Saudagar.7bbe1c48b05a89f4af4f.ttf",
     "static/media/nails01.jpg": "/art-ritas-corner/static/media/nails01.5329461ec071ed0aa652.jpg",
     "static/media/flower04.png": "/art-ritas-corner/static/media/flower04.d921fd5887ca5d0d9a57.png",
+    "static/media/paintings.png": "/art-ritas-corner/static/media/paintings.b5de15885fda8df527e5.png",
+    "static/media/nails.png": "/art-ritas-corner/static/media/nails.51371c5251dc750b4286.png",
     "static/media/blob_cream_08.png": "/art-ritas-corner/static/media/blob_cream_08.eef58c57f0a3870423ba.png",
     "static/media/blob_cream_09.png": "/art-ritas-corner/static/media/blob_cream_09.351ba3829b394cc8414b.png",
     "static/media/blob_cream_03.png": "/art-ritas-corner/static/media/blob_cream_03.65c680f42729cecfd29b.png",
@@ -47,11 +49,11 @@
     "static/media/blob_cream_12.png": "/art-ritas-corner/static/media/blob_cream_12.6696b3c2881d068b449f.png",
     "static/media/blob_cream_05.png": "/art-ritas-corner/static/media/blob_cream_05.5f84023b3b8c42c9be26.png",
     "index.html": "/art-ritas-corner/index.html",
-    "main.6ae63bbf.css.map": "/art-ritas-corner/static/css/main.6ae63bbf.css.map",
-    "main.d925ddfd.js.map": "/art-ritas-corner/static/js/main.d925ddfd.js.map"
+    "main.08718032.css.map": "/art-ritas-corner/static/css/main.08718032.css.map",
+    "main.063d46d3.js.map": "/art-ritas-corner/static/js/main.063d46d3.js.map"
   },
   "entrypoints": [
-    "static/css/main.6ae63bbf.css",
-    "static/js/main.d925ddfd.js"
+    "static/css/main.08718032.css",
+    "static/js/main.063d46d3.js"
   ]
 }
