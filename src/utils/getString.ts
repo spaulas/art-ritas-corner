@@ -31,7 +31,7 @@ export const getServicesListToString = (
     const serviceData = nailsCategory?.images.find(
       (image) => image.id === service
     );
-    servicesToString = `${servicesToString}${serviceData?.title.fr}, `;
+    servicesToString = `${servicesToString}${serviceData?.title?.fr}, `;
   });
 
   return servicesToString.slice(0, -2);
@@ -59,5 +59,5 @@ export const getPaintingToString = (
     (image) => image.id === painting
   );
 
-  return paintingData?.title.fr ?? "";
+  return paintingData?.title?.fr ?? "";
 };

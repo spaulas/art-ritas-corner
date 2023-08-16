@@ -32,7 +32,7 @@ const NailsFields = ({ fields, updateNailsFields }: NailsFieldsProps) => {
       (acc: Option[], category) => [
         ...acc,
         {
-          label: category.title[language],
+          label: category.title?.[language] ?? "",
           value: category.id,
         },
       ],

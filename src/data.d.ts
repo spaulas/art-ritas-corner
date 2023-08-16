@@ -5,8 +5,8 @@ export type Text = {
 
 export type ImageType = {
   id: string;
-  title: Text;
-  description: Text;
+  title?: Text;
+  description?: Text;
   price?: number;
   duration?: number;
   src: string;

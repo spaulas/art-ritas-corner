@@ -14,20 +14,21 @@
         "fr": "Peinture minimalises, jeu de couleurs et fines lignes",
         "en": "Peinture minimalises, jeu de couleurs et fines lignes"
       },
-      "titlePosition": "top-left",
+      "titlePosition": "top-right",
       "flower": {
-        "id": 4,
-        "position": "bottom-left"
+        "id": 5,
+        "position": "bottom-right"
       },
       "blobs": [
         {
-          "color": "cream",
-          "id": 9
+          "color": "pink",
+          "id": 1,
+          "size": "small"
         },
         {
           "color": "blue",
-          "id": 7,
-          "angle": 75
+          "id": 5,
+          "size": "small"
         }
       ],
       "images": [
@@ -64,19 +65,20 @@
         "fr": "Sériés de peintures qu’embrasse les différents corps, femme et homme, grosse et mince, sensuel et brute, amour propre et pour le prochain",
         "en": "Sériés de peintures qu’embrasse les différents corps, femme et homme, grosse et mince, sensuel et brute, amour propre et pour le prochain"
       },
-      "titlePosition": "bottom-right",
+      "titlePosition": "top-left",
       "flower": {
-        "id": 3,
-        "position": "top-right"
+        "id": 4,
+        "position": "bottom-left"
       },
       "blobs": [
         {
           "color": "cream",
-          "id": 6
+          "id": 9
         },
         {
-          "color": "pink",
-          "id": 11
+          "color": "blue",
+          "id": 7,
+          "angle": 75
         }
       ],
       "images": [
@@ -144,19 +146,19 @@
         "fr": "La magie des couleurs, toute une série de peintures dédiées à la couleur, des peintures faites à partir d’une palette unique pour chaque toile",
         "en": "La magie des couleurs, toute une série de peintures dédiées à la couleur, des peintures faites à partir d’une palette unique pour chaque toile"
       },
-      "titlePosition": "top-left",
+      "titlePosition": "bottom-right",
       "flower": {
-        "id": 5,
-        "position": "bottom-left"
+        "id": 3,
+        "position": "top-right"
       },
       "blobs": [
         {
-          "color": "blue",
-          "id": 7
+          "color": "cream",
+          "id": 6
         },
         {
-          "color": "cream",
-          "id": 4
+          "color": "pink",
+          "id": 11
         }
       ],
       "images": [
@@ -225,17 +227,18 @@
       },
       "titlePosition": "top-left",
       "flower": {
-        "id": 1,
+        "id": 5,
         "position": "bottom-left"
       },
       "blobs": [
         {
           "color": "blue",
-          "id": 7
+          "id": 11,
+          "size": "small"
         },
         {
-          "color": "cream",
-          "id": 4
+          "color": "pink",
+          "id": 2
         }
       ],
       "images": [
@@ -302,35 +305,68 @@
         "fr": "Transforme ton espace dans une pièce unique, donne vie a ton environnement",
         "en": "Transforme ton espace dans une pièce unique, donne vie a ton environnement"
       },
-      "titlePosition": "top-left",
+      "titlePosition": "bottom-right",
       "flower": {
         "id": 2,
-        "position": "bottom-left"
+        "position": "top-right"
       },
       "blobs": [
         {
-          "color": "blue",
+          "color": "cream",
           "id": 7
         },
         {
-          "color": "cream",
+          "color": "pink",
           "id": 4
         }
       ],
       "images": [
         {
-          "id": "body01",
-          "src": "body01",
-          "title": {
-            "fr": "Body 01",
-            "en": "Body 01"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
+          "id": "acrylicAbstract01",
+          "src": "acrylicAbstract01",
           "available": true,
           "link": "https://www.instagram.com/p/CTWzpRYMztR/?img_index=1"
+        },
+        {
+          "id": "acrylicAbstract02",
+          "src": "acrylicAbstract02",
+          "available": true,
+          "link": "https://www.instagram.com/p/CbSPC7YMrJB/?img_index=1"
+        },
+        {
+          "id": "acrylicAbstract03",
+          "src": "acrylicAbstract03",
+          "available": true,
+          "link": "https://www.instagram.com/p/CXnovdKMrFe/?img_index=1"
+        },
+        {
+          "id": "acrylicAbstract04",
+          "src": "acrylicAbstract04",
+          "available": true,
+          "link": "https://www.instagram.com/p/CU9yhixsqS8/?img_index=1"
+        },
+        {
+          "id": "acrylicAbstract05",
+          "src": "acrylicAbstract05",
+          "available": true
+        },
+        {
+          "id": "acrylicAbstract06",
+          "src": "acrylicAbstract06",
+          "available": true,
+          "link": "https://www.instagram.com/p/CVNWt5_sSJ8/?img_index=1"
+        },
+        {
+          "id": "acrylicAbstract07",
+          "src": "acrylicAbstract07",
+          "available": true,
+          "link": "https://www.instagram.com/p/CXf0JQIMT2w/?img_index=1"
+        },
+        {
+          "id": "acrylicAbstract08",
+          "src": "acrylicAbstract08",
+          "available": true,
+          "link": "https://www.instagram.com/p/COLPHXgsfuC/?img_index=1"
         }
       ]
     },
@@ -356,27 +392,19 @@
       "blobs": [
         {
           "color": "blue",
-          "id": 7
+          "id": 3
         },
         {
           "color": "cream",
-          "id": 4
+          "id": 8
         }
       ],
       "images": [
         {
-          "id": "body01",
-          "src": "body01",
-          "title": {
-            "fr": "Body 01",
-            "en": "Body 01"
-          },
-          "description": {
-            "fr": "Décrivez ici en petit détail en quoi il consiste",
-            "en": "Describe here in small detail what it consists of"
-          },
+          "id": "acrylicAbstract03",
+          "src": "acrylicAbstract03",
           "available": true,
-          "link": "https://www.instagram.com/p/CTWzpRYMztR/?img_index=1"
+          "link": "https://www.instagram.com/p/CXnovdKMrFe/?img_index=1"
         }
       ]
     },
@@ -394,19 +422,20 @@
         "fr": "“Most mandalas have an intuitive, irrational character and, through their symbolical content, exert a retroactive influence on the unconscious. They therefore possess a “magical” significance (…)” Carl Yung, mandala Symbolism",
         "en": "“Most mandalas have an intuitive, irrational character and, through their symbolical content, exert a retroactive influence on the unconscious. They therefore possess a “magical” significance (…)” Carl Yung, mandala Symbolism"
       },
-      "titlePosition": "top-left",
+      "titlePosition": "bottom-right",
       "flower": {
-        "id": 5,
-        "position": "bottom-left"
+        "id": 3,
+        "position": "top-right"
       },
       "blobs": [
         {
           "color": "blue",
-          "id": 7
+          "id": 10
         },
         {
-          "color": "cream",
-          "id": 4
+          "color": "pink",
+          "id": 13,
+          "size": "small"
         }
       ],
       "images": [
@@ -431,19 +460,20 @@
         "fr": "Mandalas numériques, crée avec une symétrie parfaite, trouve l’équilibre dans un tableau unique",
         "en": "Mandalas numériques, crée avec une symétrie parfaite, trouve l’équilibre dans un tableau unique"
       },
-      "titlePosition": "top-left",
+      "titlePosition": "bottom-left",
       "flower": {
-        "id": 5,
-        "position": "bottom-left"
+        "id": 4,
+        "position": "top-left"
       },
       "blobs": [
         {
           "color": "blue",
-          "id": 7
+          "id": 2
         },
         {
           "color": "cream",
-          "id": 4
+          "id": 1,
+          "size": "small"
         }
       ],
       "images": [
