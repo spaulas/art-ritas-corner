@@ -12,14 +12,10 @@ const FormSelector = () => {
   const isSelectedClassName = (currentType: BasicFormFields["type"]): string =>
     currentType === basicFields.type ? "form-selector-current" : "";
 
+  if (basicFields.type === "paintings") return <div className="form-selector--empty"/>;
+
   return (
     <div className="form-selector">
-      <div
-        className={isSelectedClassName("paintings")}
-        onClick={() => handleChange("paintings")}
-      >
-        Peintures
-      </div>
       <div
         className={isSelectedClassName("nails")}
         onClick={() => handleChange("nails")}
