@@ -20,6 +20,7 @@ const TopBar = () => {
     document.getElementById("form-page")?.scrollIntoView();
   };
 
+  // TODO: DIFERENCIAR ESSA BOSTA
   const handleInstagramClick = () => {
     if (basicFields.type === "paintings") {
       window.open("https://www.instagram.com/art_ritascorner/");

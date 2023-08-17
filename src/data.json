@@ -164,18 +164,6 @@
         ],
         "images": [
           {
-            "id": "acrylicAbstract01",
-            "src": "acrylicAbstract01",
-            "available": true,
-            "link": "https://www.instagram.com/p/CTWzpRYMztR/?img_index=1"
-          },
-          {
-            "id": "acrylicAbstract02",
-            "src": "acrylicAbstract02",
-            "available": true,
-            "link": "https://www.instagram.com/p/CbSPC7YMrJB/?img_index=1"
-          },
-          {
             "id": "acrylicAbstract03",
             "src": "acrylicAbstract03",
             "available": true,
@@ -254,41 +242,6 @@
             "src": "acrylicAbstract02",
             "available": true,
             "link": "https://www.instagram.com/p/CbSPC7YMrJB/?img_index=1"
-          },
-          {
-            "id": "acrylicAbstract03",
-            "src": "acrylicAbstract03",
-            "available": true,
-            "link": "https://www.instagram.com/p/CXnovdKMrFe/?img_index=1"
-          },
-          {
-            "id": "acrylicAbstract04",
-            "src": "acrylicAbstract04",
-            "available": true,
-            "link": "https://www.instagram.com/p/CU9yhixsqS8/?img_index=1"
-          },
-          {
-            "id": "acrylicAbstract05",
-            "src": "acrylicAbstract05",
-            "available": true
-          },
-          {
-            "id": "acrylicAbstract06",
-            "src": "acrylicAbstract06",
-            "available": true,
-            "link": "https://www.instagram.com/p/CVNWt5_sSJ8/?img_index=1"
-          },
-          {
-            "id": "acrylicAbstract07",
-            "src": "acrylicAbstract07",
-            "available": true,
-            "link": "https://www.instagram.com/p/CXf0JQIMT2w/?img_index=1"
-          },
-          {
-            "id": "acrylicAbstract08",
-            "src": "acrylicAbstract08",
-            "available": true,
-            "link": "https://www.instagram.com/p/COLPHXgsfuC/?img_index=1"
           }
         ]
       },
