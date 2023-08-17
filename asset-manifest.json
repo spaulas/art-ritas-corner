@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/art-ritas-corner/static/css/main.08718032.css",
-    "main.js": "/art-ritas-corner/static/js/main.063d46d3.js",
+    "main.js": "/art-ritas-corner/static/js/main.0ce8e252.js",
     "static/media/aquarelaBody05.png": "/art-ritas-corner/static/media/aquarelaBody05.fa5ed636a96795af7ed7.png",
     "static/media/acrylicAbstract06.png": "/art-ritas-corner/static/media/acrylicAbstract06.395ebdb6096d09b89b14.png",
     "static/media/acrylicAbstract05.png": "/art-ritas-corner/static/media/acrylicAbstract05.0c9f00679dfff9b85d59.png",
@@ -50,10 +50,10 @@
     "static/media/blob_cream_05.png": "/art-ritas-corner/static/media/blob_cream_05.5f84023b3b8c42c9be26.png",
     "index.html": "/art-ritas-corner/index.html",
     "main.08718032.css.map": "/art-ritas-corner/static/css/main.08718032.css.map",
-    "main.063d46d3.js.map": "/art-ritas-corner/static/js/main.063d46d3.js.map"
+    "main.0ce8e252.js.map": "/art-ritas-corner/static/js/main.0ce8e252.js.map"
   },
   "entrypoints": [
     "static/css/main.08718032.css",
-    "static/js/main.063d46d3.js"
+    "static/js/main.0ce8e252.js"
   ]
 }
