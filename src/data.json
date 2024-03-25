@@ -803,7 +803,7 @@
           "fr": "Frais de déplacement",
           "en": "Travelling expenses"
         },
-        "ranges": [
+        "bulletPoints": [
           {
             "fr": "Jusqu'a 5km gratuit",
             "en": "Up to 5km free"
@@ -837,7 +837,7 @@
           "fr": "Une carte fidélité que donne différents avantages.",
           "en": "A loyalty card that gives different advantages."
         },
-        "ranges": [
+        "bulletPoints": [
           {
             "fr": "7 prestation: 30% remise",
             "en": "7 service: 30% discount"

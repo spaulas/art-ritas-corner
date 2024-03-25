@@ -2,11 +2,11 @@ import React, { useContext } from "react";
 import type { TCCategory as TCCategoryProps } from "data.d";
 import { LanguageContext } from "context/LanguageProvider";
 
-const TCCategory = ({ title, description, ranges }: TCCategoryProps) => {
+const TCCategory = ({ title, description, bulletPoints }: TCCategoryProps) => {
   const { language } = useContext(LanguageContext);
 
   const renderCategoryRanges = () =>
-    ranges?.map((range) => (
+    bulletPoints?.map((range) => (
       <li className="nails-tc-category-range">{range[language]}</li>
     ));
 
@@ -18,7 +18,7 @@ const TCCategory = ({ title, description, ranges }: TCCategoryProps) => {
           {description[language]}
         </div>
       )}
-      <div className="nails-tc-category-ranges-container">
+      <div className="nails-tc-category-bulletPoints-container">
         {renderCategoryRanges()}
       </div>
     </div>
